@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/client/app/components/mission-button/component.js

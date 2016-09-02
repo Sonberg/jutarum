@@ -8,6 +8,7 @@
 *.iml
 out
 gen
-
+bower_components/
+node_modules/
 #npm debug
  npm-debug.log

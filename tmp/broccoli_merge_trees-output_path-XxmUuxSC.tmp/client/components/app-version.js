@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/client/node_modules/ember-cli-app-version/app/components/app-version.js

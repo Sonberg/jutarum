@@ -1,0 +1,17 @@
+{{#link-to "rapport" model.id class=buttonClass}}
+  <div class="row">
+    <div class="text medium-4">
+      <span class="m--title ml2">{{{model.name}}}</span>
+    </div>
+    <div class="text medium-5">
+        <span class="m--under">{{team model.team}}</span>
+
+    </div>
+    <div class="text medium-2">
+    {{#each tags as |tag|}}
+    <span class="m--tag">{{tag}}</span>
+    {{/each}}
+    </div>
+    {{fa-icon "angle-right faa-horizontal m--icon mr2" pull="right"}}
+  </div>
+  {{/link-to}}

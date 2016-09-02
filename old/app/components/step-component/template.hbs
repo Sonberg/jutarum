@@ -1,0 +1,28 @@
+<div class="ui seven small steps">
+  {{#if (not-eq router.currentRouteName "write")}}
+    {{#each mission.steps as |step index|}}
+      <div class="step {{step.classNames}}">
+          <div class="content" {{ action "choose" step }} >
+              {{#link-to step.linkTo}}
+              <div class="title">{{step.title}}</div>
+              {{/link-to}}
+          </div>
+      </div>
+    {{/each}}
+  {{else}}
+  <div class="step back">
+    {{#link-to "index" }}
+      <div class="content" {{ action "choose"  "back" }}>
+        <div class="title">Gå tillbaka</div>
+      </div>
+    {{/link-to}}
+  </div>
+    <div class="step next ready">
+      {{#link-to "index" }}
+        <div class="content" {{ action "createRecord" }}>
+          <div class="title">Spara och stäng</div>
+        </div>
+      {{/link-to}}
+    </div>
+  {{/if}}
+</div>

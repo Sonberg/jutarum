@@ -1,0 +1,16 @@
+{
+  "name": "client",
+  "dependencies": {
+    "ember": "~2.4.1",
+    "ember-cli-shims": "0.1.0",
+    "ember-cli-test-loader": "0.2.2",
+    "ember-qunit-notifications": "0.1.0",
+    "foundation-sites": "^6.2.3",
+    "font-awesome": "~4.5.0",
+    "font-awesome-animation": "^0.0.9",
+    "semantic-ui-step": "^2.1.7",
+    "webcamjs": "^1.0.9",
+    "dropit": "^1.1.1",
+    "animate.css": "^3.5.2"
+  }
+}

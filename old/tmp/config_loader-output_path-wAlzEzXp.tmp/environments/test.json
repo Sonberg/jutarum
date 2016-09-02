@@ -1,0 +1,1 @@
+{"modulePrefix":"client","environment":"test","baseURL":"/","locationType":"none","EmberENV":{"FEATURES":{}},"APP":{"LOG_ACTIVE_GENERATION":false,"LOG_VIEW_LOOKUPS":false,"rootElement":"#ember-testing","name":"client","version":"0.0.0+22af0a37"},"exportApplicationGlobal":true}

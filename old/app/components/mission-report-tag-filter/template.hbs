@@ -1,0 +1,29 @@
+<div class="medium-4 columns">
+    <label class="jr--title">Ämne</label>
+    <select class="subject">
+      {{#each subject as |subject|}}
+          <option value="{{subject}}">{{subject}}</option>
+      {{/each}}
+    </select>
+</div>
+
+<div class="medium-4 columns">
+    <label class="jr--title">Termin</label>
+    <select class="semester">
+      {{#each semester as |semester|}}
+          <option value="{{semester}}">{{semester}}</option>
+      {{/each}}
+    </select>
+
+</div>
+
+<div class="medium-4 columns">
+    <label class="jr--title">Årskurs</label>
+    <select class="klass">
+      {{#each klass as |klass|}}
+          <option value="{{klass}}">{{klass}}</option>
+      {{/each}}
+    </select>
+
+</div>
+

@@ -1,0 +1,46 @@
+@import './bower_components/foundation-sites/assets/foundation.scss';
+@import "mixins";
+/*@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+@import 'https://fonts.googleapis.com/css?family=Raleway';*/
+
+
+@import "palette";
+@import "variables";
+@import "helpers";
+@import "basic";
+@import "list";
+@import "animations";
+@import "select2";
+@import "components/scroll";
+@import "components/camera";
+@import "components/menu";
+@import "components/grid";
+@import "components/typography";
+@import "components/button";
+@import "components/dropdown";
+@import "components/tables";
+@import "components/ember-modal-dialog";
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+@import "components/select2";
+@import "components/login";
+
+@include font-face(Raleway, fonts/Raleway);
+@include font-face(Raleway, fonts/Baloo_Paaji);
+
+body,
+html {
+  height: 100%;
+}
+hr {
+  margin-bottom: 0 !important;
+}
+input,
+option,
+select {
+  outline: none;
+}
+.small {
+  width: 60px;
+  height: 60px;
+}

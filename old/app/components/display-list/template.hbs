@@ -1,0 +1,41 @@
+<table class="table new-mission">
+  <thead>
+    <th>
+
+    </th> {{query-filter-thead attr="name" title="Namn"}} {{query-filter-thead attr="created" classNames="text-right" title="Senast uppdaterad"}}
+    <th>
+
+    </th>
+  </thead>
+  <tbody>
+    {{#each model as | node | }}
+      <tr>
+        <td>
+          {{#if node.image}}
+            {{{asset-icon node.image}}}
+          {{/if}}
+        </td>
+        <td>
+
+          {{#link-to "mission" node.id }}
+            {{#if node.name}}
+              {{node.name}}
+            {{else}}
+              {{node.first-name}} {{node.last-name}}
+            {{/if}}
+          {{/link-to}}
+        </td>
+        <td>
+          <div class="text-right text-small width-full">
+            {{time-ago model=node}}
+          </div>
+        </td>
+        <td class="text-right">
+          <div {{action "select" node}}>
+            {{fa-icon icon}}
+          </div>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

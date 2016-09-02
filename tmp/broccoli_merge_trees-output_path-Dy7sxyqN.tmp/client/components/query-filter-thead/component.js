@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/app/components/query-filter-thead/component.js

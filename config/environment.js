@@ -4,8 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     googleFonts: [
       'Raleway',
-      'Baloo+Paaji'],
-    contentSecurityPolicy:{
+      'Baloo+Paaji'
+    ],
+    contentSecurityPolicy: {
       'font-src': "'self' fonts.gstatic.com",
       'style-src': "'self' fonts.googleapis.com"
     },
@@ -15,7 +16,7 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     uiNavigator: {
-      injectionFactories: [ 'component' ]
+      injectionFactories: ['component']
 
     },
     EmberENV: {
@@ -52,7 +53,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.locationType = 'hash';
   }
 
   return ENV;

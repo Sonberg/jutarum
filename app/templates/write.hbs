@@ -1,0 +1,52 @@
+<div class="columns-divided">
+  <div class="rows--2 float--left padding--medium outline--none write">
+    {{#if mission.images}}
+      <div class="display-flex text-center mb3">
+        {{#each mission.images as | img | }}
+          <div class="thumb" {{action "remove" img.index  img.image }}>
+            <img src= {{img.image}} alt="" />
+            <span class="m--tag">{{img.name}}</span>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+    <h1 contenteditable="true" data-text="Title" id="parse--title">{{{mission.lastRapport.name}}}</h1>
+    <div class="outline--none" contenteditable="true" id="parse--hook">
+      {{#if mission.lastRapport.body}}
+        {{{mission.lastRapport.body}}}
+      {{else}}
+        Skriv texten här!
+      {{/if}}
+    </div>
+  </div>
+  <div class="rows--2 float--right padding--medium">
+    {{#each data as |structure index| }}
+      <span class="jr--title size--large">{{structure.title}}</span>
+
+      <div class="camera-wrapper">
+        {{#each structure.images as | img | }}
+          <div class="thumb" {{action "add" index structure.title img }}>
+            <img src= {{img}} alt="" />
+          </div>
+        {{/each}}
+      </div>
+      {{#if structure.images}}
+        <div class="text">Klicka på bilden för att lägga till den i rapporten</div>
+      {{/if}}
+      <ul class="margin--bottom--large">
+        <div class="explore mb1">
+          <b>Utforska</b>
+          {{#each structure.explore as |e| }}
+            <li>{{e}}</li>
+          {{/each}}
+        </div>
+        <div class="knowledge">
+          <b>Förkunskaper</b>
+          {{#each structure.knowledge as |k| }}
+            <li>{{k}}</li>
+          {{/each}}
+        </div>
+      </ul>
+    {{/each}}
+  </div>
+</div>

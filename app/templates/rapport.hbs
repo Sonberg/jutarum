@@ -1,0 +1,25 @@
+<div class="width-full text-center ">
+  {{image-slider id=model.id}}
+</div>
+<div class="container">
+  <div class="text-center">
+    <!-- Title -->
+    <div class="jr--title text-center mb0 mt1">{{{model.name}}}</div>
+
+    <!-- Team -->
+    <p class="text-bold m0">
+      {{team model.team}}
+    </p>
+
+    <!-- Tags -->
+    <div class="m0">
+      {{#each (parse model.structure) as |tag|}}
+        <span class="m--tag">{{tag.title}}</span>
+      {{/each}}
+    </div>
+
+    <div class="mt3">
+      {{{model.body}}}
+    </div>
+  </div>
+</div>

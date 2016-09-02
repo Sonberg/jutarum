@@ -1,0 +1,231 @@
+.button.secondary {
+  background-color: $secondary-green-light;
+  color: #404040;
+  border-radius: 3px;
+  margin: 10px;
+  &:hover {
+    background-color: $secondary-green;
+    span {
+      color: $white !important;
+    }
+
+      i {
+        -webkit-animation-name: hvr-icon-wobble-horizontal;
+        animation-name: hvr-icon-wobble-horizontal;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+
+    }
+  }
+  a {
+    color: $charcoal-text;
+  }
+}
+.mission {
+  text-align: left;
+  width: 100%;
+  transition: padding 0.4s;
+  font-size: medium;
+  cursor: pointer;
+  &:hover {
+    //padding: 2em 1em !important;
+  }
+  .m--content-wrapper {}
+  img {
+    height: 50px;
+    margin-right: 1rem;
+    float: left;
+  }
+  .m--title {
+    font-weight: 700;
+    float: left;
+  }
+  .m--icon {
+    position: relative;
+    top: -8px;
+    padding-left: 10px;
+  }
+  .m--cta-start {
+    float: right;
+  }
+  .m--cta-start p {
+    float: left;
+    font-weight: 700;
+    font-family: Helvetica, sans-serif;
+    margin: -5px 0 0;
+  }
+  .m--icon-comment {
+    position: relative;
+    top: -10px;
+  }
+  .m--tag {
+    background-color: #0c4d78;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    position: relative;
+    float: right;
+    margin-right: 5px;
+    margin-top: -20px;
+  }
+}
+$color-for-modal: #ccc;
+.mission-modal {
+  text-align: left;
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $color-for-modal;
+    font-weight: 700;
+  }
+  p {
+    color: $color-for-modal;
+    margin-left: 15px;
+  }
+  .fa {
+    color: $color-for-modal;
+  }
+  .start-mission {
+    margin-top: 35px;
+    border: 2px solid $color-for-modal;
+    border-radius: 3px;
+    padding: 10px 60px;
+    color: $color-for-modal;
+    font-weight: 700;
+  }
+  //closebutton
+  .fa.fa-pull-right {
+    margin-left: 2em;
+  }
+}
+/*Color for testing purpose only, not sure bout design/color choice yet //simon*/
+a {
+  color: $charcoal-text;
+  font-weight: 700;
+}
+.btn-float {
+  height: 120px;
+  width: 120px;
+  background-color: $primary-green;
+  position: fixed;
+  bottom: 2%;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 50px;
+  a {
+    color: $charcoal-text;
+    font-weight: 700;
+  }
+  &.fixed-left {
+    left: 1%;
+    background-color: $primary-orange;
+    &:hover {
+      background-color: $secondary-orange-dark;
+      cursor: pointer;
+    }
+  }
+  &.fixed-center {
+    position: fixed;
+    left: 62.5%;
+    padding: 17px;
+    font-weight: 700;
+    margin-left: -30px;
+    border: 5px solid $primary-orange;
+    background-color: white;
+    color: #333333;
+    text-align: center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+    bottom: 40px;
+    p{
+      margin-top: -12px;
+      margin-left: 1px;
+      font-size: 24px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $secondary-orange-dark;
+      color:$white;
+      border-color:$secondary-orange-dark;
+
+    }
+    &:disabled {
+      background-color: $secondary-orange-dark;
+      cursor: pointer;
+    }
+  }
+  &.fixed-right {
+    right: 1%;
+    background-color: $primary-orange;
+    color: $white;
+    -webkit-box-shadow: 0px 0px 60px -4px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 0px 60px -4px rgba(0,0,0,0.23);
+    box-shadow: 0px 0px 60px -4px rgba(0,0,0,0.23);
+    &:hover {
+      background-color: $secondary-orange-dark;
+      cursor: pointer;
+      color: $white;
+      -webkit-animation: bounce 0.7s;
+      animation: bounce 0.7s;
+    }
+    &:disabled {
+      background-color: $secondary-orange-dark;
+      cursor: pointer;
+    }
+  }
+  &.fixed-left {
+    left: 1%;
+    color: $white;
+    background-color: $primary-orange;
+    -webkit-box-shadow: 0px 0px 60px -4px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0px 0px 60px -4px rgba(0,0,0,0.23);
+    box-shadow: 0px 0px 60px -4px rgba(0,0,0,0.23);
+    &:hover {
+      background-color: $secondary-orange-dark;
+      cursor: pointer;
+      color: $white;
+      -webkit-animation: bounce 0.7s;
+      animation: bounce 0.7s;
+    }
+    &:disabled {
+      background-color: $secondary-orange-dark;
+      cursor: pointer;
+    }
+  }
+}
+.btn-projname{
+  left: 40% !important;
+  border-radius: 300px !important;
+  height: 48px !important;
+  color: white;
+  padding: 12px 0 0 0;
+  bottom: 45px;
+  width: 21rem;
+  background-color: $primary-orange;
+
+}
+
+.drop-content{
+  bottom: 60px;
+  position: relative;
+  width: 200px;
+  background-color: #656565;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}

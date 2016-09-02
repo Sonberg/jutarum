@@ -1,0 +1,23 @@
+{{outlet}}
+
+<div class="login">
+  <div class="content p3">
+    <h1 class="text-center">Jutarum Beta 1.0</h1>
+    
+    <select class="mb2" onchange={{action (mut school) value="target.value"}}>
+      <option value="default" disabled="true" selected="true">Vilken skola går du på?</option>
+      {{#each model as | school |}}
+        <option value={{school.id}}>{{school.name}}</option>
+      {{/each}}
+    </select>
+    
+    Finns du inte med i listan? Prata med din lärare
+    <select class="mb1" onchange={{action (mut user) value="target.value" }}>
+      <option value="default" disabled="true" selected="true">Vad heter du?</option>
+      {{#each users as | user |}}
+        <option value={{user.id}}>{{user.first-name}} {{user.last-name}}</option>
+      {{/each}}
+    </select>
+    {{#link-to "index" }}<button type="button" {{action "submit"}}>Logga in</button>{{/link-to}}
+  </div>
+</div>

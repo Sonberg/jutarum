@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/client/node_modules/ember-cli/lib/broccoli/testem.js

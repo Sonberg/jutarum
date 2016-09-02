@@ -1,0 +1,54 @@
+<div class="top-bar display-flex">
+  <ul class="float--left menu ml2">
+    <li class="active">
+      {{#link-to "index"}}Hem{{/link-to}}
+    </li>
+    <li class="active">
+      {{#link-to "rapports" }}Banken{{/link-to}}
+    </li>
+
+  </ul>
+    {{#if (eq global.user.type "admin")}}
+    <ul class="account menu float--right ml2">
+
+        <li class="">
+            <ul id="menu-dropit2" class="menu">
+                <li>
+                    <b>För lärare {{fa-icon "angle-down"}}</b>
+                    <ul>
+                        <li>{{#link-to "dashboard-missions" }}Uppdrag{{/link-to}}</li>
+                        <!--<li>{{!#link-to "dashboard-students" }}Studenter{{!/link-to}}</li> -->
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    {{/if}}
+  <ul class="mission-nav float--center menu">
+    <li>
+      <h4>{{mission.tab}}</h4></li>
+  </ul>
+    <ul class="account menu float--right mr2">
+      {{#if mission.lastRapport}}
+        {{#if (missionVisible router.currentRouteName)}}
+            <li class="pr2">
+              {{#link-to mission.lastRoute mission.model.id classNames="last" }}Återgå till senste uppdraget{{/link-to}}
+            </li>
+        {{/if}}
+      {{/if}}
+        </ul>
+  <ul class="account menu float--right mr2">
+
+    <li class="">
+      <ul id="menu-dropit" class="menu">
+        <li>
+          <b>{{{asset-avatar global.user.avatar}}} Välkommen, {{global.user.first-name}} {{global.user.last-name}}! {{fa-icon "angle-down"}}</b>
+          <ul>
+            <li>{{#link-to "user" "kalle"}}Min profil{{/link-to}}</li>
+            <li><button type="logout" name="button" {{ action "logout" }}>{{#link-to "login"}}Logga ut {{fa-icon "logout"}}{{/link-to}}</button></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,16 @@
+<div class="columns-divided">
+  <div class="columns rows--2">
+    <ul class="vertical--menu p1">
+      {{#each group as |structure|}}
+        <li {{ action "select" structure }}>{{structure}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="columns rows--2">
+    <ul class="vertical--menu selected p1">
+      {{#each selected as |structure|}}
+        <li {{ action "remove" structure }}>{{structure}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

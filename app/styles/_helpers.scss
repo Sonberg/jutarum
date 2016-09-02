@@ -1,0 +1,484 @@
+/*
+##Helpers
+  Helper classes for the UI
+
+  Responsive embeds
+```
+<div class="embed-responsive">
+  <iframe></iframe>
+</div>
+```
+
+__margin__
+*top
+*bottom
+*y
+*x
+*none
+
+    <div class="margin-{value}"></div>
+*/
+// Responsive embeds
+.#{$utility-prefix}embed-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  embed,
+  iframe,
+  object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+// Positions
+.#{$utility-prefix}absolute--center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  > * {
+    margin: 0 auto;
+  }
+}
+.#{$utility-prefix}static {
+  position: static;
+}
+.#{$utility-prefix}absolute {
+  position: absolute;
+}
+.#{$utility-prefix}relative {
+  position: relative;
+}
+// Overflow
+.#{$utility-prefix}overflow-auto {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.#{$utility-prefix}overflow-hidden {
+  overflow: hidden;
+}
+.#{$utility-prefix}p0 {
+  padding: 0;
+}
+.#{$utility-prefix}p1 {
+  padding: $global-padding;
+}
+.#{$utility-prefix}py1 {
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+}
+.#{$utility-prefix}px1 {
+  padding-left: $global-padding;
+  padding-right: $global-padding;
+}
+.#{$utility-prefix}p2 {
+  padding: $global-padding * 2;
+}
+.#{$utility-prefix}py2 {
+  padding-top: $global-padding * 2;
+  padding-bottom: $global-padding * 2;
+}
+.#{$utility-prefix}px2 {
+  padding-left: $global-padding * 2;
+  padding-right: $global-padding * 2;
+}
+.#{$utility-prefix}p3 {
+  padding: $global-padding * 3;
+}
+.#{$utility-prefix}py3 {
+  padding-top: $global-padding * 3;
+  padding-bottom: $global-padding * 3;
+}
+.#{$utility-prefix}px3 {
+  padding-left: $global-padding * 3;
+  padding-right: $global-padding * 3;
+}
+.#{$utility-prefix}pb1 {
+  padding-bottom: $global-padding;
+}
+.#{$utility-prefix}pb2 {
+  padding-bottom: $global-padding * 2;
+}
+.#{$utility-prefix}pb3 {
+  padding-bottom: $global-padding * 3;
+}
+.#{$utility-prefix}pb-full-scroll {
+  padding-bottom: 80vh;
+}
+.#{$utility-prefix}pt1 {
+  padding-top: $global-padding;
+}
+.#{$utility-prefix}pt2 {
+  padding-top: $global-padding * 2;
+}
+.#{$utility-prefix}pt3 {
+  padding-top: $global-padding * 3;
+}
+.#{$utility-prefix}pl1 {
+  padding-left: $global-padding;
+}
+.#{$utility-prefix}pl2 {
+  padding-left: $global-padding * 2;
+}
+.#{$utility-prefix}pl3 {
+  padding-left: $global-padding * 3;
+}
+.#{$utility-prefix}pr1 {
+  padding-right: $global-padding;
+}
+.#{$utility-prefix}pr2 {
+  padding-right: $global-padding * 2;
+}
+.#{$utility-prefix}pr3 {
+  padding-right: $global-padding * 3;
+}
+// Margin
+.#{$utility-prefix}m0 {
+  margin: 0;
+}
+.#{$utility-prefix}mt0 {
+  margin-top: 0;
+}
+.#{$utility-prefix}mr0 {
+  margin-right: 0;
+}
+.#{$utility-prefix}mb0 {
+  margin-bottom: 0;
+}
+.#{$utility-prefix}ml0 {
+  margin-left: 0;
+}
+.#{$utility-prefix}m1 {
+  margin: $global-margin;
+}
+.#{$utility-prefix}mt1 {
+  margin-top: $global-margin;
+}
+.#{$utility-prefix}mr1 {
+  margin-right: $global-margin;
+}
+.#{$utility-prefix}mb1 {
+  margin-bottom: $global-margin;
+}
+.#{$utility-prefix}ml1 {
+  margin-left: $global-margin;
+}
+.#{$utility-prefix}m2 {
+  margin: $global-margin * 2;
+}
+.#{$utility-prefix}mt2 {
+  margin-top: $global-margin * 2;
+}
+.#{$utility-prefix}mr2 {
+  margin-right: $global-margin * 2;
+}
+.#{$utility-prefix}mb2 {
+  margin-bottom: $global-margin * 2;
+}
+.#{$utility-prefix}ml2 {
+  margin-left: $global-margin * 2;
+}
+.#{$utility-prefix}m3 {
+  margin: $global-margin * 3;
+}
+.#{$utility-prefix}mt3 {
+  margin-top: $global-margin * 3;
+}
+.#{$utility-prefix}mr3 {
+  margin-right: $global-margin * 3;
+}
+.#{$utility-prefix}mb3 {
+  margin-bottom: $global-margin * 3;
+}
+.#{$utility-prefix}ml3 {
+  margin-left: $global-margin * 3;
+}
+.#{$utility-prefix}mx1 {
+  margin-left: $global-margin;
+  margin-right: $global-margin;
+}
+.#{$utility-prefix}mx2 {
+  margin-left: $global-margin * 2;
+  margin-right: $global-margin * 2;
+}
+.#{$utility-prefix}mx3 {
+  margin-left: $global-margin * 3;
+  margin-right: $global-margin * 3;
+}
+.#{$utility-prefix}mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+// Nudging
+.#{$utility-prefix}nl1 {
+  margin-left: $global-margin / 2;
+}
+.#{$utility-prefix}nr1 {
+  margin-right: $global-margin / 2;
+}
+.#{$utility-prefix}nt1 {
+  margin-top: $global-margin / 2;
+}
+.#{$utility-prefix}nb1 {
+  margin-bottom: $global-margin / 2;
+}
+.#{$utility-prefix}nx1 {
+  margin-left: $global-margin / 2;
+  margin-right: $global-margin / 2;
+}
+.#{$utility-prefix}ny1 {
+  margin-top: $global-margin / 2;
+  margin-bottom: $global-margin / 2;
+}
+.#{$utility-prefix}n1 {
+  margin: $global-margin / 2;
+}
+// Alignments
+.#{$utility-prefix}pull-right {
+  float: right;
+}
+.#{$utility-prefix}pull-left {
+  float: left;
+}
+.#{$utility-prefix}text-center {
+  text-align: center;
+}
+.#{$utility-prefix}text-left {
+  text-align: left;
+}
+.#{$utility-prefix}text-right {
+  text-align: right;
+}
+// Border radius
+.#{$utility-prefix}bradius-circle {
+  border-radius: $global-circle;
+}
+.#{$utility-prefix}bradius-rounded {
+  border-radius: $global-rounded;
+}
+.#{$utility-prefix}bradius {
+  border-radius: $global-radius;
+}
+// Hide but show for screen readers
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+.#{$utility-prefix}vertical-align-top {
+  vertical-align: top;
+}
+.#{$utility-prefix}vertical-align-middle {
+  vertical-align: middle;
+}
+.#{$utility-prefix}vertical-align-bottom {
+  vertical-align: bottom;
+}
+// Pointer
+.#{$utility-prefix}pointer-events-none {
+  pointer-events: none;
+}
+.#{$utility-prefix}pointer-events-all {
+  pointer-events: all;
+}
+.#{$utility-prefix}cursor-pointer {
+  cursor: pointer;
+}
+.#{$utility-prefix}cursor-default {
+  cursor: auto;
+}
+.#{$utility-prefix}cursor-not-allowed {
+  cursor: not-allowed;
+}
+// Flex classes
+.flex {
+  display: flex;
+  backface-visibility: hidden;
+}
+.flex-inline {
+  display: inline-flex;
+  backface-visibility: hidden;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-center {
+  align-items: center;
+}
+.flex-baseline {
+  align-items: baseline;
+}
+.flex-stretch {
+  align-items: stretch;
+}
+.flex-start {
+  align-items: flex-start;
+}
+.flex-end {
+  align-items: flex-end;
+}
+.flex-justify {
+  justify-content: space-between;
+}
+// 1. Fix for Chrome 44 bug. https: //code.google.com/p/chromium/issues/detail?id=506893
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  /* 1 */
+  min-height: 0;
+  /* 1 */
+}
+.flex-grow {
+  flex: 1 0 auto;
+}
+.flex-shrink {
+  flex: 0 0 auto;
+}
+.flex-expand {
+  flex: 1 1 auto;
+}
+.flex-none {
+  flex: none;
+}
+.flex-reduce {
+  flex: 0 1 auto;
+}
+.flex-first {
+  order: -1;
+}
+.flex-last {
+  order: 99999;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: no-wrap;
+}
+.flex-centering {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-flex-end {
+  justify-content: flex-end;
+}
+.justify-flex-start {
+  justify-content: flex-end;
+}
+// Display overwrites
+.#{$utility-prefix}disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.#{$utility-prefix}dimmed {
+  opacity: 0.5;
+}
+.#{$utility-prefix}hidden {
+  display: none;
+}
+.#{$utility-prefix}visible {
+  display: block;
+}
+.#{$utility-prefix}inline-block {
+  display: inline-block;
+}
+.#{$utility-prefix}inline {
+  display: inline;
+}
+.#{$utility-prefix}block {
+  display: block;
+}
+.#{$utility-prefix}table {
+  display: table;
+}
+.#{$utility-prefix}table-cell {
+  display: table-cell;
+}
+// Borders
+.#{$utility-prefix}b0 {
+  border: 0;
+}
+.#{$utility-prefix}bt0 {
+  border-top: 0;
+}
+.#{$utility-prefix}br0 {
+  border-right: 0;
+}
+.#{$utility-prefix}bb0 {
+  border-bottom: 0 !important;
+}
+.#{$utility-prefix}bl0 {
+  border-left: 0;
+}
+.#{$utility-prefix}b1 {
+  border: 1px solid $global-border-color;
+}
+.#{$utility-prefix}bt1 {
+  border-top: 1px solid $global-border-color;
+}
+.#{$utility-prefix}br1 {
+  border-right: 1px solid $global-border-color;
+}
+.#{$utility-prefix}bb1 {
+  border-bottom: 1px solid $global-border-color;
+}
+.#{$utility-prefix}bl1 {
+  border-left: 1px solid $global-border-color;
+}
+// Border radius
+.#{$utility-prefix}br0 {
+  border-radius: none;
+}
+.#{$utility-prefix}br {
+  border-radius: $global-radius;
+}
+.#{$utility-prefix}brtl {
+  border-top-left-radius: $global-radius;
+}
+.#{$utility-prefix}brtr {
+  border-top-right-radius: $global-radius;
+}
+.#{$utility-prefix}brbr {
+  border-bottom-left-radius: $global-radius;
+}
+.#{$utility-prefix}brbl {
+  border-bottom-right-radius: $global-radius;
+}
+.position-relative {
+  position: relative;
+  * {
+    outline: none;
+  }
+}

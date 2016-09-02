@@ -1,0 +1,68 @@
+.camera-modal {
+  display: inline-table;
+  /*width: inherit !important;*/
+}
+
+.camera-overlay {
+  .content {
+    video,canvas, #camera {
+      margin: 0 auto;
+      display: block;
+
+    }
+    .buttons {
+      display: block;
+      text-align: center;
+      button {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+.camera-wrapper {
+  margin-bottom: 0px;
+  margin-top: 1rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.text {
+  display: inline-block;
+  color: darkgrey;
+  font-size: small;
+}
+
+.btn-camera {
+  color: white;
+  background: gainsboro;
+  font-weight: 900;
+  float: left;
+  height: 100px;
+  text-align: center;
+  width: 100px;
+  margin-left: 5px;
+  padding: 35px 10px 0;
+  box-sizing: border-box;
+}
+.thumb {
+  width: 133px;
+  overflow: hidden;
+  float: left;
+  margin-left: 5px;
+  span.delete {
+    height: 30px;
+    width: 30px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    padding: 2px 11px;
+    font-family: sans-serif;
+  }
+  img {
+    height: 100px;
+  }
+}

@@ -1,0 +1,49 @@
+div{
+  font-family: 'Raleway', sans-serif;
+}
+
+.jr--title {
+  font-size: 2vw;
+  font-weight: 700;
+  color: $primary-green;
+  font-family: 'Baloo Paaji', cursive;
+}
+
+.jr--title-header{
+  font-size:4vw;
+  font-weight: 700;
+  color: $primary-green;
+  font-family: 'Baloo Paaji', cursive;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Baloo Paaji', cursive;
+  font-size: 2.5vw;
+}
+.size--large {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.m--tag{
+  font-size: 12px;
+}
+
+.knowledge {
+  li {
+    color: grey;
+  }
+}
+
+
+.write {
+  font-size: larger;
+}
+
+.text-center {
+  text-align:center!important;
+}
+
+.text-bold {
+  font-weight: bold;
+}

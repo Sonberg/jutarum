@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-hwDuRKdF.tmp/0/services/navigator.js

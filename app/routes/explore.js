@@ -6,6 +6,12 @@ export default Ember.Route.extend({
   actions: {
     willTransition: function(transition) {
       this.get("mission.updateRecord")("structure", this.router.router.currentHandlerInfos[1].name, this.get("mission"));
+      
+      if(transition.targetName === "write") {
+        this.set("mission.nextText", "Spara");
+      } else {
+        this.set("mission.nextText", "Nästa");
+      }
     }
   }
 });

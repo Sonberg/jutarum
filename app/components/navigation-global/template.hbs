@@ -9,7 +9,7 @@
 
   </ul>
     {{#if (eq global.user.type "admin")}}
-    <ul class="account menu float--right ml2">
+    <ul class="account menu float--right">
 
         <li class="">
             <ul id="menu-dropit2" class="menu">
@@ -28,7 +28,7 @@
     <li>
       <h4>{{mission.tab}}</h4></li>
   </ul>
-    <ul class="account menu float--right mr2">
+    <ul class="account menu float--right">
       {{#if mission.lastRapport}}
         {{#if (missionVisible router.currentRouteName)}}
             <li class="pr2">
@@ -37,7 +37,7 @@
         {{/if}}
       {{/if}}
         </ul>
-  <ul class="account menu float--right mr2">
+  <ul class="account menu float--right">
 
     <li class="">
       <ul id="menu-dropit" class="menu">

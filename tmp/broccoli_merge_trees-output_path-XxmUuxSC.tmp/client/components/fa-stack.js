@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/client/node_modules/ember-font-awesome/app/components/fa-stack.js

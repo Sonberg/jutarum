@@ -3,10 +3,14 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   mission: Ember.inject.service(),
   actions: {
+    didTransition() {
+    },
     willTransition(transition) {
       var self = this;
       var title = Ember.$("#parse--title").html().trim();
       var body = Ember.$("#parse--hook").html().trim();
+      
+      this.set("nextText", "Nästa")
       
       if (transition.targetName === "index") {
         this.get("mission.updateRecord")(null, this.router.router.currentHandlerInfos[1].name, this.get("mission"), function(rapport) {
@@ -34,6 +38,7 @@ export default Ember.Route.extend({
         });
       } else {
         var rapport = this.get("mission.lastRapport");
+        this.set("mission.nextText", "Nästa");
         rapport.set("name", title);
         rapport.set("body", body);
       }

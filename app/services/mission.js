@@ -9,11 +9,11 @@ export default Ember.Service.extend({
   lastRoute: null,
   tab: "",
   
-  nextText: "Next",
+  nextText: "Nästa",
   nextParams: {
     route: "structure"
   },
-  backText: "Back",
+  backText: "Tillbaka",
   backParams: {
     route: "index"
   },

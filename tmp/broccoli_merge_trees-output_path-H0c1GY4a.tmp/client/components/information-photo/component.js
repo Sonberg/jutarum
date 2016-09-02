@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/app/components/information-photo/component.js

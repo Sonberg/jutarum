@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-A1RJfTxJ.tmp/0/bower_components/ember-cli-test-loader/test-loader.js

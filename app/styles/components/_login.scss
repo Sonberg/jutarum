@@ -3,23 +3,29 @@
   top: 0;
   bottom: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
   right: 0;
   background-color: $secondary-green-light;
   .content {
     background-color: $primary-green;
     border-radius: 3px;
     max-width: 700px;
-    width: 90%;
+    width: 70%;
     margin: 10% auto;
+    display: table;
+    padding: 2em;
     h1 {
       color: white;
-      font-size: 3rem;
+      font-size: 2rem;
     }
     button {
       color: white;
       background-color: $primary-orange;
-      padding: 1rem;
+      padding: 0.8rem;
       outline: none;
+      float: right;
       &:hover {
         background-color: $secondary-orange-dark;
       }

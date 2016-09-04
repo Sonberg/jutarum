@@ -4,19 +4,26 @@
     {{#each data.images as |img |}}
       <div class="thumb" contenteditable="false">
         <span class="delete" {{ action "delete" img index }}>x</span>
-        <img src={{img}} alt="" />
+        <img src= {{img}} alt="" />
       </div>
     {{/each}}
     {{#if (eq type "explore")}}
-      <div class="btn-camera"  {{ action "toggleModal" }}>
-        Camera
-      </div>
+      {{#if hasFlash}}
+        <div class="btn-camera" {{ action "toggleModal" }}>
+          {{fa-icon "picture-o"}}
+        </div>
+      {{else}}
+        <label for= {{uniqId this}} class="btn-camera m0">
+          {{fa-icon "file-image-o" size=1}}
+        </label>
+        <input type="file" capture="camera" accept="image/*" id= {{uniqId this}} name= {{uniqId this}} onchange= {{action "upload" }} class="hidden">
+      {{/if}}
     {{/if}}
   </div>
 
-  <ul id={{data.title}} contenteditable={{editable}}>
+  <ul id= {{data.title}} contenteditable= {{editable}}>
     {{#each rows as |row|}}
-    <li>{{row}}</li>
+      <li>{{row}}</li>
     {{/each}}
   </ul>
 

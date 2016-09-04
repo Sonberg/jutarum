@@ -34,18 +34,22 @@
         <div class="text">Klicka på bilden för att lägga till den i rapporten</div>
       {{/if}}
       <ul class="margin--bottom--large">
+        {{#if (gt structure.explore.length 0)}}
         <div class="explore mb1">
           <b>Utforska</b>
           {{#each structure.explore as |e| }}
             <li>{{e}}</li>
           {{/each}}
         </div>
+        {{/if}}
+        {{#if (gt structure.knowledge.length 0)}}
         <div class="knowledge">
           <b>Förkunskaper</b>
           {{#each structure.knowledge as |k| }}
             <li>{{k}}</li>
           {{/each}}
         </div>
+        {{/if}}
       </ul>
     {{/each}}
   </div>

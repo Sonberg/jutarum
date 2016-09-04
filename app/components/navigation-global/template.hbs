@@ -1,5 +1,5 @@
 <div class="top-bar display-flex">
-  <ul class="float--left menu ml2">
+  <ul class="float--left menu">
     <li class="active">
       {{#link-to "index"}}Hem{{/link-to}}
     </li>
@@ -32,7 +32,7 @@
       {{#if mission.lastRapport}}
         {{#if (missionVisible router.currentRouteName)}}
             <li class="pr2">
-              {{#link-to mission.lastRoute mission.model.id classNames="last" }}Återgå till senste uppdraget{{/link-to}}
+              {{#link-to mission.lastRoute mission.model.id classNames="last" }}Återgå till uppdraget{{/link-to}}
             </li>
         {{/if}}
       {{/if}}
@@ -42,7 +42,7 @@
     <li class="">
       <ul id="menu-dropit" class="menu">
         <li>
-          <b>{{{asset-avatar global.user.avatar}}} Välkommen, {{global.user.first-name}} {{global.user.last-name}}! {{fa-icon "angle-down"}}</b>
+          <b>{{{asset-avatar global.user.avatar}}} Välkommen, {{global.user.first-name}}! {{fa-icon "angle-down"}}</b>
           <ul>
             <li>{{#link-to "user" "kalle"}}Min profil{{/link-to}}</li>
             <li><button type="logout" name="button" {{ action "logout" }}>{{#link-to "login"}}Logga ut {{fa-icon "logout"}}{{/link-to}}</button></li>

@@ -2,13 +2,13 @@
   display: inline-table;
   /*width: inherit !important;*/
 }
-
 .camera-overlay {
   .content {
-    video,canvas, #camera {
+    #camera,
+    canvas,
+    video {
       margin: 0 auto;
       display: block;
-
     }
     .buttons {
       display: block;
@@ -21,38 +21,41 @@
     }
   }
 }
-
-
 .camera-wrapper {
-  margin-bottom: 0px;
-  margin-top: 1rem;
+  margin-bottom: 0;
+  margin-top: 0rem;
   display: inline-block;
   width: 100%;
 }
-
 .text {
   display: inline-block;
   color: darkgrey;
   font-size: small;
 }
-
 .btn-camera {
   color: white;
   background: gainsboro;
   font-weight: 900;
   float: left;
-  height: 100px;
+  font-size: medium;
+  height: 1em;
   text-align: center;
-  width: 100px;
-  margin-left: 5px;
-  padding: 35px 10px 0;
+  width: 1em;
+  padding: 0.4em;
+  vertical-align: middle;
+  display: inline-table;
   box-sizing: border-box;
+  
+}
+@media screen and (min-width: 64em) {
+  .btn-camera {
+    font-size: 1.5em;
+  }
 }
 .thumb {
-  width: 133px;
   overflow: hidden;
   float: left;
-  margin-left: 5px;
+  margin-right: 5px;
   span.delete {
     height: 30px;
     width: 30px;
@@ -63,6 +66,6 @@
     font-family: sans-serif;
   }
   img {
-    height: 100px;
+    height: 54px;
   }
 }

@@ -44,3 +44,19 @@ select {
   width: 60px;
   height: 60px;
 }
+
+
+.no-hover *:hover { 
+  opacity:1.0;
+  
+  [contentEditable] {
+    font-size: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.4em !important;
+  }
+
+box-shadow:none;
+   //pointer-events: none; /* only use !important if you have to */
+}

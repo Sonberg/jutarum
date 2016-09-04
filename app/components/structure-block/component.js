@@ -1,10 +1,17 @@
 import Ember from 'ember';
+import helper from '../../utils/helper';
 
 export default Ember.Component.extend({
   mission: Ember.inject.service(),
+  
   classNames: ["block"],
   index: null,
   cameraVisible: false,
+  hasFlash: true,
+  
+  _setup: function() {
+    this.set("hasFlash", helper.hasFlash());
+  }.on("init"),
 
   data: function() {
     return this.get("mission.structure." + this.get("index"));
@@ -71,6 +78,21 @@ export default Ember.Component.extend({
   },
 
   actions: {
+    upload: function(e) {
+      var self = this;
+      var input = e.target;
+        if (input.files && input.files[0]) {
+            var that = this;
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var data = e.target.result;
+                self.get("mission.structure." + self.get("index") + ".images").pushObject(data);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    },
+    
     toggleModal: function() {
       if(this) { var self = this; }
       this.get("toggleModal")(self);

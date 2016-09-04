@@ -1,5 +1,5 @@
 .menu-margin {
-  margin-top: 5rem;
+  padding-top: 5rem;
 }
 .mission-nav {
   color: #ffffff;
@@ -14,7 +14,6 @@
 .top-bar {
   background-color: $primary-green;
   border-bottom: solid 8px $secondary-green-dark;
-  position: relative;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,19 +23,17 @@
   ul {
     background: none;
   }
-  
   .last {
     background: white !important;
-color: #66a268 !important;
-border-radius: 3px;
+    color: #66a268 !important;
+    border-radius: 3px;
   }
-  
   .menu {
     background: none;
     margin-top: 10px;
     li {
       color: white;
-      font-size: 14px;
+      font-size: 1em;
     }
     img {
       height: 40px;
@@ -44,13 +41,15 @@ border-radius: 3px;
       margin-top: -20px;
     }
     a {
-      font-size: 14px;
+      font-size: 1em;
       color: $white;
       background: transparent;
     }
-    a:hover {
-      color: #d9d9d9;
-    }
+
+      a:hover {
+        color: #d9d9d9;
+      }
+
     a.active {
       color: $white;
       width: 100%;
@@ -59,14 +58,15 @@ border-radius: 3px;
       border: solid 2px $white;
       padding-bottom: 25px;
       .active {
-
         a {
-          font-size: 14px;
+          font-size: 1em;
           color: $white;
           background-color: transparent;
         }
-        a:hover {
-          color: #d9d9d9;
+        :not(.no-hover) {
+          a:hover {
+            color: #d9d9d9;
+          }
         }
         a.active {
           color: $white;
@@ -77,11 +77,10 @@ border-radius: 3px;
           padding-bottom: 25px;
         }
         button {
-          font-size: 14px;
+          font-size: 1em;
           color: $white;
         }
-        button:hover {
-        }
+        button:hover {}
         &.float--center {
           font-family: 'Baloo Paaji', cursive;
           font-size: x-large;
@@ -114,8 +113,7 @@ border-radius: 3px;
   .sub-menu {
     background-color: $secondary-green-dark;
     margin: 0;
-    padding: .5rem .8rem;
-    padding-top: 0rem;
+    padding: 0 0.8rem 0.5rem;
     display: flex;
     li {
       font-size: 0.9rem;
@@ -204,26 +202,24 @@ border-radius: 3px;
   //Styles for dropit
   .dropit-submenu {
     color: white;
-    font-size: 14px;
+    font-size: 1em;
     border-radius: 3px;
-    margin: 30px -37px auto 0px;
+    margin: 27px -37px auto 0;
     background-color: $secondary-green-dark;
-    li{
+    li {
       list-style-type: none;
       background: $secondary-green-dark;
       padding: 20px;
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
-      &:hover{
+      &:hover {
         background: $secondary-green-light;
         color: dimgrey;
-        a{
+        a {
           color: $charcoal-text;
         }
       }
     }
-
-
   }
   .top-bar #menu-dropit ul li:first-child,
   .top-bar #menu-dropit2 ul li:first-child {
@@ -234,16 +230,13 @@ border-radius: 3px;
   .top-bar #menu-dropit ul li:last-child,
   .top-bar #menu-dropit2 ul li:last-child {
     border-radius: 0 0 3px 3px;
-
     .top-bar #menu-dropit ul li:last-child {
-
       border-radius: 0 0 3px 3px;
     }
     .top-bar #menu-dropit2 ul li:last-child {
       padding-bottom: 20px;
       padding-top: 10px;
       border-radius: 0 0 3px 3px;
-
     }
     .top-bar #menu-dropit ul li a,
     .top-bar #menu-dropit ul li button,
@@ -255,9 +248,11 @@ border-radius: 3px;
     .dropit-submenu li {
       background-color: $primary-green;
     }
-    .dropit-submenu li:hover {
-      background-color: $secondary-green-dark;
-    }
+
+      .dropit-submenu li:hover {
+        background-color: $secondary-green-dark;
+      }
+
     .top-bar #menu-dropit ul,
     .top-bar #menu-dropit2 ul {
       background-color: $primary-green;

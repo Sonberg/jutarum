@@ -30,27 +30,27 @@ ul.mission-list {
 
       }
   }
-}
+  
+  .m--title {
+    font-weight: 900;
+  }
+  .m--under {
+    color: #848484;
+    font-size: 14px;
+    margin-right: 1rem;
+  }
+  }
+  .m--icon {
+  margin-top: .6em;
+  }
 
-.m--title {
-  font-weight: 900;
-}
-.m--under {
-  color: #848484;
-  font-size: 14px;
-  margin-right: 1rem;
-}
-}
-.m--icon {
-margin-top: .6em;
-}
-
-.m--tag {
-  font-size: 12px;
-  background: $primary-orange;
-  color:$white;
-  border-radius: 3px;
-  padding: 4px 12px;
+  .m--tag {
+    font-size: 12px;
+    background: $primary-orange;
+    color:$white;
+    border-radius: 3px;
+    padding: 4px 12px;
+  }
 }
 
 

@@ -459,7 +459,7 @@ __margin__
 }
 // Border radius
 .#{$utility-prefix}br0 {
-  border-radius: none;
+  border-radius: 0 !important;
 }
 .#{$utility-prefix}br {
   border-radius: $global-radius;

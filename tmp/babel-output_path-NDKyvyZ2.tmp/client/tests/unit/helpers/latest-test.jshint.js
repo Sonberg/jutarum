@@ -1,9 +1,0 @@
-define('client/tests/unit/helpers/latest-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - unit/helpers/latest-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/helpers/latest-test.js should pass jshint.');
-  });
-});

@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/app/components/nav-notification/component.js

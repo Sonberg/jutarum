@@ -26,9 +26,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .m--tag{
-  font-size: 12px;
-  border-radius: 0px;
-  display: block;
+  font-size: .7em;
+  background: $primary-orange;
+  color:$white;
+  border-radius: 3px;
+  padding: 4px 12px;
 }
 
 .knowledge {

@@ -53,7 +53,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    //ENV.locationType = 'hash';
+    ENV.locationType = 'hash';
+    minifyCSS: {
+        enabled: true
+    }
+    minifyJS: {
+        enabled: true
+    }
   }
 
   return ENV;

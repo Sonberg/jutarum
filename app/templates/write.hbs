@@ -5,7 +5,7 @@
         {{#each mission.images as | img | }}
           <div class="thumb" {{action "remove" img.index  img.image }}>
             <img src= {{img.image}} alt="" />
-            <span class="m--tag">{{img.name}}</span>
+            <span class="m--tag display-block br0">{{img.name}}</span>
           </div>
         {{/each}}
       </div>

@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/tmp/stub_generator-output_path-uYIIK3TA.tmp/browserify_stubs.js

@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-JOgbsQGC.tmp/0/ember-data.js

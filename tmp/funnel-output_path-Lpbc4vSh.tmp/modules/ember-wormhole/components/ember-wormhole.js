@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-l7sN7o8x.tmp/0/components/ember-wormhole.js

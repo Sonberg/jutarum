@@ -55,7 +55,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.locationType = 'hash';
     minifyCSS: {
-        enabled: true
+        enabled: false
     }
     minifyJS: {
         enabled: true

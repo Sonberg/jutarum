@@ -3,7 +3,9 @@
     <ul class="vertical--menu p1">
       {{#each group as |person|}}
         {{#if (not-eq person.id global.user.id)}}
-          <li {{ action "select" person }}>{{person.name}}</li>
+          {{#if (not-eq person.id "null") }}
+            <li {{ action "select" person }}>{{person.name}}</li>
+          {{/if}}
         {{/if}}
       {{/each}}
     </ul>
@@ -13,7 +15,9 @@
     <ul class="vertical--menu selected p1">
       <li>{{global.user.first-name}} {{global.user.last-name}}</li>
       {{#each selected as |person|}}
-        <li {{ action "remove" person }}>{{person.name}}</li>
+        {{#if (not-eq person.id "null") }}
+          <li {{ action "remove" person }}>{{person.name}}</li>
+        {{/if}}
       {{/each}}
     </ul>
   </div>

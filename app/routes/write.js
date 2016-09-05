@@ -3,8 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   mission: Ember.inject.service(),
   actions: {
-    didTransition() {
-    },
     willTransition(transition) {
       var self = this;
       var title = Ember.$("#parse--title").html().trim();

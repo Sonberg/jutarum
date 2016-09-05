@@ -57,6 +57,7 @@ export default Ember.Route.extend({
 
     didTransition(transition) {
       var routes = this.get("mission.routes");
+      console.log(this.router.router.currentHandlerInfos);
       if (this.router.router.currentHandlerInfos[2].name) {
         var current = this.router.router.currentHandlerInfos[2].name;
         if (routes.indexOf(current) != -1) {

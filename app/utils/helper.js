@@ -17,8 +17,26 @@ export default {
     return hasFlash;
   },
 
-  removeTouchHover: function() {
-    Ember.$("body").addClass("no-hover");
+  removeHoverCSSRule: function() {
+    console.log("remove hover");
+    if ('createTouch' in document) {
+      try {
+        Ember.$("body").addClass("no-hover");
+        var ignore = /:hover/;
+        for (var i = 0; i < document.styleSheets.length; i++) {
+          var sheet = document.styleSheets[i];
+          if (!sheet.cssRules) {
+            continue;
+          }
+          for (var j = sheet.cssRules.length - 1; j >= 0; j--) {
+            var rule = sheet.cssRules[j];
+            if (rule.type === CSSRule.STYLE_RULE && ignore.test(rule.selectorText)) {
+              sheet.deleteRule(j);
+            }
+          }
+        }
+      } catch (e) {}
+    }
   },
 
   clearUpload: function(e) {

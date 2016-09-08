@@ -5,5 +5,5 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 export default Model.extend({
   name: attr('string'),
   rapport_id: attr('number'),
-  image: attr('string'),
+  image: attr('string')
 });

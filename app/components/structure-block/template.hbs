@@ -8,16 +8,18 @@
       </div>
     {{/each}}
     {{#if (eq type "explore")}}
-      {{#if hasFlash}}
+      {{!#if (not hasFlash)}}
+      <!--
         <div class="btn-camera" {{ action "toggleModal" }}>
           {{fa-icon "picture-o"}}
         </div>
-      {{else}}
+      -->
+      {{!else}}
         <label for= {{uniqId this}} class="btn-camera m0">
           {{fa-icon "file-image-o" size=1}}
         </label>
         <input type="file" capture="camera" accept="image/*" id= {{uniqId this}} name= {{uniqId this}} onchange= {{action "upload" }} class="hidden">
-      {{/if}}
+      {{!/if}}
     {{/if}}
   </div>
 

@@ -91,7 +91,7 @@ export default Ember.Service.extend({
     
     return rapport.save().then(function(newRapport) {
       if (newRapport.get("id")) {
-        
+        console.log(self.get("images"));
         for (var i = 0; i < self.get("images").length; i++) {
           /* Spara bilder */
           var image = self.get("store").createRecord('image', {

@@ -12,24 +12,33 @@ export default Ember.Controller.extend({
     var rapports = this.get("store").peekAll("rapport");
 
     model.forEach(function(mission) {
-      rapports.forEach(function(rapport) {
-        var team = JSON.parse(rapport.get("team"));
-        var inTeam = false;
-        for (var i = 0; i < team.length; i++) {
-          if (team[i].id === self.get("global.user.id")) {
-            inTeam = true;
-          }
-        }
-
-        if (!inTeam) {
-          if (parseInt(rapport.get("mission-id")) && parseInt(mission.get("id"))) {
-            if (parseInt(rapport.get("mission-id")) !== parseInt(mission.get("id"))) {
-              self.get("new").pushObject(mission);
+      var inRapport = function() {
+        rapports.forEach(function(rapport) {
+          var team = JSON.parse(rapport.get("team"));
+          var inTeam = false;
+          for (var i = 0; i < team.length; i++) {
+            if (team[i].id === self.get("global.user.id")) {
+              inTeam = true;
             }
           }
-        }
-        inTeam = false;
-      });
+
+          if (!inTeam) {
+            if (parseInt(rapport.get("mission-id")) && parseInt(mission.get("id"))) {
+              if (parseInt(rapport.get("mission-id")) !== parseInt(mission.get("id"))) {
+                return true;
+              }
+            }
+          }
+          inTeam = false;
+        });
+        return false;
+      }
+      
+      if (inRapport()) {
+        self.get("new").pushObject(mission);
+      } else {
+        self.get("old").pushObject(mission);
+      }
     });
   }.on("init")
 });

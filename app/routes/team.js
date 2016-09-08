@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   global: Ember.inject.service(),
   mission: Ember.inject.service(),
   store: Ember.inject.service(),
+
   actions: {
     willTransition: function(transition) {
       var user = {
@@ -16,6 +17,11 @@ export default Ember.Route.extend({
       }
       
       this.get("mission.updateRecord")("team", this.router.router.currentHandlerInfos[1].name, this.get("mission"));
-    }
+    },
+    didTransition: function(transition) {
+      if (this.get("mission.structure")) {
+        this.get("mission.resetService")(this.get("mission"));
+      }
+    } 
   }
 });

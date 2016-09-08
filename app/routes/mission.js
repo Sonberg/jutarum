@@ -47,7 +47,6 @@ export default Ember.Route.extend({
 
 
       this.get("checkRoute")(transition, this);
-      console.log(transition);
 
       if (transition.targetName === "index") {
         this.set("mission.tab", "");

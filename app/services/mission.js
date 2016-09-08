@@ -4,11 +4,11 @@ export default Ember.Service.extend({
   global: Ember.inject.service(),
   store: Ember.inject.service(),
   model: null,
-  routes: ["index", "team", "structure", "knowledge", "explore", "write", "index"], 
+  routes: ["index", "team", "structure", "knowledge", "explore", "write", "index"],
   lastRapport: null,
   lastRoute: null,
   tab: "",
-  
+
   nextText: "Nästa",
   nextParams: {
     route: "structure"
@@ -17,8 +17,8 @@ export default Ember.Service.extend({
   backParams: {
     route: "index"
   },
-  
-  
+
+
   title: null,
   body: null,
   structure: [],
@@ -34,48 +34,48 @@ export default Ember.Service.extend({
     }
     return self.get("structure");
   },
-  
+
   updateRecord: function(attr, route, self, callback) {
     // Transition inside mission
     if (route === "mission" && attr) {
-      
+
       // No rappoort created
       if (!self.get("lastRapport")) {
         var rapport = self.get("store").createRecord("rapport", {
-            "mission-id": self.get("model.id"),
-            "school-id": self.get("global.school.id")
-          });
+          "mission-id": self.get("model.id"),
+          "school-id": self.get("global.school.id")
+        });
         self.set("lastRapport", rapport);
-      } 
-      
+      }
+
       var rapport = self.get("lastRapport");
       rapport.set(attr, JSON.stringify(self.get(attr)));
     }
-    
+
     if (callback) {
       callback(self.get("lastRapport"));
     }
   },
 
   createRecord: function(self) {
-    
+
     /* Validate input */
     if (title.length < 5) {
       return false;
     }
-    
-    
+
+
     if (body.length < 5) {
       return false;
     }
-        
+
     if (self.get("lastRapport")) {
       var rapport = self.get("store").peekRecord('rapport', self.get("lastRapport"));
       rapport.set("name", title);
       rapport.set("structure", JSON.stringify(self.get("removeImages")(self)));
       rapport.set("body", body);
       rapport.set("school-id", self.get("global.school.id"));
-      rapport.set("team",JSON.stringify);
+      rapport.set("team", JSON.stringify);
     } else {
       if (body) {
         var rapport = self.get("store").createRecord('rapport', {
@@ -88,16 +88,22 @@ export default Ember.Service.extend({
         });
       }
     }
-    
+    console.log(self.get("images"));
     return rapport.save().then(function(newRapport) {
+      console.log("save");
       if (newRapport.get("id")) {
+        console.log("got id");
         console.log(self.get("images"));
-        for (var i = 0; i < self.get("images").length; i++) {
+        for (var i = 0; i < self.get("images.length"); i++) {
+          console.log(self.get("images." + i + ".image.length"));
+          var pic = self.get("resize")(self.get("images." + i + ".image"));
+          console.log(pic.length);
+
           /* Spara bilder */
           var image = self.get("store").createRecord('image', {
             name: self.get("images." + i + ".name"),
             rapport_id: newRapport.get("id"),
-            image: self.get("images." + i + ".image")
+            image: pic
           });
           image.save();
         }
@@ -106,6 +112,27 @@ export default Ember.Service.extend({
       }
       return false;
     });
+
+  },
+  
+  resize: function(image) {
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var cw = canvas.width;
+    var ch = canvas.height;
+
+    // limit the image to 150x100 maximum size
+    var maxW = 500;
+    var maxH = 500;
+    var iw=img.width;
+    var ih=img.height;
+    var scale=Math.min((maxW/iw),(maxH/ih));
+    var iwScaled=iw*scale;
+    var ihScaled=ih*scale;
+    canvas.width=iwScaled;
+    canvas.height=ihScaled;
+    ctx.drawImage(img,0,0,iwScaled,ihScaled);
+    return canvas.toDataURL();
     
   },
 

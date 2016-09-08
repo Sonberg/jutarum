@@ -48,6 +48,8 @@ module.exports = function(defaults) {
   app.import('bower_components/moment/locale/sv.js');
   app.import('bower_components/moment/min/moment-with-locales.js');
   
+  // Lz string
+  app.import("bower_components/lz-string/libs/lz-string.min.js");
   
   return app.toTree();
 };

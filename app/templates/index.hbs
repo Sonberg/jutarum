@@ -1,30 +1,33 @@
 <div class="row fullwidth mt3 mr3 ml2 bb0 animated bounceInDown">
   <div class="medium-12 large-12">
-    <h1 class="jr--title-header pl1">Välkommen {{global.user.first-name}}!</h1> {{mission-alert model=model}}
+    <h1 class="jr--title-header">Välkommen {{global.user.first-name}}!</h1> {{mission-alert model=model}}
   </div>
 </div>
 
 {{#if (not-eq model.length 0)}}
-<div class="row fullwidth bb0 mr2 ml2 mt1">
-  <div class="medium-12 large-12 float-right mr1">
-    <h1 class="jr--title ml1 mb0">Nya uppdrag</h1>
-    {{#each new as | mission |}}
-      {{#if (not-eq mission.id mission.lastRapport.missionId)}}
-        {{mission-button model=mission}}
-      {{/if}}
-    {{/each}}
+  {{#if new}}
+    <div class="row fullwidth bb0 mr2 ml2 mt1">
+      <div class="medium-12 large-12 float-right mr1">
+        <h1 class="jr--title ml1 mb0">Nya uppdrag</h1>
+        {{#each new as | mission |}}
+          {{#if (not-eq mission.id mission.lastRapport.missionId)}}
+            {{mission-button model=mission}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
 
-  </div>
-
-</div>
-<div class="row fullwidth mt3 mr3 ml1">
-  <div class="medium-12 large-12">
-    <h1 class="jr--title pl1 mb0">Avslutade uppdrag</h1>
-    {{#each old as | mission |}}
-      {{mission-button model=mission}}
-    {{/each}}
-  </div>
-</div>
+  {{#if old}}
+    <div class="row fullwidth mt3 mr3 ml1">
+      <div class="medium-12 large-12">
+        <h1 class="jr--title pl1 mb0">Avslutade uppdrag</h1>
+        {{#each old as | mission |}}
+          {{mission-button model=mission}}
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
 {{else}}
   <h1 class="text-center">Du har slutfört alla dina uppdrag!</h1>
 {{/if}}

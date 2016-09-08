@@ -1,13 +1,13 @@
 {{#link-to "rapport" model.id class=buttonClass}}
-  <div class="row">
-    <div class="text medium-3">
+  <div class="row flex">
+    <div class="text">
       <span class="m--title ml2">{{{model.name}}}</span>
     </div>
-    <div class="text medium-4">
+    <div class="columns text hide-for-small-only">
         <span class="m--under">{{team model.team}}</span>
 
     </div>
-    <div class="text medium-4">
+    <div class="text columns text-right hide-for-small-only">
     {{#each tags as |tag|}}
     <span class="m--tag">{{tag}}</span>
     {{/each}}

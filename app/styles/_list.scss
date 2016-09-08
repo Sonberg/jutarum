@@ -2,67 +2,12 @@ ul.mission-list {
   li {
     list-style-type: none;
     border-bottom: 1px lighten($charcoal-text, 65%) solid;
+    margin-right: 40px;
+
     &:hover {
       background-color: $secondary-green-light;
       border-bottom: 1px $secondary-green-light solid;
-      i{
-        -webkit-animation-name: hvr-icon-wobble-horizontal;
-        animation-name: hvr-icon-wobble-horizontal;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-timing-function: ease-in-out;
-        animation-timing-function: ease-in-out;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
-      }
-    }
-    a {
-      color: black;
-      .text {
-        display: inline-block;
-        margin: 15px 0 15px 0;
-      }
-    &:first-child {
-      margin-top: 2rem;
-    }
-      i{
-        margin-top: 20px;
 
-      }
-  }
-  
-  .m--title {
-    font-weight: 900;
-  }
-  .m--under {
-    color: #848484;
-    font-size: 14px;
-    margin-right: 1rem;
-  }
-  }
-  .m--icon {
-  margin-top: .6em;
-  }
-
-  .m--tag {
-    font-size: 12px;
-    background: $primary-orange;
-    color:$white;
-    border-radius: 3px;
-    padding: 4px 12px;
-  }
-}
-
-
-.new-mission {
-  tr {
-    border-bottom: 1px lighten($charcoal-text, 65%) solid!important;
-  i{
-    margin-top: 11px;
-  }
-    &:hover {
-      background-color: $secondary-green-light!important;
-      border-bottom: 1px $secondary-green-light solid!important;
       i {
         -webkit-animation-name: hvr-icon-wobble-horizontal;
         animation-name: hvr-icon-wobble-horizontal;
@@ -72,38 +17,113 @@ ul.mission-list {
         animation-timing-function: ease-in-out;
         -webkit-animation-iteration-count: 1;
         animation-iteration-count: 1;
-
       }
     }
 
+    a {
+      color: black;
+
+      .text {
+        display: inline-block;
+        margin: 15px 0;
+
+        &:first-child {
+          flex: 0 0 auto;
+          max-width: 100%;
+          overflow: hidden;
+        }
+      }
+
+      &:first-child {
+        margin-top: 2rem;
+      }
+
+      i {
+        margin-top: 20px;
+      }
+    }
+
+    .m--title {
+      font-weight: 900;
+    }
+
+    .m--under {
+      color: #848484;
+      //font-size: 14px;
+      margin-right: 1rem;
+    }
+  }
+
+  .m--icon {
+    margin-top: 1em;
+    margin-left: auto;
+  }
+
+  .m--tag {
+    font-size: 12px;
+    background: $primary-orange;
+    color: $white;
+    border-radius: 3px;
+    padding: 4px 12px;
+  }
+}
+
+.new-mission {
+  tr {
+    border-bottom: 1px lighten($charcoal-text, 65%) solid!important;
+
+    i {
+      margin-top: 11px;
+    }
+
+    &:hover {
+      background-color: $secondary-green-light!important;
+      border-bottom: 1px $secondary-green-light solid!important;
+
+      i {
+        -webkit-animation-name: hvr-icon-wobble-horizontal;
+        animation-name: hvr-icon-wobble-horizontal;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+      }
+    }
   }
 }
 
 .mission-updater {
   background-color: lighten($charcoal-text, 65%);
   border-radius: 3px;
-  input, textarea {
+
+  input,
+  textarea {
     border-radius: 3px;
   }
+
   .new-update-button {
     background-color: $secondary-green-light;
     color: #404040;
     border-radius: 3px;
-    outline:0;
+    outline: 0;
     display: block;
     border: none;
     padding: 15px;
     width: 48%;
     font-size: 14px;
-    font-width:700;
+    font-width: 700;
+
     &:hover {
       background-color: $secondary-green;
-      color:$white;
-
+      color: $white;
     }
   }
 }
 
-.new-mission{
-  p{  margin-bottom: 0rem;}
+.new-mission {
+  p {
+    margin-bottom: 0;
+  }
 }

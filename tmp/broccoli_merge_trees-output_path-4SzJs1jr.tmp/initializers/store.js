@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/tmp/broccoli_merge_trees-input_base_path-NUHHEbm6.tmp/15/initializers/store.js

@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-suZZbycC.tmp/0/initializers/add-modals-container.js

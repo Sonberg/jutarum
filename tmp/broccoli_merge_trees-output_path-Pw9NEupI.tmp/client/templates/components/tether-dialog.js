@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/node_modules/ember-modal-dialog/app/templates/components/tether-dialog.js

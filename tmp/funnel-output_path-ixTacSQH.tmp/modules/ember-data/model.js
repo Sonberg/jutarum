@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/node_modules/ember-data/addon/model.js

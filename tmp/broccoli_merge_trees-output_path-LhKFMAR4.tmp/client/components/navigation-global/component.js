@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/app/components/navigation-global/component.js

@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-gu6iNcnr.tmp/0/utils/is-descriptor.js

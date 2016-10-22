@@ -8,10 +8,7 @@
     </li>
     {{#if (eq global.user.type "admin")}}
       <li>
-        <a href="#"><b>För lärare {{fa-icon "angle-down"}}</b></a>
-        <ul class="menu dropit dropit-submenu">
-            <li class="dropit-submenu"> {{#link-to "dashboard-missions" }}Uppdrag{{/link-to}}</li>
-        </ul>
+          {{#link-to "dashboard-missions" }}Redigera uppdrag{{/link-to}}
       </li>
     {{/if}}
   </ul>

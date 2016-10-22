@@ -8,6 +8,7 @@ export default Ember.Controller.extend({
 
   _setup: function() {
     var self = this;
+    console.log("setup");
     var rapports = this.get("store").findAll("rapport");
     this.get("store").findAll("mission").then(function(model) {
       self.set("new", Ember.A());

@@ -8,14 +8,9 @@ export default Ember.Component.extend({
   }.observes("mission.tab").on("init").property("activeTab"),
 
   _jQuery: function() {
-    $('#menu-dropit').dropit({
+    Ember.$('#menu-dropit').dropit({
       action: 'click',
-      triggerEl: 'a', // The trigger element
-    });
-    
-    $('#menu-dropit2').dropit({
-      action: 'click',
-      triggerEl: 'a', // The trigger element
+      triggerEl: 'a'
     });
   }.on("didInsertElement"),
   

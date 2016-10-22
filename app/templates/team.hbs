@@ -1,6 +1,7 @@
 <div class="columns-divided">
-  <div class="columns rows--2">
+  <div class="columns rows--2 pb3">
     <ul class="vertical--menu p1">
+      {{#if model}}
       {{#each group as |person|}}
         {{#if (not-eq person.id global.user.id)}}
           {{#if (not-eq person.id "null") }}
@@ -8,10 +9,11 @@
           {{/if}}
         {{/if}}
       {{/each}}
+      {{/if}}
     </ul>
   </div>
 
-  <div class="columns rows--2">
+  <div class="columns rows--2 pb3">
     <ul class="vertical--menu selected p1">
       <li>{{global.user.first-name}} {{global.user.last-name}}</li>
       {{#each selected as |person|}}

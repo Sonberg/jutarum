@@ -9,15 +9,13 @@ export default Ember.Component.extend({
 
   _jQuery: function() {
     $('#menu-dropit').dropit({
-      action: 'mouseenter',
-      triggerEl: 'b', // The trigger element
+      action: 'click',
+      triggerEl: 'a', // The trigger element
     });
-  }.on("didInsertElement"),
-
-  _jQueasdry: function() {
+    
     $('#menu-dropit2').dropit({
-      action: 'mouseenter',
-      triggerEl: 'b', // The trigger element
+      action: 'click',
+      triggerEl: 'a', // The trigger element
     });
   }.on("didInsertElement"),
   

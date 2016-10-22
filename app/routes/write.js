@@ -11,6 +11,16 @@ export default Ember.Route.extend({
               this.set("nextText", "Nästa")
 
               if (transition.targetName === "index") {
+                /* Validate input */
+                if (title.length < 5) {
+                  transition.abort();
+                }
+
+
+                if (body.length < 5) {
+                  transition.abort();
+                }
+                
                 this.get("mission.updateRecord")(null, this.router.router.currentHandlerInfos[1].name, this.get("mission"), function(rapport) {
                   var structure = self.get("mission.removeImages")(self.get("mission"));
                   rapport.set("name", title);

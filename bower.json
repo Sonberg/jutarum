@@ -13,6 +13,7 @@
     "dropit": "^1.1.1",
     "select2": "^4.0.3",
     "moment": "^2.14.1",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "lz-string": "^1.4.4"
   }
 }

@@ -26,6 +26,7 @@
     "ember-cli-animate-css": "0.0.1",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.5",
+    "ember-cli-cookie": "^0.2.0",
     "ember-cli-dependency-checker": "^1.2.0",
     "ember-cli-google-fonts": "2.3.1",
     "ember-cli-htmlbars": "^1.0.1",
@@ -40,6 +41,7 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-font-awesome": "2.1.1",
+    "ember-load": "0.0.9",
     "ember-load-initializers": "^0.5.0",
     "ember-modal-dialog": "0.8.5",
     "ember-resolver": "^2.0.3",
@@ -47,6 +49,7 @@
     "emberx-file-input": "1.0.0",
     "liquid-fire": "0.23.1",
     "loader.js": "^4.0.0",
+    "rimraf": "2.2.8",
     "ui-navigator-service": "0.3.1"
   },
   "dependencies": {

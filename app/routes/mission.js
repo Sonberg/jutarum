@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   mission: Ember.inject.service(),
+  global: Ember.inject.service(),
 
   model(params) {
     var model = this.store.find("mission", params.mission_id);
@@ -17,6 +18,7 @@ export default Ember.Route.extend({
 
   setupController: function(controller, model) {
     controller.set('model', model);
+    this.set("global.mission", model);
   },
 
   checkRoute(transition, self) {

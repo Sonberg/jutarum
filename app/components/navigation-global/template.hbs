@@ -1,53 +1,40 @@
 <div class="top-bar display-flex">
-  <ul class="float--left menu">
-    <li class="active">
+  <ul class="float--left menu" id="menu-dropit2">
+    <li>
       {{#link-to "index"}}Hem{{/link-to}}
     </li>
-    <li class="active">
+    <li>
       {{#link-to "rapports" }}Banken{{/link-to}}
     </li>
-
-  </ul>
     {{#if (eq global.user.type "admin")}}
-    <ul class="account menu float--right">
-
-        <li class="">
-            <ul id="menu-dropit2" class="menu">
-                <li>
-                    <b>För lärare {{fa-icon "angle-down"}}</b>
-                    <ul>
-                        <li>{{#link-to "dashboard-missions" }}Uppdrag{{/link-to}}</li>
-                        <!--<li>{{!#link-to "dashboard-students" }}Studenter{{!/link-to}}</li> -->
-                    </ul>
-                </li>
-            </ul>
-        </li>
-    </ul>
+      <li>
+        <a href="#"><b>För lärare {{fa-icon "angle-down"}}</b></a>
+        <ul class="menu dropit dropit-submenu">
+            <li class="dropit-submenu"> {{#link-to "dashboard-missions" }}Uppdrag{{/link-to}}</li>
+        </ul>
+      </li>
     {{/if}}
+  </ul>
   <ul class="mission-nav float--center menu">
     <li>
       <h4>{{mission.tab}}</h4></li>
   </ul>
-    <ul class="account menu float--right">
-      {{#if mission.lastRapport}}
-        {{#if (missionVisible router.currentRouteName)}}
-            <li class="pr2">
-              {{#link-to mission.lastRoute mission.model.id classNames="last" }}Återgå till uppdraget{{/link-to}}
-            </li>
-        {{/if}}
-      {{/if}}
-        </ul>
   <ul class="account menu float--right">
-
-    <li class="">
-      <ul id="menu-dropit" class="menu">
-        <li>
-          <b>{{{asset-avatar global.user.avatar}}} Välkommen, {{global.user.first-name}}! {{fa-icon "angle-down"}}</b>
+    {{#if mission.lastRapport}}
+      {{#if (missionVisible router.currentRouteName)}}
+        <li class="pr2">
+          {{#link-to mission.lastRoute global.mission.id classNames="last" }}Återgå till uppdraget{{/link-to}}
+        </li>
+      {{/if}}
+    {{/if}}
+  </ul>
+  <ul class="account menu float--right" id="menu-dropit">
+    <li>
+      <a href="#"><b>{{{asset-avatar global.user.avatar}}} Välkommen, {{global.user.first-name}}! {{fa-icon "angle-down"}}</b></a>
+      <ul class="menu dropit">
           <ul>
-            <li>{{#link-to "user" "kalle"}}Min profil{{/link-to}}</li>
             <li><button type="logout" name="button" {{ action "logout" }}>{{#link-to "login"}}Logga ut {{fa-icon "logout"}}{{/link-to}}</button></li>
           </ul>
-        </li>
       </ul>
     </li>
   </ul>

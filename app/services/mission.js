@@ -57,6 +57,7 @@ export default Ember.Service.extend({
     }
   },
 
+/* Not using */
   createRecord: function(self) {
 
     /* Validate input */

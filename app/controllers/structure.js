@@ -1,13 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  store: Ember.inject.service(),
   mission: Ember.inject.service(),
+  global: Ember.inject.service(),
   group: [
-    "Utseende",
-    "Fortplantning",
-    "Föda",
-    "Bostad",
-    "Fiender"
   ],
   selected: [
 
@@ -15,7 +12,15 @@ export default Ember.Controller.extend({
   
   init: function () {
     this._super();
+    
     Ember.run.schedule("afterRender", this, function() {
+      if (this.get("global.mission.structures")) {
+        this.set("selected", Ember.$.parseJSON(this.get("global.mission.structures")));
+      } else {
+        this.set("group", ["Utseende", "Fortplantning", "Föda", "Bostad", "Fiender"]);
+      }
+      
+      this.get("save")(this);
       this.set("mission.tab", "Stödstruktur");
       this.set("selected", []);
       for (var i = 0; i < this.get("mission.structure.length"); i++) {

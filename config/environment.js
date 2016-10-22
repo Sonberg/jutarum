@@ -2,6 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
+    'ember-load': {
+      // This is the default value, if you don't set this opton
+      loadingIndicatorClass: 'ember-load-indicator'
+    },
     googleFonts: [
       'Raleway',
       'Baloo+Paaji'
@@ -25,7 +29,6 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

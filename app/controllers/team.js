@@ -4,32 +4,31 @@ export default Ember.Controller.extend({
   global: Ember.inject.service(),
   mission: Ember.inject.service(),
   store: Ember.inject.service(),
-  users: null,
-  group: [],
+  model: null,
+  //group: [],
   selected: [],
 
   init: function() {
     this._super();
     var self = this;
 
-    /* Retrive users from server */
-    if (this.get("global.school.id")) {
-      var users = this.get("store").peekAll("user");
-      users.forEach(function(user) {
-          if(user.get("type") !== "admin") {
-            self.get("group").pushObject({
-              id: user.get("id"),
-              name: user.get("first-name") + " " + user.get("last-name")
-            });
-          }
-      });
-    }
-
     Ember.run.schedule("afterRender", this, function() {
       this.set("mission.tab", "Arbetsgrupp");
       this.set("selected", this.get("mission.team"));
     });
   },
+
+  group: Ember.computed('model.@each', function() {
+    var model = this.get('model');
+    var arr = model.filterBy('type', "student").map(function(user, index, enumerable) {
+      return {
+        id: user.get("id"),
+        name: user.get("first-name") + " " + user.get("last-name")
+      };
+    });
+
+    return arr;
+  }),
 
   save: function(self) {
     console.log("save");

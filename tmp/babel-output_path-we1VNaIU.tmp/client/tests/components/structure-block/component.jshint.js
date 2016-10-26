@@ -1,0 +1,9 @@
+define('client/tests/components/structure-block/component.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/structure-block/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'components/structure-block/component.js should pass jshint.\ncomponents/structure-block/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-block/component.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-block/component.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-block/component.js: line 70, col 20, \'self\' is already defined.\ncomponents/structure-block/component.js: line 91, col 14, Missing semicolon.\ncomponents/structure-block/component.js: line 85, col 17, \'that\' is defined but never used.\ncomponents/structure-block/component.js: line 98, col 31, \'self\' used out of scope.\ncomponents/structure-block/component.js: line 59, col 9, \'window\' is not defined.\ncomponents/structure-block/component.js: line 60, col 24, \'window\' is not defined.\ncomponents/structure-block/component.js: line 61, col 15, \'document\' is not defined.\ncomponents/structure-block/component.js: line 62, col 24, \'document\' is not defined.\ncomponents/structure-block/component.js: line 74, col 7, \'Webcam\' is not defined.\ncomponents/structure-block/component.js: line 76, col 7, \'Webcam\' is not defined.\ncomponents/structure-block/component.js: line 87, col 30, \'FileReader\' is not defined.\n\n14 errors');
+  });
+});

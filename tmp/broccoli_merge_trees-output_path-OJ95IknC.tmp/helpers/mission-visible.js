@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/app/helpers/mission-visible.js

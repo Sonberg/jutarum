@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/jutarum/tmp/funnel-input_base_path-F6d3ZNaC.tmp/0/lib/helpers/singularize.js

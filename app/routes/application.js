@@ -6,6 +6,12 @@ export default Ember.Route.extend({
   beforeModel: function(transition) {
     this.get("check")(this.controllerFor('application'), transition);
   },
+  
+  afterModel: function () {
+    console.log("after");
+    const loadingIndicatorClass = this.get('ember-load-config.loadingIndicatorClass') || 'ember-load-indicator';
+    Ember.$(`.${loadingIndicatorClass}`).remove();
+  },
   check: function(self, transition) {
     if (self.cookie) {
       if (self.get("global.user") === null || self.get("global.school") === null) {

@@ -1,0 +1,31 @@
+{{#if (not-eq missions.length 0)}}
+  {{#if new}}
+    {{mission-alert model=new}}
+    <div class="row fullwidth bb0 mr2 ml2 mt1">
+      <div class="medium-12 large-12 float-right mr1">
+        <h1 class="jr--title ml1 mb0">Nya uppdrag</h1>
+        {{#each new as | newMission |}}
+          {{#if (eq newMission.id mission.lastRapport.mission-id)}}
+            {{mission-button model=newMission text="Återgå till uppdrag"}}
+          {{else}}
+            {{mission-button model=newMission text="Starta uppdrag"}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+
+  {{#if old}}
+    <div class="row fullwidth mt3 mr3 ml1">
+      <div class="medium-12 large-12">
+        <h1 class="jr--title pl1 mb0">Avslutade uppdrag</h1>
+        {{#each old as | mission |}}
+          {{mission-button model=mission text="Utför uppdraget igen"}}
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+{{else}}
+  <h1 class="text-center">Du har slutfört alla dina uppdrag!</h1>
+  <button class="ladda-button" id="reload" data-style="expand-right" {{action "reload"}}><span class="ladda-label">Uppdatera</span></button>
+{{/if}}

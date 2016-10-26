@@ -1,8 +1,19 @@
-{{#if isAuthenticated}}
-  {{navigation-global}}
-{{/if}}
-<div class="menu-margin">
-  {{liquid-outlet class="reset-transform"}}
-</div>
+{{#if global.user}}
+  {{#if isAuthenticated}}
+    {{navigation-global}}
+  {{/if}}
+  <div class="menu-margin">
+    {{liquid-outlet class="reset-transform"}}
+  </div>
 
-{{ember-load-remover}}
+  {{ember-load-remover}}
+{{else}}
+  <div class="ember-load-indicator">
+    <div class="mask-loading">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+  </div>
+{{/if}}

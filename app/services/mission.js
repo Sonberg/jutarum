@@ -42,7 +42,7 @@ export default Ember.Service.extend({
       // No rappoort created
       if (!self.get("lastRapport")) {
         var rapport = self.get("store").createRecord("rapport", {
-          "mission-id": self.get("model.id"),
+          "mission-id": self.get("global.mission.id"),
           "school-id": self.get("global.school.id")
         });
         self.set("lastRapport", rapport);
@@ -72,7 +72,7 @@ export default Ember.Service.extend({
 
     if (self.get("lastRapport")) {
       var rapport = self.get("store").peekRecord('rapport', self.get("lastRapport"));
-      rapport.set("name", title);
+      rapport.set("name", self.get("global.mission.name"));
       rapport.set("structure", JSON.stringify(self.get("removeImages")(self)));
       rapport.set("body", body);
       rapport.set("school-id", self.get("global.school.id"));

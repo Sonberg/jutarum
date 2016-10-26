@@ -51,5 +51,13 @@ module.exports = function(defaults) {
   // Lz string
   app.import("bower_components/lz-string/libs/lz-string.min.js");
   
+  // Ladda
+  app.import("bower_components/ladda/dist/ladda.min.css");
+  app.import("bower_components/ladda/dist/ladda-themeless.min.css");
+  app.import("bower_components/ladda/dist/spin.min.js");
+  app.import("bower_components/ladda/dist/ladda.jquery.min.js");
+  app.import("bower_components/ladda/dist/ladda.min.js");
+  
+  
   return app.toTree();
 };

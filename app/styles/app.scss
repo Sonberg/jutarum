@@ -61,3 +61,13 @@ select {
 box-shadow:none;
    //pointer-events: none; /* only use !important if you have to */
 }
+
+.ladda-button {
+  margin: 40px auto;
+    display: block;
+    outline: none;
+    background-color: $secondary-green-dark;
+    &:hover {
+      background-color: $primary-green;
+    }
+}

@@ -16,8 +16,11 @@ export default Ember.Component.extend({
   
   actions: {
     logout: function() {
+      this.cookie.removeCookie('user');
+      this.cookie.removeCookie('school');
       this.set("global.user", null);
       this.set("global.school", null);
+      window.location.reload(true);
     }
   }
 

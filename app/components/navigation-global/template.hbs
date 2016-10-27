@@ -30,7 +30,7 @@
       <a href="#"><b>{{{asset-avatar global.user.avatar}}} Välkommen, {{global.user.first-name}}! {{fa-icon "angle-down"}}</b></a>
       <ul class="menu dropit">
           <ul>
-            <li><button type="logout" name="button" {{ action "logout" }}>{{#link-to "login"}}Logga ut {{fa-icon "logout"}}{{/link-to}}</button></li>
+            <li><button type="logout" name="button" {{ action "logout" }}>{{!#link-to "login"}}Logga ut {{fa-icon "logout"}}{{!/link-to}}</button></li>
           </ul>
       </ul>
     </li>

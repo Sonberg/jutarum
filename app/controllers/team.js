@@ -19,8 +19,10 @@ export default Ember.Controller.extend({
   },
 
   group: Ember.computed('model.@each', function() {
+    var user = this.get("global.user");
     var model = this.get('model');
-    var arr = model.filterBy('type', "student").map(function(user, index, enumerable) {
+    
+    var arr = model.filterBy('type', "student").filterBy('class-id', user.content.data["class-id"]).map(function(user, index, enumerable) {
       return {
         id: user.get("id"),
         name: user.get("first-name") + " " + user.get("last-name")

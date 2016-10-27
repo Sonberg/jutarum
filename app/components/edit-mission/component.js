@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import assets from '../../utils/assets';
-import PDFObject from "npm:pdfobject";
 
 export default Ember.Component.extend({
   global: Ember.inject.service(),

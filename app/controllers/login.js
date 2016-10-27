@@ -35,7 +35,8 @@ export default Ember.Controller.extend({
       this.set("global.school", this.get("store").peekRecord("school", this.get("school")));
       this.set("global.user", this.get("store").peekRecord("user", this.get("user")));
       this.cookie.setCookie('school', this.get("school"), { expires: 7, path: '/' });
-      this.cookie.setCookie('user', this.get("user"), { expires: 7, path: '/' })
+      this.cookie.setCookie('user', this.get("user"), { expires: 7, path: '/' });
+      window.location.reload(true);
     }
   }
 });

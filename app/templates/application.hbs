@@ -1,4 +1,4 @@
-{{#if global.user}}
+{{#if (or global.user (eq path "login"))}}
   {{#if isAuthenticated}}
     {{navigation-global}}
   {{/if}}

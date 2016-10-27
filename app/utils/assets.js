@@ -1,6 +1,8 @@
+import Ember from 'ember';
+
 export default {
   path(type) {
-      return "assets/images/" + type + "/";
+      return "https://s3-eu-west-1.amazonaws.com/jutarum/images/" + type + "/";
     },
 
     ext() {

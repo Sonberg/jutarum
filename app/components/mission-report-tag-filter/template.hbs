@@ -1,17 +1,19 @@
 <div class="medium-4 columns">
-    <label class="jr--title">Ämne</label>
-    <select class="subject">
-      {{#each subject as |subject|}}
-          <option value="{{subject}}">{{subject}}</option>
+    <label class="jr--title">Uppdrag</label>
+    <select class="mission" onchange={{action "filterMission"  value="target.value"}}>
+      <option value=undefined selected={{eq params.mission 0}}>Alla</option>
+      {{#each missions as |mission|}}
+          <option value="{{mission.id}}" selected={{eq params.mission mission.id}}>{{mission.name}}</option>
       {{/each}}
     </select>
 </div>
 
 <div class="medium-4 columns">
-    <label class="jr--title">Termin</label>
-    <select class="semester">
-      {{#each semester as |semester|}}
-          <option value="{{semester}}">{{semester}}</option>
+    <label class="jr--title">Elev</label>
+    <select class="user" onchange={{action "filterUser"value="target.value"}}>
+      <option value=undefined selected={{eq params.user 0}}>Alla</option>
+      {{#each users as |user|}}
+          <option value="{{user.id}}" selected={{eq params.user user.id}}>{{user.first-name}} {{user.last-name}}</option>
       {{/each}}
     </select>
 
@@ -19,9 +21,10 @@
 
 <div class="medium-4 columns">
     <label class="jr--title">Årskurs</label>
-    <select class="klass">
-      {{#each klass as |klass|}}
-          <option value="{{klass}}">{{klass}}</option>
+    <select class="klass" onchange={{action "filterClass"  value="target.value"}}>
+      <option value=undefined selected={{eq params.class 0}}>Alla</option>
+      {{#each classes as |class|}}
+          <option value="{{class.id}}" selected={{eq params.class class.id}}>{{class.title}}</option>
       {{/each}}
     </select>
 

@@ -4,12 +4,16 @@
 <div class="no-border">
   <div class="row">
     <ul class="mission-list mt2">
-      {{#if model.length}}
-      {{#each model as | node |}}
-        {{#if node.id}}
-          <li>{{mission-report model=node}}</li>
+      {{#if model}}
+        {{#if rapports}}
+          {{#each rapports as | node |}}
+            {{#if node.id}}
+              <li>{{mission-report model=node}}</li>
+            {{/if}}
+          {{/each}}
+        {{else}}
+          <h3 class="text-center p3">Inga träffar</h3>
         {{/if}}
-      {{/each}}
       {{else}}
         <h1 class="text-center p3">Det finns inga rapporter ännu</h1>
       {{/if}}

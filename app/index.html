@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="icon" href="{{rootURL}}assets/favicon.ico">
 
   <title>Jutarum</title>
   <meta name="description" content=""> {{content-for "head"}}
 
-  <link rel="stylesheet" href="assets/vendor.css">
-  <link rel="stylesheet" href="assets/client.css"> {{content-for "head-footer"}}
+  <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/client.css"> {{content-for "head-footer"}}
 </head>
 
 <body>
@@ -27,8 +27,8 @@
 
   {{content-for "body"}}
 
-  <script src="assets/vendor.js"></script>
-  <script src="assets/client.js"></script>
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/client.js"></script>
 
   {{content-for "body-footer"}}
 </body>

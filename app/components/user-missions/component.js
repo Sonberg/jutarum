@@ -67,7 +67,9 @@ export default Ember.Component.extend({
   },
   
   _jQuery: function() {
-    this.set("reloadBtn", Ladda.create(document.getElementById('reload')));
+    if (document.getElementById('reload')) {
+        this.set("reloadBtn", Ladda.create(document.getElementById('reload')));
+    }
   }.on("didInsertElement"),
   
   actions: {

@@ -32,6 +32,7 @@ Router.map(function() {
   /* 404 - Page not found */
   this.route('not-found', { path: '/*path' });
   this.route('login');
+  this.route('jutarum');
 });
 
 export default Router;

@@ -4,7 +4,6 @@ export default Ember.Route.extend({
   global: Ember.inject.service(),
   beforeModel() {
     if (!this.get("global.school.id")) {
-      //this.transitionTo("login");
       return false;
     }
   },

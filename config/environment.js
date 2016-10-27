@@ -17,7 +17,7 @@ module.exports = function(environment) {
 
     modulePrefix: 'client',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     uiNavigator: {
       injectionFactories: ['component']
@@ -45,7 +45,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
+    ENV.rootURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -57,7 +57,6 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    ENV.baseURL = '/jutarum/';
     minifyCSS: {
         enabled: false
     }

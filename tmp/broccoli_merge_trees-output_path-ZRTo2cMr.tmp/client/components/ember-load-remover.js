@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/node_modules/ember-load/app/components/ember-load-remover.js

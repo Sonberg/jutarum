@@ -69341,10 +69341,10 @@ return Tether;
 
 }));
 
-},{}],"/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-57AnmHfd.tmp/browserify_stubs.js":[function(require,module,exports){
+},{}],"/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-OJ8XgwPA.tmp/browserify_stubs.js":[function(require,module,exports){
 define('npm:pdfobject', function(){ return { 'default': require('pdfobject')};})
 define('npm:tether-drop', function(){ return { 'default': require('tether-drop')};})
-},{"pdfobject":"/Applications/MAMP/htdocs/jutarum/node_modules/pdfobject/pdfobject.js","tether-drop":"/Applications/MAMP/htdocs/jutarum/node_modules/tether-drop/dist/js/drop.js"}]},{},["/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-57AnmHfd.tmp/browserify_stubs.js"]);
+},{"pdfobject":"/Applications/MAMP/htdocs/jutarum/node_modules/pdfobject/pdfobject.js","tether-drop":"/Applications/MAMP/htdocs/jutarum/node_modules/tether-drop/dist/js/drop.js"}]},{},["/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-OJ8XgwPA.tmp/browserify_stubs.js"]);
 
 ;/*!
  * jQuery Cookie Plugin v1.4.1

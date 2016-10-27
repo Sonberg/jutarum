@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/app/components/scroll-view/component.js

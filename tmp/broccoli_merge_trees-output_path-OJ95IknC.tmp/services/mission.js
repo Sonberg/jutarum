@@ -1,1 +1,0 @@
-/Applications/MAMP/htdocs/jutarum/app/services/mission.js

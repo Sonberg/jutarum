@@ -1,370 +1,381 @@
+'use strict';
+
 define('client/tests/adapters/application.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - adapters/application.js');
+  QUnit.module('JSHint | adapters/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'adapters/application.js should pass jshint.\nadapters/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nadapters/application.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(false, 'adapters/application.js should pass jshint.\nadapters/application.js: line 5, col 49, \'snapshotArray\' is defined but never used.\nadapters/application.js: line 5, col 42, \'store\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/app.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - app.js');
+  QUnit.module('JSHint | app.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'app.js should pass jshint.\napp.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 4, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\napp.js: line 6, col 1, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 13, col 3, \'object short notation\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\napp.js: line 18, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n7 errors');
+    assert.ok(true, 'app.js should pass jshint.');
   });
 });
 define('client/tests/components/button-float-projname/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/button-float-projname/component.js');
+  QUnit.module('JSHint | components/button-float-projname/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/button-float-projname/component.js should pass jshint.\ncomponents/button-float-projname/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/button-float-projname/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/button-float-projname/component.js should pass jshint.');
   });
 });
 define('client/tests/components/button-float-small/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/button-float-small/component.js');
+  QUnit.module('JSHint | components/button-float-small/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/button-float-small/component.js should pass jshint.\ncomponents/button-float-small/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/button-float-small/component.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/button-float-small/component.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/button-float-small/component.js: line 10, col 5, \'let\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\ncomponents/button-float-small/component.js: line 17, col 7, Missing semicolon.\ncomponents/button-float-small/component.js: line 10, col 9, \'dropInstance\' is defined but never used.\ncomponents/button-float-small/component.js: line 11, col 15, \'document\' is not defined.\n\n7 errors');
+    assert.ok(false, 'components/button-float-small/component.js should pass jshint.\ncomponents/button-float-small/component.js: line 17, col 7, Missing semicolon.\ncomponents/button-float-small/component.js: line 10, col 9, \'dropInstance\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/components/button-float/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/button-float/component.js');
+  QUnit.module('JSHint | components/button-float/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/button-float/component.js should pass jshint.\ncomponents/button-float/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/button-float/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/button-float/component.js should pass jshint.');
   });
 });
 define('client/tests/components/camera-component/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/camera-component/component.js');
+  QUnit.module('JSHint | components/camera-component/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/camera-component/component.js should pass jshint.\ncomponents/camera-component/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/camera-component/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/camera-component/component.js: line 13, col 5, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 24, col 5, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 34, col 7, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 41, col 7, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 48, col 7, \'Webcam\' is not defined.\n\n7 errors');
+    assert.ok(false, 'components/camera-component/component.js should pass jshint.\ncomponents/camera-component/component.js: line 13, col 5, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 24, col 5, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 34, col 7, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 41, col 7, \'Webcam\' is not defined.\ncomponents/camera-component/component.js: line 48, col 7, \'Webcam\' is not defined.\n\n5 errors');
   });
 });
 define('client/tests/components/display-list/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/display-list/component.js');
+  QUnit.module('JSHint | components/display-list/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/display-list/component.js should pass jshint.\ncomponents/display-list/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/display-list/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/display-list/component.js should pass jshint.');
   });
 });
 define('client/tests/components/edit-mission/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/edit-mission/component.js');
+  QUnit.module('JSHint | components/edit-mission/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/edit-mission/component.js should pass jshint.\ncomponents/edit-mission/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-mission/component.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-mission/component.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-mission/component.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-mission/component.js: line 94, col 13, \'mission\' is already defined.\ncomponents/edit-mission/component.js: line 63, col 20, \'$\' is not defined.\ncomponents/edit-mission/component.js: line 3, col 8, \'PDFObject\' is defined but never used.\n\n7 errors');
+    assert.ok(false, 'components/edit-mission/component.js should pass jshint.\ncomponents/edit-mission/component.js: line 93, col 13, \'mission\' is already defined.\ncomponents/edit-mission/component.js: line 62, col 20, \'$\' is not defined.\n\n2 errors');
   });
 });
 define('client/tests/components/edit-student/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/edit-student/component.js');
+  QUnit.module('JSHint | components/edit-student/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/edit-student/component.js should pass jshint.\ncomponents/edit-student/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-student/component.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-student/component.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-student/component.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/edit-student/component.js: line 92, col 13, \'mission\' is already defined.\ncomponents/edit-student/component.js: line 62, col 20, \'$\' is not defined.\ncomponents/edit-student/component.js: line 3, col 8, \'PDFObject\' is defined but never used.\n\n7 errors');
+    assert.ok(false, 'components/edit-student/component.js should pass jshint.\ncomponents/edit-student/component.js: line 92, col 13, \'mission\' is already defined.\ncomponents/edit-student/component.js: line 62, col 20, \'$\' is not defined.\ncomponents/edit-student/component.js: line 3, col 8, \'PDFObject\' is defined but never used.\n\n3 errors');
   });
 });
 define('client/tests/components/image-slider/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/image-slider/component.js');
+  QUnit.module('JSHint | components/image-slider/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/image-slider/component.js should pass jshint.\ncomponents/image-slider/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/image-slider/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/image-slider/component.js should pass jshint.');
   });
 });
 define('client/tests/components/information-photo/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/information-photo/component.js');
+  QUnit.module('JSHint | components/information-photo/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/information-photo/component.js should pass jshint.\ncomponents/information-photo/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/information-photo/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/information-photo/component.js should pass jshint.');
   });
 });
 define('client/tests/components/mission-alert/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/mission-alert/component.js');
+  QUnit.module('JSHint | components/mission-alert/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/mission-alert/component.js should pass jshint.\ncomponents/mission-alert/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/mission-alert/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/mission-alert/component.js: line 18, col 40, Missing semicolon.\ncomponents/mission-alert/component.js: line 29, col 12, Missing semicolon.\ncomponents/mission-alert/component.js: line 44, col 11, Missing semicolon.\n\n5 errors');
+    assert.ok(false, 'components/mission-alert/component.js should pass jshint.\ncomponents/mission-alert/component.js: line 18, col 40, Missing semicolon.\ncomponents/mission-alert/component.js: line 29, col 12, Missing semicolon.\ncomponents/mission-alert/component.js: line 25, col 52, \'enumerable\' is defined but never used.\ncomponents/mission-alert/component.js: line 25, col 45, \'index\' is defined but never used.\ncomponents/mission-alert/component.js: line 44, col 11, Missing semicolon.\n\n5 errors');
   });
 });
 define('client/tests/components/mission-button/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/mission-button/component.js');
+  QUnit.module('JSHint | components/mission-button/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/mission-button/component.js should pass jshint.\ncomponents/mission-button/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/mission-button/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(false, 'components/mission-button/component.js should pass jshint.\ncomponents/mission-button/component.js: line 9, col 24, \'e\' is defined but never used.\ncomponents/mission-button/component.js: line 12, col 24, \'e\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/components/mission-component/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/mission-component/component.js');
+  QUnit.module('JSHint | components/mission-component/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/mission-component/component.js should pass jshint.\ncomponents/mission-component/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/mission-component/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/mission-component/component.js should pass jshint.');
   });
 });
 define('client/tests/components/mission-report-tag-filter/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/mission-report-tag-filter/component.js');
+  QUnit.module('JSHint | components/mission-report-tag-filter/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/mission-report-tag-filter/component.js should pass jshint.\ncomponents/mission-report-tag-filter/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/mission-report-tag-filter/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/mission-report-tag-filter/component.js should pass jshint.');
   });
 });
 define('client/tests/components/mission-report/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/mission-report/component.js');
+  QUnit.module('JSHint | components/mission-report/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/mission-report/component.js should pass jshint.\ncomponents/mission-report/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/mission-report/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/mission-report/component.js should pass jshint.');
   });
 });
 define('client/tests/components/nav-notification/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/nav-notification/component.js');
+  QUnit.module('JSHint | components/nav-notification/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/nav-notification/component.js should pass jshint.\ncomponents/nav-notification/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/nav-notification/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/nav-notification/component.js should pass jshint.');
   });
 });
 define('client/tests/components/navigation-global/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/navigation-global/component.js');
+  QUnit.module('JSHint | components/navigation-global/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/navigation-global/component.js should pass jshint.\ncomponents/navigation-global/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/navigation-global/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/navigation-global/component.js should pass jshint.');
   });
 });
 define('client/tests/components/navigation-user/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/navigation-user/component.js');
+  QUnit.module('JSHint | components/navigation-user/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/navigation-user/component.js should pass jshint.\ncomponents/navigation-user/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/navigation-user/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/navigation-user/component.js should pass jshint.');
   });
 });
 define('client/tests/components/news-component/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/news-component/component.js');
+  QUnit.module('JSHint | components/news-component/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/news-component/component.js should pass jshint.\ncomponents/news-component/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/news-component/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/news-component/component.js should pass jshint.');
   });
 });
 define('client/tests/components/query-filter-thead/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/query-filter-thead/component.js');
+  QUnit.module('JSHint | components/query-filter-thead/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/query-filter-thead/component.js should pass jshint.\ncomponents/query-filter-thead/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/query-filter-thead/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(false, 'components/query-filter-thead/component.js should pass jshint.\ncomponents/query-filter-thead/component.js: line 10, col 19, \'e\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/components/scroll-view/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/scroll-view/component.js');
+  QUnit.module('JSHint | components/scroll-view/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/scroll-view/component.js should pass jshint.\ncomponents/scroll-view/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/scroll-view/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'components/scroll-view/component.js should pass jshint.');
   });
 });
 define('client/tests/components/step-component/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/step-component/component.js');
+  QUnit.module('JSHint | components/step-component/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/step-component/component.js should pass jshint.\ncomponents/step-component/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/step-component/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/step-component/component.js: line 10, col 28, Missing semicolon.\ncomponents/step-component/component.js: line 17, col 5, \'history\' is not defined.\n\n4 errors');
+    assert.ok(false, 'components/step-component/component.js should pass jshint.\ncomponents/step-component/component.js: line 10, col 28, Missing semicolon.\ncomponents/step-component/component.js: line 16, col 18, \'self\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/components/structure-block/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/structure-block/component.js');
+  QUnit.module('JSHint | components/structure-block/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/structure-block/component.js should pass jshint.\ncomponents/structure-block/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-block/component.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-block/component.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-block/component.js: line 70, col 20, \'self\' is already defined.\ncomponents/structure-block/component.js: line 91, col 14, Missing semicolon.\ncomponents/structure-block/component.js: line 85, col 17, \'that\' is defined but never used.\ncomponents/structure-block/component.js: line 98, col 31, \'self\' used out of scope.\ncomponents/structure-block/component.js: line 59, col 9, \'window\' is not defined.\ncomponents/structure-block/component.js: line 60, col 24, \'window\' is not defined.\ncomponents/structure-block/component.js: line 61, col 15, \'document\' is not defined.\ncomponents/structure-block/component.js: line 62, col 24, \'document\' is not defined.\ncomponents/structure-block/component.js: line 74, col 7, \'Webcam\' is not defined.\ncomponents/structure-block/component.js: line 76, col 7, \'Webcam\' is not defined.\ncomponents/structure-block/component.js: line 87, col 30, \'FileReader\' is not defined.\n\n14 errors');
+    assert.ok(false, 'components/structure-block/component.js should pass jshint.\ncomponents/structure-block/component.js: line 70, col 20, \'self\' is already defined.\ncomponents/structure-block/component.js: line 91, col 14, Missing semicolon.\ncomponents/structure-block/component.js: line 85, col 17, \'that\' is defined but never used.\ncomponents/structure-block/component.js: line 98, col 31, \'self\' used out of scope.\ncomponents/structure-block/component.js: line 74, col 7, \'Webcam\' is not defined.\ncomponents/structure-block/component.js: line 76, col 7, \'Webcam\' is not defined.\n\n6 errors');
   });
 });
 define('client/tests/components/structure-component/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/structure-component/component.js');
+  QUnit.module('JSHint | components/structure-component/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/structure-component/component.js should pass jshint.\ncomponents/structure-component/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-component/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/structure-component/component.js: line 9, col 7, Duplicate key \'type\'.\n\n3 errors');
+    assert.ok(false, 'components/structure-component/component.js should pass jshint.\ncomponents/structure-component/component.js: line 9, col 7, Duplicate key \'type\'.\ncomponents/structure-component/component.js: line 18, col 19, \'e\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/components/time-ago/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/time-ago/component.js');
+  QUnit.module('JSHint | components/time-ago/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/time-ago/component.js should pass jshint.\ncomponents/time-ago/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/time-ago/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/time-ago/component.js: line 24, col 13, \'date\' is already defined.\ncomponents/time-ago/component.js: line 25, col 13, \'str\' is already defined.\ncomponents/time-ago/component.js: line 28, col 24, \'str\' used out of scope.\ncomponents/time-ago/component.js: line 11, col 5, \'moment\' is not defined.\ncomponents/time-ago/component.js: line 22, col 37, \'moment\' is not defined.\ncomponents/time-ago/component.js: line 25, col 33, \'moment\' is not defined.\n\n8 errors');
+    assert.ok(false, 'components/time-ago/component.js should pass jshint.\ncomponents/time-ago/component.js: line 24, col 13, \'date\' is already defined.\ncomponents/time-ago/component.js: line 25, col 13, \'str\' is already defined.\ncomponents/time-ago/component.js: line 28, col 24, \'str\' used out of scope.\ncomponents/time-ago/component.js: line 11, col 5, \'moment\' is not defined.\ncomponents/time-ago/component.js: line 22, col 37, \'moment\' is not defined.\ncomponents/time-ago/component.js: line 25, col 33, \'moment\' is not defined.\n\n6 errors');
   });
 });
 define('client/tests/components/user-missions/component.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - components/user-missions/component.js');
+  QUnit.module('JSHint | components/user-missions/component.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/user-missions/component.js should pass jshint.\ncomponents/user-missions/component.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncomponents/user-missions/component.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncomponents/user-missions/component.js: line 14, col 11, \'self\' is already defined.\ncomponents/user-missions/component.js: line 56, col 38, [\'team\'] is better written in dot notation.\ncomponents/user-missions/component.js: line 57, col 18, \'i\' is already defined.\ncomponents/user-missions/component.js: line 70, col 27, \'Ladda\' is not defined.\ncomponents/user-missions/component.js: line 70, col 40, \'document\' is not defined.\n\n7 errors');
+    assert.ok(false, 'components/user-missions/component.js should pass jshint.\ncomponents/user-missions/component.js: line 14, col 11, \'self\' is already defined.\ncomponents/user-missions/component.js: line 32, col 50, \'enumerable\' is defined but never used.\ncomponents/user-missions/component.js: line 32, col 43, \'index\' is defined but never used.\ncomponents/user-missions/component.js: line 44, col 50, \'enumerable\' is defined but never used.\ncomponents/user-missions/component.js: line 44, col 43, \'index\' is defined but never used.\ncomponents/user-missions/component.js: line 57, col 18, \'i\' is already defined.\ncomponents/user-missions/component.js: line 71, col 31, \'Ladda\' is not defined.\n\n7 errors');
   });
 });
 define('client/tests/controllers/application.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/application.js');
+  QUnit.module('JSHint | controllers/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/application.js should pass jshint.\ncontrollers/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/application.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/application.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+    assert.ok(true, 'controllers/application.js should pass jshint.');
   });
 });
 define('client/tests/controllers/dashboard-missions.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/dashboard-missions.js');
+  QUnit.module('JSHint | controllers/dashboard-missions.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/dashboard-missions.js should pass jshint.\ncontrollers/dashboard-missions.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/dashboard-missions.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/dashboard-missions.js should pass jshint.');
   });
 });
 define('client/tests/controllers/dashboard.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/dashboard.js');
+  QUnit.module('JSHint | controllers/dashboard.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/dashboard.js should pass jshint.\ncontrollers/dashboard.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/dashboard.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/dashboard.js should pass jshint.');
   });
 });
 define('client/tests/controllers/explore.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/explore.js');
+  QUnit.module('JSHint | controllers/explore.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/explore.js should pass jshint.\ncontrollers/explore.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/explore.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/explore.js should pass jshint.');
   });
 });
 define('client/tests/controllers/index.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/index.js');
+  QUnit.module('JSHint | controllers/index.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/index.js should pass jshint.\ncontrollers/index.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/index.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/index.js should pass jshint.');
   });
 });
 define('client/tests/controllers/jutarum.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/jutarum.js');
+  QUnit.module('JSHint | controllers/jutarum.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/jutarum.js should pass jshint.\ncontrollers/jutarum.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/jutarum.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/jutarum.js should pass jshint.');
   });
 });
 define('client/tests/controllers/knowledge.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/knowledge.js');
+  QUnit.module('JSHint | controllers/knowledge.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/knowledge.js should pass jshint.\ncontrollers/knowledge.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/knowledge.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/knowledge.js should pass jshint.');
   });
 });
 define('client/tests/controllers/login.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/login.js');
+  QUnit.module('JSHint | controllers/login.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/login.js should pass jshint.\ncontrollers/login.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/login.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/login.js: line 38, col 81, Missing semicolon.\n\n3 errors');
+    assert.ok(true, 'controllers/login.js should pass jshint.');
+  });
+});
+define('client/tests/controllers/rapports.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | controllers/rapports.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'controllers/rapports.js should pass jshint.\ncontrollers/rapports.js: line 17, col 52, \'enumerable\' is defined but never used.\ncontrollers/rapports.js: line 17, col 45, \'index\' is defined but never used.\ncontrollers/rapports.js: line 28, col 65, Missing semicolon.\ncontrollers/rapports.js: line 31, col 52, \'enumerable\' is defined but never used.\ncontrollers/rapports.js: line 31, col 45, \'index\' is defined but never used.\ncontrollers/rapports.js: line 35, col 26, \'arr\' used out of scope.\n\n6 errors');
   });
 });
 define('client/tests/controllers/structure.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/structure.js');
+  QUnit.module('JSHint | controllers/structure.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/structure.js should pass jshint.\ncontrollers/structure.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/structure.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/structure.js: line 42, col 9, Missing semicolon.\n\n3 errors');
+    assert.ok(false, 'controllers/structure.js should pass jshint.\ncontrollers/structure.js: line 42, col 9, Missing semicolon.\n\n1 error');
   });
 });
 define('client/tests/controllers/team.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/team.js');
+  QUnit.module('JSHint | controllers/team.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/team.js should pass jshint.\ncontrollers/team.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/team.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/team.js: line 13, col 9, \'self\' is defined but never used.\n\n3 errors');
+    assert.ok(false, 'controllers/team.js should pass jshint.\ncontrollers/team.js: line 13, col 9, \'self\' is defined but never used.\ncontrollers/team.js: line 25, col 127, \'enumerable\' is defined but never used.\ncontrollers/team.js: line 25, col 120, \'index\' is defined but never used.\n\n3 errors');
   });
 });
 define('client/tests/controllers/user.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/user.js');
+  QUnit.module('JSHint | controllers/user.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/user.js should pass jshint.\ncontrollers/user.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/user.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/user.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/user.js: line 19, col 15, \'document\' is not defined.\ncontrollers/user.js: line 35, col 20, \'$\' is not defined.\n\n5 errors');
+    assert.ok(false, 'controllers/user.js should pass jshint.\ncontrollers/user.js: line 35, col 20, \'$\' is not defined.\n\n1 error');
   });
 });
 define('client/tests/controllers/write.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - controllers/write.js');
+  QUnit.module('JSHint | controllers/write.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'controllers/write.js should pass jshint.\ncontrollers/write.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\ncontrollers/write.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'controllers/write.js should pass jshint.');
   });
 });
 define('client/tests/helpers/asset-avatar.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/asset-avatar.js');
+  QUnit.module('JSHint | helpers/asset-avatar.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/asset-avatar.js should pass jshint.\nhelpers/asset-avatar.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/asset-avatar.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/asset-avatar.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/asset-avatar.js: line 12, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
+    assert.ok(true, 'helpers/asset-avatar.js should pass jshint.');
   });
 });
 define('client/tests/helpers/asset-icon.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/asset-icon.js');
+  QUnit.module('JSHint | helpers/asset-icon.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/asset-icon.js should pass jshint.\nhelpers/asset-icon.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/asset-icon.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/asset-icon.js: line 4, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/asset-icon.js: line 17, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
+    assert.ok(true, 'helpers/asset-icon.js should pass jshint.');
   });
 });
 define('client/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -377,7 +388,7 @@ define('client/tests/helpers/destroy-app', ['exports', 'ember'], function (expor
 define('client/tests/helpers/destroy-app.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/destroy-app.js');
+  QUnit.module('JSHint | helpers/destroy-app.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'helpers/destroy-app.js should pass jshint.');
@@ -386,22 +397,24 @@ define('client/tests/helpers/destroy-app.jshint', ['exports'], function (exports
 define('client/tests/helpers/in-array.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/in-array.js');
+  QUnit.module('JSHint | helpers/in-array.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/in-array.js should pass jshint.\nhelpers/in-array.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/in-array.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/in-array.js: line 16, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+    assert.ok(true, 'helpers/in-array.js should pass jshint.');
   });
 });
 define('client/tests/helpers/mission-visible.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/mission-visible.js');
+  QUnit.module('JSHint | helpers/mission-visible.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/mission-visible.js should pass jshint.\nhelpers/mission-visible.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/mission-visible.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/mission-visible.js: line 13, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+    assert.ok(true, 'helpers/mission-visible.js should pass jshint.');
   });
 });
-define('client/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'client/tests/helpers/start-app', 'client/tests/helpers/destroy-app'], function (exports, _qunit, _clientTestsHelpersStartApp, _clientTestsHelpersDestroyApp) {
+define('client/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'ember', 'client/tests/helpers/start-app', 'client/tests/helpers/destroy-app'], function (exports, _qunit, _ember, _clientTestsHelpersStartApp, _clientTestsHelpersDestroyApp) {
+  var Promise = _ember['default'].RSVP.Promise;
+
   exports['default'] = function (name) {
     var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
@@ -410,16 +423,17 @@ define('client/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'clien
         this.application = (0, _clientTestsHelpersStartApp['default'])();
 
         if (options.beforeEach) {
-          options.beforeEach.apply(this, arguments);
+          return options.beforeEach.apply(this, arguments);
         }
       },
 
       afterEach: function afterEach() {
-        if (options.afterEach) {
-          options.afterEach.apply(this, arguments);
-        }
+        var _this = this;
 
-        (0, _clientTestsHelpersDestroyApp['default'])(this.application);
+        var afterEach = options.afterEach && options.afterEach.apply(this, arguments);
+        return Promise.resolve(afterEach).then(function () {
+          return (0, _clientTestsHelpersDestroyApp['default'])(_this.application);
+        });
       }
     });
   };
@@ -427,7 +441,7 @@ define('client/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'clien
 define('client/tests/helpers/module-for-acceptance.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/module-for-acceptance.js');
+  QUnit.module('JSHint | helpers/module-for-acceptance.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'helpers/module-for-acceptance.js should pass jshint.');
@@ -436,10 +450,10 @@ define('client/tests/helpers/module-for-acceptance.jshint', ['exports'], functio
 define('client/tests/helpers/parse.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/parse.js');
+  QUnit.module('JSHint | helpers/parse.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/parse.js should pass jshint.\nhelpers/parse.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/parse.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/parse.js: line 7, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+    assert.ok(true, 'helpers/parse.js should pass jshint.');
   });
 });
 define('client/tests/helpers/resolver', ['exports', 'client/resolver', 'client/config/environment'], function (exports, _clientResolver, _clientConfigEnvironment) {
@@ -456,7 +470,7 @@ define('client/tests/helpers/resolver', ['exports', 'client/resolver', 'client/c
 define('client/tests/helpers/resolver.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/resolver.js');
+  QUnit.module('JSHint | helpers/resolver.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'helpers/resolver.js should pass jshint.');
@@ -483,7 +497,7 @@ define('client/tests/helpers/start-app', ['exports', 'ember', 'client/app', 'cli
 define('client/tests/helpers/start-app.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/start-app.js');
+  QUnit.module('JSHint | helpers/start-app.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'helpers/start-app.js should pass jshint.');
@@ -492,46 +506,46 @@ define('client/tests/helpers/start-app.jshint', ['exports'], function (exports) 
 define('client/tests/helpers/team.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/team.js');
+  QUnit.module('JSHint | helpers/team.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/team.js should pass jshint.\nhelpers/team.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/team.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/team.js: line 27, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+    assert.ok(true, 'helpers/team.js should pass jshint.');
   });
 });
 define('client/tests/helpers/timeago.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/timeago.js');
+  QUnit.module('JSHint | helpers/timeago.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/timeago.js should pass jshint.\nhelpers/timeago.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/timeago.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/timeago.js: line 13, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/timeago.js: line 4, col 3, \'moment\' is not defined.\nhelpers/timeago.js: line 6, col 14, \'moment\' is not defined.\n\n5 errors');
+    assert.ok(false, 'helpers/timeago.js should pass jshint.\nhelpers/timeago.js: line 4, col 3, \'moment\' is not defined.\nhelpers/timeago.js: line 6, col 14, \'moment\' is not defined.\n\n2 errors');
   });
 });
 define('client/tests/helpers/uniq-id.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - helpers/uniq-id.js');
+  QUnit.module('JSHint | helpers/uniq-id.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'helpers/uniq-id.js should pass jshint.\nhelpers/uniq-id.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nhelpers/uniq-id.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nhelpers/uniq-id.js: line 9, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n3 errors');
+    assert.ok(true, 'helpers/uniq-id.js should pass jshint.');
   });
 });
 define('client/tests/initializers/component-router-injector.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - initializers/component-router-injector.js');
+  QUnit.module('JSHint | initializers/component-router-injector.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'initializers/component-router-injector.js should pass jshint.\ninitializers/component-router-injector.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ninitializers/component-router-injector.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'initializers/component-router-injector.js should pass jshint.');
   });
 });
 define('client/tests/initializers/test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - initializers/test.js');
+  QUnit.module('JSHint | initializers/test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'initializers/test.js should pass jshint.\ninitializers/test.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ninitializers/test.js: line 6, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ninitializers/test.js: line 10, col 2, Missing semicolon.\n\n3 errors');
+    assert.ok(false, 'initializers/test.js should pass jshint.\ninitializers/test.js: line 10, col 2, Missing semicolon.\n\n1 error');
   });
 });
 define('client/tests/integration/components/button-float/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -547,11 +561,7 @@ define('client/tests/integration/components/button-float/component-test', ['expo
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -581,7 +591,7 @@ define('client/tests/integration/components/button-float/component-test', ['expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'button-float', ['loc', [null, [1, 0], [1, 16]]]]],
+        statements: [['content', 'button-float', ['loc', [null, [1, 0], [1, 16]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -594,8 +604,7 @@ define('client/tests/integration/components/button-float/component-test', ['expo
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -629,11 +638,7 @@ define('client/tests/integration/components/button-float/component-test', ['expo
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -677,7 +682,7 @@ define('client/tests/integration/components/button-float/component-test', ['expo
 define('client/tests/integration/components/button-float/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/button-float/component-test.js');
+  QUnit.module('JSHint | integration/components/button-float/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/button-float/component-test.js should pass jshint.');
@@ -696,11 +701,7 @@ define('client/tests/integration/components/edit-mission/component-test', ['expo
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -730,7 +731,7 @@ define('client/tests/integration/components/edit-mission/component-test', ['expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'edit-mission', ['loc', [null, [1, 0], [1, 16]]]]],
+        statements: [['content', 'edit-mission', ['loc', [null, [1, 0], [1, 16]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -743,8 +744,7 @@ define('client/tests/integration/components/edit-mission/component-test', ['expo
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -778,11 +778,7 @@ define('client/tests/integration/components/edit-mission/component-test', ['expo
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -826,7 +822,7 @@ define('client/tests/integration/components/edit-mission/component-test', ['expo
 define('client/tests/integration/components/edit-mission/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/edit-mission/component-test.js');
+  QUnit.module('JSHint | integration/components/edit-mission/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/edit-mission/component-test.js should pass jshint.');
@@ -845,11 +841,7 @@ define('client/tests/integration/components/image-slider/component-test', ['expo
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -879,7 +871,7 @@ define('client/tests/integration/components/image-slider/component-test', ['expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'image-slider', ['loc', [null, [1, 0], [1, 16]]]]],
+        statements: [['content', 'image-slider', ['loc', [null, [1, 0], [1, 16]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -892,8 +884,7 @@ define('client/tests/integration/components/image-slider/component-test', ['expo
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -927,11 +918,7 @@ define('client/tests/integration/components/image-slider/component-test', ['expo
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -975,7 +962,7 @@ define('client/tests/integration/components/image-slider/component-test', ['expo
 define('client/tests/integration/components/image-slider/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/image-slider/component-test.js');
+  QUnit.module('JSHint | integration/components/image-slider/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/image-slider/component-test.js should pass jshint.');
@@ -994,11 +981,7 @@ define('client/tests/integration/components/information-photos/component-test', 
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1028,7 +1011,7 @@ define('client/tests/integration/components/information-photos/component-test', 
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'information-photos', ['loc', [null, [1, 0], [1, 22]]]]],
+        statements: [['content', 'information-photos', ['loc', [null, [1, 0], [1, 22]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1041,8 +1024,7 @@ define('client/tests/integration/components/information-photos/component-test', 
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1076,11 +1058,7 @@ define('client/tests/integration/components/information-photos/component-test', 
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1124,7 +1102,7 @@ define('client/tests/integration/components/information-photos/component-test', 
 define('client/tests/integration/components/information-photos/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/information-photos/component-test.js');
+  QUnit.module('JSHint | integration/components/information-photos/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/information-photos/component-test.js should pass jshint.');
@@ -1143,11 +1121,7 @@ define('client/tests/integration/components/information-structure/component-test
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1177,7 +1151,7 @@ define('client/tests/integration/components/information-structure/component-test
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'information-structure', ['loc', [null, [1, 0], [1, 25]]]]],
+        statements: [['content', 'information-structure', ['loc', [null, [1, 0], [1, 25]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1190,8 +1164,7 @@ define('client/tests/integration/components/information-structure/component-test
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1225,11 +1198,7 @@ define('client/tests/integration/components/information-structure/component-test
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1273,7 +1242,7 @@ define('client/tests/integration/components/information-structure/component-test
 define('client/tests/integration/components/information-structure/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/information-structure/component-test.js');
+  QUnit.module('JSHint | integration/components/information-structure/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/information-structure/component-test.js should pass jshint.');
@@ -1292,11 +1261,7 @@ define('client/tests/integration/components/mission-alert/component-test', ['exp
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1326,7 +1291,7 @@ define('client/tests/integration/components/mission-alert/component-test', ['exp
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-alert', ['loc', [null, [1, 0], [1, 17]]]]],
+        statements: [['content', 'mission-alert', ['loc', [null, [1, 0], [1, 17]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1339,8 +1304,7 @@ define('client/tests/integration/components/mission-alert/component-test', ['exp
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1374,11 +1338,7 @@ define('client/tests/integration/components/mission-alert/component-test', ['exp
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1422,7 +1382,7 @@ define('client/tests/integration/components/mission-alert/component-test', ['exp
 define('client/tests/integration/components/mission-alert/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-alert/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-alert/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-alert/component-test.js should pass jshint.');
@@ -1441,11 +1401,7 @@ define('client/tests/integration/components/mission-button-active/component-test
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1475,7 +1431,7 @@ define('client/tests/integration/components/mission-button-active/component-test
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-button-active', ['loc', [null, [1, 0], [1, 25]]]]],
+        statements: [['content', 'mission-button-active', ['loc', [null, [1, 0], [1, 25]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1488,8 +1444,7 @@ define('client/tests/integration/components/mission-button-active/component-test
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1523,11 +1478,7 @@ define('client/tests/integration/components/mission-button-active/component-test
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1571,7 +1522,7 @@ define('client/tests/integration/components/mission-button-active/component-test
 define('client/tests/integration/components/mission-button-active/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-button-active/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-button-active/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-button-active/component-test.js should pass jshint.');
@@ -1590,11 +1541,7 @@ define('client/tests/integration/components/mission-button/component-test', ['ex
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1624,7 +1571,7 @@ define('client/tests/integration/components/mission-button/component-test', ['ex
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-button', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'mission-button', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1637,8 +1584,7 @@ define('client/tests/integration/components/mission-button/component-test', ['ex
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1672,11 +1618,7 @@ define('client/tests/integration/components/mission-button/component-test', ['ex
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1720,7 +1662,7 @@ define('client/tests/integration/components/mission-button/component-test', ['ex
 define('client/tests/integration/components/mission-button/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-button/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-button/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-button/component-test.js should pass jshint.');
@@ -1739,11 +1681,7 @@ define('client/tests/integration/components/mission-component/component-test', [
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1773,7 +1711,7 @@ define('client/tests/integration/components/mission-component/component-test', [
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-component', ['loc', [null, [1, 0], [1, 21]]]]],
+        statements: [['content', 'mission-component', ['loc', [null, [1, 0], [1, 21]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1786,8 +1724,7 @@ define('client/tests/integration/components/mission-component/component-test', [
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1821,11 +1758,7 @@ define('client/tests/integration/components/mission-component/component-test', [
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1869,7 +1802,7 @@ define('client/tests/integration/components/mission-component/component-test', [
 define('client/tests/integration/components/mission-component/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-component/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-component/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-component/component-test.js should pass jshint.');
@@ -1888,11 +1821,7 @@ define('client/tests/integration/components/mission-explore/component-test', ['e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -1922,7 +1851,7 @@ define('client/tests/integration/components/mission-explore/component-test', ['e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-explore', ['loc', [null, [1, 0], [1, 19]]]]],
+        statements: [['content', 'mission-explore', ['loc', [null, [1, 0], [1, 19]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -1935,8 +1864,7 @@ define('client/tests/integration/components/mission-explore/component-test', ['e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -1970,11 +1898,7 @@ define('client/tests/integration/components/mission-explore/component-test', ['e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2018,7 +1942,7 @@ define('client/tests/integration/components/mission-explore/component-test', ['e
 define('client/tests/integration/components/mission-explore/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-explore/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-explore/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-explore/component-test.js should pass jshint.');
@@ -2037,11 +1961,7 @@ define('client/tests/integration/components/mission-knowledge/component-test', [
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2071,7 +1991,7 @@ define('client/tests/integration/components/mission-knowledge/component-test', [
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-knowledge', ['loc', [null, [1, 0], [1, 21]]]]],
+        statements: [['content', 'mission-knowledge', ['loc', [null, [1, 0], [1, 21]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2084,8 +2004,7 @@ define('client/tests/integration/components/mission-knowledge/component-test', [
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -2119,11 +2038,7 @@ define('client/tests/integration/components/mission-knowledge/component-test', [
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2167,7 +2082,7 @@ define('client/tests/integration/components/mission-knowledge/component-test', [
 define('client/tests/integration/components/mission-knowledge/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-knowledge/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-knowledge/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-knowledge/component-test.js should pass jshint.');
@@ -2186,11 +2101,7 @@ define('client/tests/integration/components/mission-report-tag-filter/component-
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2220,7 +2131,7 @@ define('client/tests/integration/components/mission-report-tag-filter/component-
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-report-tag-filter', ['loc', [null, [1, 0], [1, 29]]]]],
+        statements: [['content', 'mission-report-tag-filter', ['loc', [null, [1, 0], [1, 29]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2233,8 +2144,7 @@ define('client/tests/integration/components/mission-report-tag-filter/component-
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -2268,11 +2178,7 @@ define('client/tests/integration/components/mission-report-tag-filter/component-
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2316,7 +2222,7 @@ define('client/tests/integration/components/mission-report-tag-filter/component-
 define('client/tests/integration/components/mission-report-tag-filter/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-report-tag-filter/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-report-tag-filter/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-report-tag-filter/component-test.js should pass jshint.');
@@ -2335,11 +2241,7 @@ define('client/tests/integration/components/mission-report/component-test', ['ex
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2369,7 +2271,7 @@ define('client/tests/integration/components/mission-report/component-test', ['ex
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-report', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'mission-report', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2382,8 +2284,7 @@ define('client/tests/integration/components/mission-report/component-test', ['ex
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -2417,11 +2318,7 @@ define('client/tests/integration/components/mission-report/component-test', ['ex
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2465,7 +2362,7 @@ define('client/tests/integration/components/mission-report/component-test', ['ex
 define('client/tests/integration/components/mission-report/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-report/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-report/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-report/component-test.js should pass jshint.');
@@ -2484,11 +2381,7 @@ define('client/tests/integration/components/mission-strucure/component-test', ['
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2518,7 +2411,7 @@ define('client/tests/integration/components/mission-strucure/component-test', ['
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-strucure', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'mission-strucure', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2531,8 +2424,7 @@ define('client/tests/integration/components/mission-strucure/component-test', ['
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -2566,11 +2458,7 @@ define('client/tests/integration/components/mission-strucure/component-test', ['
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2614,7 +2502,7 @@ define('client/tests/integration/components/mission-strucure/component-test', ['
 define('client/tests/integration/components/mission-strucure/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-strucure/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-strucure/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-strucure/component-test.js should pass jshint.');
@@ -2633,11 +2521,7 @@ define('client/tests/integration/components/mission-team/component-test', ['expo
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2667,7 +2551,7 @@ define('client/tests/integration/components/mission-team/component-test', ['expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-team', ['loc', [null, [1, 0], [1, 16]]]]],
+        statements: [['content', 'mission-team', ['loc', [null, [1, 0], [1, 16]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2680,8 +2564,7 @@ define('client/tests/integration/components/mission-team/component-test', ['expo
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -2715,11 +2598,7 @@ define('client/tests/integration/components/mission-team/component-test', ['expo
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2763,7 +2642,7 @@ define('client/tests/integration/components/mission-team/component-test', ['expo
 define('client/tests/integration/components/mission-team/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-team/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-team/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-team/component-test.js should pass jshint.');
@@ -2782,11 +2661,7 @@ define('client/tests/integration/components/mission-write/component-test', ['exp
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2816,7 +2691,7 @@ define('client/tests/integration/components/mission-write/component-test', ['exp
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'mission-write', ['loc', [null, [1, 0], [1, 17]]]]],
+        statements: [['content', 'mission-write', ['loc', [null, [1, 0], [1, 17]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2829,8 +2704,7 @@ define('client/tests/integration/components/mission-write/component-test', ['exp
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -2864,11 +2738,7 @@ define('client/tests/integration/components/mission-write/component-test', ['exp
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2912,7 +2782,7 @@ define('client/tests/integration/components/mission-write/component-test', ['exp
 define('client/tests/integration/components/mission-write/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/mission-write/component-test.js');
+  QUnit.module('JSHint | integration/components/mission-write/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/mission-write/component-test.js should pass jshint.');
@@ -2931,11 +2801,7 @@ define('client/tests/integration/components/nav-bar/component-test', ['exports',
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -2965,7 +2831,7 @@ define('client/tests/integration/components/nav-bar/component-test', ['exports',
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'nav-bar', ['loc', [null, [1, 0], [1, 11]]]]],
+        statements: [['content', 'nav-bar', ['loc', [null, [1, 0], [1, 11]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2978,8 +2844,7 @@ define('client/tests/integration/components/nav-bar/component-test', ['exports',
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3013,11 +2878,7 @@ define('client/tests/integration/components/nav-bar/component-test', ['exports',
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3061,7 +2922,7 @@ define('client/tests/integration/components/nav-bar/component-test', ['exports',
 define('client/tests/integration/components/nav-bar/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/nav-bar/component-test.js');
+  QUnit.module('JSHint | integration/components/nav-bar/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/nav-bar/component-test.js should pass jshint.');
@@ -3080,11 +2941,7 @@ define('client/tests/integration/components/nav-notification-test', ['exports', 
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3114,7 +2971,7 @@ define('client/tests/integration/components/nav-notification-test', ['exports', 
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'nav-notification', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'nav-notification', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3127,8 +2984,7 @@ define('client/tests/integration/components/nav-notification-test', ['exports', 
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3162,11 +3018,7 @@ define('client/tests/integration/components/nav-notification-test', ['exports', 
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3210,7 +3062,7 @@ define('client/tests/integration/components/nav-notification-test', ['exports', 
 define('client/tests/integration/components/nav-notification-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/nav-notification-test.js');
+  QUnit.module('JSHint | integration/components/nav-notification-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/nav-notification-test.js should pass jshint.');
@@ -3229,11 +3081,7 @@ define('client/tests/integration/components/nav-notification/component-test', ['
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3263,7 +3111,7 @@ define('client/tests/integration/components/nav-notification/component-test', ['
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'nav-notification', ['loc', [null, [1, 0], [1, 20]]]]],
+        statements: [['content', 'nav-notification', ['loc', [null, [1, 0], [1, 20]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3276,8 +3124,7 @@ define('client/tests/integration/components/nav-notification/component-test', ['
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3311,11 +3158,7 @@ define('client/tests/integration/components/nav-notification/component-test', ['
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3359,7 +3202,7 @@ define('client/tests/integration/components/nav-notification/component-test', ['
 define('client/tests/integration/components/nav-notification/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/nav-notification/component-test.js');
+  QUnit.module('JSHint | integration/components/nav-notification/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/nav-notification/component-test.js should pass jshint.');
@@ -3378,11 +3221,7 @@ define('client/tests/integration/components/navigation-user/component-test', ['e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3412,7 +3251,7 @@ define('client/tests/integration/components/navigation-user/component-test', ['e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'navigation-user', ['loc', [null, [1, 0], [1, 19]]]]],
+        statements: [['content', 'navigation-user', ['loc', [null, [1, 0], [1, 19]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3425,8 +3264,7 @@ define('client/tests/integration/components/navigation-user/component-test', ['e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3460,11 +3298,7 @@ define('client/tests/integration/components/navigation-user/component-test', ['e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3508,7 +3342,7 @@ define('client/tests/integration/components/navigation-user/component-test', ['e
 define('client/tests/integration/components/navigation-user/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/navigation-user/component-test.js');
+  QUnit.module('JSHint | integration/components/navigation-user/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/navigation-user/component-test.js should pass jshint.');
@@ -3527,11 +3361,7 @@ define('client/tests/integration/components/news-component/component-test', ['ex
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3561,7 +3391,7 @@ define('client/tests/integration/components/news-component/component-test', ['ex
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'news-component', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'news-component', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3574,8 +3404,7 @@ define('client/tests/integration/components/news-component/component-test', ['ex
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3609,11 +3438,7 @@ define('client/tests/integration/components/news-component/component-test', ['ex
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3657,7 +3482,7 @@ define('client/tests/integration/components/news-component/component-test', ['ex
 define('client/tests/integration/components/news-component/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/news-component/component-test.js');
+  QUnit.module('JSHint | integration/components/news-component/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/news-component/component-test.js should pass jshint.');
@@ -3676,11 +3501,7 @@ define('client/tests/integration/components/scroll-view/component-test', ['expor
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3710,7 +3531,7 @@ define('client/tests/integration/components/scroll-view/component-test', ['expor
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'scroll-view', ['loc', [null, [1, 0], [1, 15]]]]],
+        statements: [['content', 'scroll-view', ['loc', [null, [1, 0], [1, 15]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3723,8 +3544,7 @@ define('client/tests/integration/components/scroll-view/component-test', ['expor
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3758,11 +3578,7 @@ define('client/tests/integration/components/scroll-view/component-test', ['expor
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3806,7 +3622,7 @@ define('client/tests/integration/components/scroll-view/component-test', ['expor
 define('client/tests/integration/components/scroll-view/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/scroll-view/component-test.js');
+  QUnit.module('JSHint | integration/components/scroll-view/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/scroll-view/component-test.js should pass jshint.');
@@ -3825,11 +3641,7 @@ define('client/tests/integration/components/step-component/component-test', ['ex
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3859,7 +3671,7 @@ define('client/tests/integration/components/step-component/component-test', ['ex
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'step-component', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'step-component', ['loc', [null, [1, 0], [1, 18]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3872,8 +3684,7 @@ define('client/tests/integration/components/step-component/component-test', ['ex
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -3907,11 +3718,7 @@ define('client/tests/integration/components/step-component/component-test', ['ex
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -3955,7 +3762,7 @@ define('client/tests/integration/components/step-component/component-test', ['ex
 define('client/tests/integration/components/step-component/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/step-component/component-test.js');
+  QUnit.module('JSHint | integration/components/step-component/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/step-component/component-test.js should pass jshint.');
@@ -3974,11 +3781,7 @@ define('client/tests/integration/components/structure-block/component-test', ['e
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -4008,7 +3811,7 @@ define('client/tests/integration/components/structure-block/component-test', ['e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'structure-block', ['loc', [null, [1, 0], [1, 19]]]]],
+        statements: [['content', 'structure-block', ['loc', [null, [1, 0], [1, 19]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -4021,8 +3824,7 @@ define('client/tests/integration/components/structure-block/component-test', ['e
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -4056,11 +3858,7 @@ define('client/tests/integration/components/structure-block/component-test', ['e
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -4104,7 +3902,7 @@ define('client/tests/integration/components/structure-block/component-test', ['e
 define('client/tests/integration/components/structure-block/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/structure-block/component-test.js');
+  QUnit.module('JSHint | integration/components/structure-block/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/structure-block/component-test.js should pass jshint.');
@@ -4123,11 +3921,7 @@ define('client/tests/integration/components/user-missions/component-test', ['exp
     this.render(Ember.HTMLBars.template((function () {
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -4157,7 +3951,7 @@ define('client/tests/integration/components/user-missions/component-test', ['exp
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'user-missions', ['loc', [null, [1, 0], [1, 17]]]]],
+        statements: [['content', 'user-missions', ['loc', [null, [1, 0], [1, 17]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -4170,8 +3964,7 @@ define('client/tests/integration/components/user-missions/component-test', ['exp
       var child0 = (function () {
         return {
           meta: {
-            'fragmentReason': false,
-            'revision': 'Ember@2.4.6',
+            'revision': 'Ember@2.9.0',
             'loc': {
               'source': null,
               'start': {
@@ -4205,11 +3998,7 @@ define('client/tests/integration/components/user-missions/component-test', ['exp
 
       return {
         meta: {
-          'fragmentReason': {
-            'name': 'missing-wrapper',
-            'problems': ['wrong-type']
-          },
-          'revision': 'Ember@2.4.6',
+          'revision': 'Ember@2.9.0',
           'loc': {
             'source': null,
             'start': {
@@ -4253,280 +4042,289 @@ define('client/tests/integration/components/user-missions/component-test', ['exp
 define('client/tests/integration/components/user-missions/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - integration/components/user-missions/component-test.js');
+  QUnit.module('JSHint | integration/components/user-missions/component-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'integration/components/user-missions/component-test.js should pass jshint.');
   });
 });
+define('client/tests/models/class.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | models/class.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(false, 'models/class.js should pass jshint.\nmodels/class.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/class.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n2 errors');
+  });
+});
 define('client/tests/models/image.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - models/image.js');
+  QUnit.module('JSHint | models/image.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/image.js should pass jshint.\nmodels/image.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/image.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/image.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/image.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nmodels/image.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/image.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n6 errors');
+    assert.ok(false, 'models/image.js should pass jshint.\nmodels/image.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/image.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/models/mission.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - models/mission.js');
+  QUnit.module('JSHint | models/mission.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/mission.js should pass jshint.\nmodels/mission.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/mission.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/mission.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/mission.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nmodels/mission.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/mission.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n6 errors');
+    assert.ok(false, 'models/mission.js should pass jshint.\nmodels/mission.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/mission.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/models/rapport.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - models/rapport.js');
+  QUnit.module('JSHint | models/rapport.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/rapport.js should pass jshint.\nmodels/rapport.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/rapport.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/rapport.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/rapport.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nmodels/rapport.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n5 errors');
+    assert.ok(false, 'models/rapport.js should pass jshint.\nmodels/rapport.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/models/school.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - models/school.js');
+  QUnit.module('JSHint | models/school.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/school.js should pass jshint.\nmodels/school.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/school.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/school.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/school.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nmodels/school.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/school.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n6 errors');
+    assert.ok(false, 'models/school.js should pass jshint.\nmodels/school.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/school.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/models/subject.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - models/subject.js');
+  QUnit.module('JSHint | models/subject.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/subject.js should pass jshint.\nmodels/subject.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/subject.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/subject.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/subject.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nmodels/subject.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/subject.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n6 errors');
+    assert.ok(false, 'models/subject.js should pass jshint.\nmodels/subject.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/subject.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/models/user.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - models/user.js');
+  QUnit.module('JSHint | models/user.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'models/user.js should pass jshint.\nmodels/user.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/user.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/user.js: line 3, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nmodels/user.js: line 5, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nmodels/user.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/user.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n6 errors');
+    assert.ok(false, 'models/user.js should pass jshint.\nmodels/user.js: line 3, col 10, \'belongsTo\' is defined but never used.\nmodels/user.js: line 3, col 21, \'hasMany\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/resolver.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - resolver.js');
+  QUnit.module('JSHint | resolver.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'resolver.js should pass jshint.\nresolver.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nresolver.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'resolver.js should pass jshint.');
   });
 });
 define('client/tests/router.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - router.js');
+  QUnit.module('JSHint | router.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'router.js should pass jshint.\nrouter.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 2, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nrouter.js: line 4, col 1, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nrouter.js: line 38, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
+    assert.ok(true, 'router.js should pass jshint.');
   });
 });
 define('client/tests/routes/application.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/application.js');
+  QUnit.module('JSHint | routes/application.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/application.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/application.js: line 12, col 5, \'const\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/application.js: line 13, col 13, \'template literal syntax\' is only available in ES6 (use \'esversion: 6\').\n\n4 errors');
+    assert.ok(false, 'routes/application.js should pass jshint.\nroutes/application.js: line 8, col 39, Missing semicolon.\nroutes/application.js: line 31, col 41, \'model\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/routes/dashboard-missions.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/dashboard-missions.js');
+  QUnit.module('JSHint | routes/dashboard-missions.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/dashboard-missions.js should pass jshint.\nroutes/dashboard-missions.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard-missions.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard-missions.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(false, 'routes/dashboard-missions.js should pass jshint.\nroutes/dashboard-missions.js: line 4, col 9, \'params\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/routes/dashboard-rapports.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/dashboard-rapports.js');
+  QUnit.module('JSHint | routes/dashboard-rapports.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/dashboard-rapports.js should pass jshint.\nroutes/dashboard-rapports.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard-rapports.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard-rapports.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(false, 'routes/dashboard-rapports.js should pass jshint.\nroutes/dashboard-rapports.js: line 4, col 9, \'params\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/routes/dashboard-students.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/dashboard-students.js');
+  QUnit.module('JSHint | routes/dashboard-students.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/dashboard-students.js should pass jshint.\nroutes/dashboard-students.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard-students.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard-students.js: line 5, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(false, 'routes/dashboard-students.js should pass jshint.\nroutes/dashboard-students.js: line 5, col 9, \'params\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/routes/dashboard.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/dashboard.js');
+  QUnit.module('JSHint | routes/dashboard.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/dashboard.js should pass jshint.\nroutes/dashboard.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/dashboard.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/dashboard.js should pass jshint.');
   });
 });
 define('client/tests/routes/explore.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/explore.js');
+  QUnit.module('JSHint | routes/explore.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/explore.js should pass jshint.\nroutes/explore.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/explore.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/explore.js should pass jshint.');
   });
 });
 define('client/tests/routes/index.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/index.js');
+  QUnit.module('JSHint | routes/index.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/index.js should pass jshint.\nroutes/index.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/index.js: line 5, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/index.js: line 10, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/index.js: line 12, col 97, Missing semicolon.\n\n5 errors');
+    assert.ok(false, 'routes/index.js should pass jshint.\nroutes/index.js: line 14, col 9, Missing semicolon.\nroutes/index.js: line 10, col 9, \'params\' is defined but never used.\nroutes/index.js: line 18, col 41, \'model\' is defined but never used.\n\n3 errors');
   });
 });
 define('client/tests/routes/jutarum.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/jutarum.js');
+  QUnit.module('JSHint | routes/jutarum.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/jutarum.js should pass jshint.\nroutes/jutarum.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/jutarum.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/jutarum.js should pass jshint.');
   });
 });
 define('client/tests/routes/knowledge.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/knowledge.js');
+  QUnit.module('JSHint | routes/knowledge.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/knowledge.js should pass jshint.\nroutes/knowledge.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/knowledge.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/knowledge.js should pass jshint.');
   });
 });
 define('client/tests/routes/login.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/login.js');
+  QUnit.module('JSHint | routes/login.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/login.js should pass jshint.\nroutes/login.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/login.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/login.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(false, 'routes/login.js should pass jshint.\nroutes/login.js: line 4, col 9, \'params\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/routes/mission.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/mission.js');
+  QUnit.module('JSHint | routes/mission.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/mission.js should pass jshint.\nroutes/mission.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/mission.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/mission.js: line 7, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/mission.js: line 24, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/mission.js: line 38, col 5, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/mission.js: line 59, col 5, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/mission.js: line 64, col 39, Expected \'!==\' and instead saw \'!=\'.\nroutes/mission.js: line 42, col 13, \'self\' is not defined.\nroutes/mission.js: line 43, col 22, \'self\' is not defined.\nroutes/mission.js: line 45, col 13, \'self\' is not defined.\n\n10 errors');
+    assert.ok(false, 'routes/mission.js should pass jshint.\nroutes/mission.js: line 13, col 25, \'transition\' is defined but never used.\nroutes/mission.js: line 64, col 39, Expected \'!==\' and instead saw \'!=\'.\nroutes/mission.js: line 59, col 19, \'transition\' is defined but never used.\nroutes/mission.js: line 42, col 13, \'self\' is not defined.\nroutes/mission.js: line 43, col 22, \'self\' is not defined.\nroutes/mission.js: line 45, col 13, \'self\' is not defined.\n\n6 errors');
   });
 });
 define('client/tests/routes/missions.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/missions.js');
+  QUnit.module('JSHint | routes/missions.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/missions.js should pass jshint.\nroutes/missions.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/missions.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/missions.js should pass jshint.');
   });
 });
 define('client/tests/routes/not-found.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/not-found.js');
+  QUnit.module('JSHint | routes/not-found.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/not-found.js should pass jshint.\nroutes/not-found.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/not-found.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/not-found.js should pass jshint.');
   });
 });
 define('client/tests/routes/rapport.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/rapport.js');
+  QUnit.module('JSHint | routes/rapport.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/rapport.js should pass jshint.\nroutes/rapport.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/rapport.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/rapport.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(true, 'routes/rapport.js should pass jshint.');
   });
 });
 define('client/tests/routes/rapports.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/rapports.js');
+  QUnit.module('JSHint | routes/rapports.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/rapports.js should pass jshint.\nroutes/rapports.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/rapports.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/rapports.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(false, 'routes/rapports.js should pass jshint.\nroutes/rapports.js: line 4, col 9, \'params\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/routes/step.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/step.js');
+  QUnit.module('JSHint | routes/step.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/step.js should pass jshint.\nroutes/step.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/step.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/step.js should pass jshint.');
   });
 });
 define('client/tests/routes/structure.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/structure.js');
+  QUnit.module('JSHint | routes/structure.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/structure.js should pass jshint.\nroutes/structure.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/structure.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'routes/structure.js should pass jshint.');
   });
 });
 define('client/tests/routes/team.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/team.js');
+  QUnit.module('JSHint | routes/team.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/team.js should pass jshint.\nroutes/team.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/team.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/team.js: line 8, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/team.js: line 16, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n4 errors');
+    assert.ok(false, 'routes/team.js should pass jshint.\nroutes/team.js: line 8, col 9, \'params\' is defined but never used.\nroutes/team.js: line 21, col 30, \'transition\' is defined but never used.\nroutes/team.js: line 33, col 29, \'transition\' is defined but never used.\n\n3 errors');
   });
 });
 define('client/tests/routes/user.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/user.js');
+  QUnit.module('JSHint | routes/user.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/user.js should pass jshint.\nroutes/user.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/user.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/user.js: line 4, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\n\n3 errors');
+    assert.ok(false, 'routes/user.js should pass jshint.\nroutes/user.js: line 4, col 9, \'params\' is defined but never used.\n\n1 error');
   });
 });
 define('client/tests/routes/write.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - routes/write.js');
+  QUnit.module('JSHint | routes/write.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'routes/write.js should pass jshint.\nroutes/write.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nroutes/write.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nroutes/write.js: line 6, col 13, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nroutes/write.js: line 11, col 44, Missing semicolon.\n\n4 errors');
+    assert.ok(false, 'routes/write.js should pass jshint.\nroutes/write.js: line 11, col 44, Missing semicolon.\n\n1 error');
   });
 });
 define('client/tests/services/global.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - services/global.js');
+  QUnit.module('JSHint | services/global.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'services/global.js should pass jshint.\nservices/global.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nservices/global.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\n\n2 errors');
+    assert.ok(true, 'services/global.js should pass jshint.');
   });
 });
 define('client/tests/services/mission.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - services/mission.js');
+  QUnit.module('JSHint | services/mission.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'services/mission.js should pass jshint.\nservices/mission.js: line 1, col 1, \'import\' is only available in ES6 (use \'esversion: 6\').\nservices/mission.js: line 3, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nservices/mission.js: line 51, col 11, \'rapport\' is already defined.\nservices/mission.js: line 82, col 13, \'rapport\' is already defined.\nservices/mission.js: line 93, col 12, \'rapport\' used out of scope.\nservices/mission.js: line 122, col 9, \'cw\' is defined but never used.\nservices/mission.js: line 123, col 9, \'ch\' is defined but never used.\nservices/mission.js: line 140, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nservices/mission.js: line 64, col 9, \'title\' is not defined.\nservices/mission.js: line 83, col 19, \'title\' is not defined.\nservices/mission.js: line 69, col 9, \'body\' is not defined.\nservices/mission.js: line 77, col 27, \'body\' is not defined.\nservices/mission.js: line 81, col 11, \'body\' is not defined.\nservices/mission.js: line 87, col 19, \'body\' is not defined.\nservices/mission.js: line 88, col 34, \'team\' is not defined.\nservices/mission.js: line 120, col 18, \'document\' is not defined.\nservices/mission.js: line 128, col 12, \'img\' is not defined.\nservices/mission.js: line 129, col 12, \'img\' is not defined.\nservices/mission.js: line 135, col 19, \'img\' is not defined.\n\n19 errors');
+    assert.ok(false, 'services/mission.js should pass jshint.\nservices/mission.js: line 51, col 11, \'rapport\' is already defined.\nservices/mission.js: line 82, col 13, \'rapport\' is already defined.\nservices/mission.js: line 93, col 12, \'rapport\' used out of scope.\nservices/mission.js: line 122, col 9, \'cw\' is defined but never used.\nservices/mission.js: line 123, col 9, \'ch\' is defined but never used.\nservices/mission.js: line 119, col 20, \'image\' is defined but never used.\nservices/mission.js: line 64, col 9, \'title\' is not defined.\nservices/mission.js: line 83, col 19, \'title\' is not defined.\nservices/mission.js: line 69, col 9, \'body\' is not defined.\nservices/mission.js: line 77, col 27, \'body\' is not defined.\nservices/mission.js: line 81, col 11, \'body\' is not defined.\nservices/mission.js: line 87, col 19, \'body\' is not defined.\nservices/mission.js: line 88, col 34, \'team\' is not defined.\nservices/mission.js: line 128, col 12, \'img\' is not defined.\nservices/mission.js: line 129, col 12, \'img\' is not defined.\nservices/mission.js: line 135, col 19, \'img\' is not defined.\n\n16 errors');
   });
 });
 define('client/tests/test-helper', ['exports', 'client/tests/helpers/resolver', 'ember-qunit'], function (exports, _clientTestsHelpersResolver, _emberQunit) {
@@ -4536,7 +4334,7 @@ define('client/tests/test-helper', ['exports', 'client/tests/helpers/resolver', 
 define('client/tests/test-helper.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - test-helper.js');
+  QUnit.module('JSHint | test-helper.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass jshint.');
@@ -4545,10 +4343,10 @@ define('client/tests/test-helper.jshint', ['exports'], function (exports) {
 define('client/tests/transitions.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - transitions.js');
+  QUnit.module('JSHint | transitions.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'transitions.js should pass jshint.\ntransitions.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\ntransitions.js: line 21, col 2, Unnecessary semicolon.\n\n2 errors');
+    assert.ok(false, 'transitions.js should pass jshint.\ntransitions.js: line 21, col 2, Unnecessary semicolon.\n\n1 error');
   });
 });
 define('client/tests/unit/controllers/application-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -4567,7 +4365,7 @@ define('client/tests/unit/controllers/application-test', ['exports', 'ember-quni
 define('client/tests/unit/controllers/application-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/application-test.js');
+  QUnit.module('JSHint | unit/controllers/application-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/application-test.js should pass jshint.');
@@ -4589,7 +4387,7 @@ define('client/tests/unit/controllers/dashboard-missions-test', ['exports', 'emb
 define('client/tests/unit/controllers/dashboard-missions-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/dashboard-missions-test.js');
+  QUnit.module('JSHint | unit/controllers/dashboard-missions-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/dashboard-missions-test.js should pass jshint.');
@@ -4611,7 +4409,7 @@ define('client/tests/unit/controllers/dashboard-test', ['exports', 'ember-qunit'
 define('client/tests/unit/controllers/dashboard-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/dashboard-test.js');
+  QUnit.module('JSHint | unit/controllers/dashboard-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/dashboard-test.js should pass jshint.');
@@ -4633,7 +4431,7 @@ define('client/tests/unit/controllers/index-test', ['exports', 'ember-qunit'], f
 define('client/tests/unit/controllers/index-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/index-test.js');
+  QUnit.module('JSHint | unit/controllers/index-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/index-test.js should pass jshint.');
@@ -4655,7 +4453,7 @@ define('client/tests/unit/controllers/jutarum-test', ['exports', 'ember-qunit'],
 define('client/tests/unit/controllers/jutarum-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/jutarum-test.js');
+  QUnit.module('JSHint | unit/controllers/jutarum-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/jutarum-test.js should pass jshint.');
@@ -4677,10 +4475,32 @@ define('client/tests/unit/controllers/login-test', ['exports', 'ember-qunit'], f
 define('client/tests/unit/controllers/login-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/login-test.js');
+  QUnit.module('JSHint | unit/controllers/login-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/login-test.js should pass jshint.');
+  });
+});
+define('client/tests/unit/controllers/rapports-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:rapports', 'Unit | Controller | rapports', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('client/tests/unit/controllers/rapports-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/controllers/rapports-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/controllers/rapports-test.js should pass jshint.');
   });
 });
 define('client/tests/unit/controllers/team-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -4699,7 +4519,7 @@ define('client/tests/unit/controllers/team-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/controllers/team-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/team-test.js');
+  QUnit.module('JSHint | unit/controllers/team-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/team-test.js should pass jshint.');
@@ -4721,7 +4541,7 @@ define('client/tests/unit/controllers/user-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/controllers/user-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/controllers/user-test.js');
+  QUnit.module('JSHint | unit/controllers/user-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/user-test.js should pass jshint.');
@@ -4740,7 +4560,7 @@ define('client/tests/unit/helpers/asset-icon-test', ['exports', 'client/helpers/
 define('client/tests/unit/helpers/asset-icon-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/asset-icon-test.js');
+  QUnit.module('JSHint | unit/helpers/asset-icon-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/asset-icon-test.js should pass jshint.');
@@ -4759,7 +4579,7 @@ define('client/tests/unit/helpers/in-array-test', ['exports', 'client/helpers/in
 define('client/tests/unit/helpers/in-array-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/in-array-test.js');
+  QUnit.module('JSHint | unit/helpers/in-array-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/in-array-test.js should pass jshint.');
@@ -4778,7 +4598,7 @@ define('client/tests/unit/helpers/latest-test', ['exports', 'client/helpers/late
 define('client/tests/unit/helpers/latest-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/latest-test.js');
+  QUnit.module('JSHint | unit/helpers/latest-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/latest-test.js should pass jshint.');
@@ -4797,7 +4617,7 @@ define('client/tests/unit/helpers/mission-visible-test', ['exports', 'client/hel
 define('client/tests/unit/helpers/mission-visible-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/mission-visible-test.js');
+  QUnit.module('JSHint | unit/helpers/mission-visible-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/mission-visible-test.js should pass jshint.');
@@ -4816,7 +4636,7 @@ define('client/tests/unit/helpers/parse-test', ['exports', 'client/helpers/parse
 define('client/tests/unit/helpers/parse-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/parse-test.js');
+  QUnit.module('JSHint | unit/helpers/parse-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/parse-test.js should pass jshint.');
@@ -4835,7 +4655,7 @@ define('client/tests/unit/helpers/team-test', ['exports', 'client/helpers/team',
 define('client/tests/unit/helpers/team-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/team-test.js');
+  QUnit.module('JSHint | unit/helpers/team-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/team-test.js should pass jshint.');
@@ -4854,7 +4674,7 @@ define('client/tests/unit/helpers/uniq-id-test', ['exports', 'client/helpers/uni
 define('client/tests/unit/helpers/uniq-id-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/helpers/uniq-id-test.js');
+  QUnit.module('JSHint | unit/helpers/uniq-id-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/helpers/uniq-id-test.js should pass jshint.');
@@ -4884,7 +4704,7 @@ define('client/tests/unit/initializers/component-router-injector-test', ['export
 define('client/tests/unit/initializers/component-router-injector-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/initializers/component-router-injector-test.js');
+  QUnit.module('JSHint | unit/initializers/component-router-injector-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/initializers/component-router-injector-test.js should pass jshint.');
@@ -4914,10 +4734,32 @@ define('client/tests/unit/initializers/cookie-test', ['exports', 'ember', 'clien
 define('client/tests/unit/initializers/cookie-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/initializers/cookie-test.js');
+  QUnit.module('JSHint | unit/initializers/cookie-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/initializers/cookie-test.js should pass jshint.');
+  });
+});
+define('client/tests/unit/models/class-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForModel)('class', 'Unit | Model | class', {
+    // Specify the other units that are required for this test.
+    needs: []
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var model = this.subject();
+    // let store = this.store();
+    assert.ok(!!model);
+  });
+});
+define('client/tests/unit/models/class-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/models/class-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/models/class-test.js should pass jshint.');
   });
 });
 define('client/tests/unit/models/image-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -4936,7 +4778,7 @@ define('client/tests/unit/models/image-test', ['exports', 'ember-qunit'], functi
 define('client/tests/unit/models/image-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/models/image-test.js');
+  QUnit.module('JSHint | unit/models/image-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/image-test.js should pass jshint.');
@@ -4958,7 +4800,7 @@ define('client/tests/unit/models/mission-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/models/mission-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/models/mission-test.js');
+  QUnit.module('JSHint | unit/models/mission-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/mission-test.js should pass jshint.');
@@ -4980,7 +4822,7 @@ define('client/tests/unit/models/rapport-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/models/rapport-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/models/rapport-test.js');
+  QUnit.module('JSHint | unit/models/rapport-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/rapport-test.js should pass jshint.');
@@ -5002,7 +4844,7 @@ define('client/tests/unit/models/school-test', ['exports', 'ember-qunit'], funct
 define('client/tests/unit/models/school-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/models/school-test.js');
+  QUnit.module('JSHint | unit/models/school-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/school-test.js should pass jshint.');
@@ -5024,7 +4866,7 @@ define('client/tests/unit/models/subject-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/models/subject-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/models/subject-test.js');
+  QUnit.module('JSHint | unit/models/subject-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/subject-test.js should pass jshint.');
@@ -5046,7 +4888,7 @@ define('client/tests/unit/models/user-test', ['exports', 'ember-qunit'], functio
 define('client/tests/unit/models/user-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/models/user-test.js');
+  QUnit.module('JSHint | unit/models/user-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/models/user-test.js should pass jshint.');
@@ -5067,7 +4909,7 @@ define('client/tests/unit/routes/bank-test', ['exports', 'ember-qunit'], functio
 define('client/tests/unit/routes/bank-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/bank-test.js');
+  QUnit.module('JSHint | unit/routes/bank-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/bank-test.js should pass jshint.');
@@ -5088,7 +4930,7 @@ define('client/tests/unit/routes/dashboard-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/routes/dashboard-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/dashboard-test.js');
+  QUnit.module('JSHint | unit/routes/dashboard-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/dashboard-test.js should pass jshint.');
@@ -5109,7 +4951,7 @@ define('client/tests/unit/routes/dashboard.missions-test', ['exports', 'ember-qu
 define('client/tests/unit/routes/dashboard.missions-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/dashboard.missions-test.js');
+  QUnit.module('JSHint | unit/routes/dashboard.missions-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/dashboard.missions-test.js should pass jshint.');
@@ -5130,7 +4972,7 @@ define('client/tests/unit/routes/dashboard.rapports-test', ['exports', 'ember-qu
 define('client/tests/unit/routes/dashboard.rapports-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/dashboard.rapports-test.js');
+  QUnit.module('JSHint | unit/routes/dashboard.rapports-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/dashboard.rapports-test.js should pass jshint.');
@@ -5151,7 +4993,7 @@ define('client/tests/unit/routes/dashboard.students-test', ['exports', 'ember-qu
 define('client/tests/unit/routes/dashboard.students-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/dashboard.students-test.js');
+  QUnit.module('JSHint | unit/routes/dashboard.students-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/dashboard.students-test.js should pass jshint.');
@@ -5172,7 +5014,7 @@ define('client/tests/unit/routes/explore-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/routes/explore-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/explore-test.js');
+  QUnit.module('JSHint | unit/routes/explore-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/explore-test.js should pass jshint.');
@@ -5193,7 +5035,7 @@ define('client/tests/unit/routes/index-test', ['exports', 'ember-qunit'], functi
 define('client/tests/unit/routes/index-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/index-test.js');
+  QUnit.module('JSHint | unit/routes/index-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/index-test.js should pass jshint.');
@@ -5214,7 +5056,7 @@ define('client/tests/unit/routes/jutarum-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/routes/jutarum-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/jutarum-test.js');
+  QUnit.module('JSHint | unit/routes/jutarum-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/jutarum-test.js should pass jshint.');
@@ -5235,7 +5077,7 @@ define('client/tests/unit/routes/knowledge-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/routes/knowledge-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/knowledge-test.js');
+  QUnit.module('JSHint | unit/routes/knowledge-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/knowledge-test.js should pass jshint.');
@@ -5256,7 +5098,7 @@ define('client/tests/unit/routes/login-test', ['exports', 'ember-qunit'], functi
 define('client/tests/unit/routes/login-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/login-test.js');
+  QUnit.module('JSHint | unit/routes/login-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/login-test.js should pass jshint.');
@@ -5277,7 +5119,7 @@ define('client/tests/unit/routes/mission-section-test', ['exports', 'ember-qunit
 define('client/tests/unit/routes/mission-section-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/mission-section-test.js');
+  QUnit.module('JSHint | unit/routes/mission-section-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/mission-section-test.js should pass jshint.');
@@ -5298,7 +5140,7 @@ define('client/tests/unit/routes/mission-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/routes/mission-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/mission-test.js');
+  QUnit.module('JSHint | unit/routes/mission-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/mission-test.js should pass jshint.');
@@ -5319,7 +5161,7 @@ define('client/tests/unit/routes/not-found-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/routes/not-found-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/not-found-test.js');
+  QUnit.module('JSHint | unit/routes/not-found-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/not-found-test.js should pass jshint.');
@@ -5340,7 +5182,7 @@ define('client/tests/unit/routes/rapport-test', ['exports', 'ember-qunit'], func
 define('client/tests/unit/routes/rapport-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/rapport-test.js');
+  QUnit.module('JSHint | unit/routes/rapport-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/rapport-test.js should pass jshint.');
@@ -5361,7 +5203,7 @@ define('client/tests/unit/routes/step-test', ['exports', 'ember-qunit'], functio
 define('client/tests/unit/routes/step-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/step-test.js');
+  QUnit.module('JSHint | unit/routes/step-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/step-test.js should pass jshint.');
@@ -5382,7 +5224,7 @@ define('client/tests/unit/routes/structure-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/routes/structure-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/structure-test.js');
+  QUnit.module('JSHint | unit/routes/structure-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/structure-test.js should pass jshint.');
@@ -5403,7 +5245,7 @@ define('client/tests/unit/routes/team-test', ['exports', 'ember-qunit'], functio
 define('client/tests/unit/routes/team-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/team-test.js');
+  QUnit.module('JSHint | unit/routes/team-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/team-test.js should pass jshint.');
@@ -5424,7 +5266,7 @@ define('client/tests/unit/routes/user-test', ['exports', 'ember-qunit'], functio
 define('client/tests/unit/routes/user-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/user-test.js');
+  QUnit.module('JSHint | unit/routes/user-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/user-test.js should pass jshint.');
@@ -5445,7 +5287,7 @@ define('client/tests/unit/routes/write-test', ['exports', 'ember-qunit'], functi
 define('client/tests/unit/routes/write-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/routes/write-test.js');
+  QUnit.module('JSHint | unit/routes/write-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/write-test.js should pass jshint.');
@@ -5467,7 +5309,7 @@ define('client/tests/unit/services/global-test', ['exports', 'ember-qunit'], fun
 define('client/tests/unit/services/global-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/services/global-test.js');
+  QUnit.module('JSHint | unit/services/global-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/services/global-test.js should pass jshint.');
@@ -5489,7 +5331,7 @@ define('client/tests/unit/services/mission-test', ['exports', 'ember-qunit'], fu
 define('client/tests/unit/services/mission-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/services/mission-test.js');
+  QUnit.module('JSHint | unit/services/mission-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/services/mission-test.js should pass jshint.');
@@ -5508,7 +5350,7 @@ define('client/tests/unit/utils/assets-test', ['exports', 'client/utils/assets',
 define('client/tests/unit/utils/assets-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/utils/assets-test.js');
+  QUnit.module('JSHint | unit/utils/assets-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/utils/assets-test.js should pass jshint.');
@@ -5527,7 +5369,7 @@ define('client/tests/unit/utils/helper-test', ['exports', 'client/utils/helper',
 define('client/tests/unit/utils/helper-test.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - unit/utils/helper-test.js');
+  QUnit.module('JSHint | unit/utils/helper-test.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/utils/helper-test.js should pass jshint.');
@@ -5536,19 +5378,19 @@ define('client/tests/unit/utils/helper-test.jshint', ['exports'], function (expo
 define('client/tests/utils/assets.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - utils/assets.js');
+  QUnit.module('JSHint | utils/assets.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'utils/assets.js should pass jshint.\nutils/assets.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nutils/assets.js: line 2, col 3, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nutils/assets.js: line 6, col 5, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nutils/assets.js: line 10, col 5, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nutils/assets.js: line 31, col 5, \'concise methods\' is available in ES6 (use \'esversion: 6\') or Mozilla JS extensions (use moz).\nutils/assets.js: line 59, col 2, Missing semicolon.\n\n6 errors');
+    assert.ok(false, 'utils/assets.js should pass jshint.\nutils/assets.js: line 61, col 2, Missing semicolon.\nutils/assets.js: line 1, col 8, \'Ember\' is defined but never used.\n\n2 errors');
   });
 });
 define('client/tests/utils/helper.jshint', ['exports'], function (exports) {
   'use strict';
 
-  QUnit.module('JSHint - utils/helper.js');
+  QUnit.module('JSHint | utils/helper.js');
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'utils/helper.js should pass jshint.\nutils/helper.js: line 1, col 1, \'export\' is only available in ES6 (use \'esversion: 6\').\nutils/helper.js: line 11, col 64, Expected \'!==\' and instead saw \'!=\'.\nutils/helper.js: line 45, col 2, Missing semicolon.\nutils/helper.js: line 5, col 20, \'ActiveXObject\' is not defined.\nutils/helper.js: line 10, col 11, \'navigator\' is not defined.\nutils/helper.js: line 11, col 9, \'navigator\' is not defined.\nutils/helper.js: line 12, col 9, \'navigator\' is not defined.\nutils/helper.js: line 22, col 26, \'document\' is not defined.\nutils/helper.js: line 26, col 29, \'document\' is not defined.\nutils/helper.js: line 27, col 23, \'document\' is not defined.\nutils/helper.js: line 24, col 9, \'Ember\' is not defined.\nutils/helper.js: line 33, col 31, \'CSSRule\' is not defined.\n\n12 errors');
+    assert.ok(false, 'utils/helper.js should pass jshint.\nutils/helper.js: line 11, col 64, Expected \'!==\' and instead saw \'!=\'.\nutils/helper.js: line 45, col 2, Missing semicolon.\nutils/helper.js: line 5, col 20, \'ActiveXObject\' is not defined.\nutils/helper.js: line 24, col 9, \'Ember\' is not defined.\nutils/helper.js: line 33, col 31, \'CSSRule\' is not defined.\n\n5 errors');
   });
 });
 /* jshint ignore:start */

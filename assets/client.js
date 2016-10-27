@@ -30,14 +30,12 @@ define('client/app', ['exports', 'ember', 'client/resolver', 'ember-load-initial
 
   exports['default'] = App;
 });
-define('client/components/app-version', ['exports', 'ember-cli-app-version/components/app-version', 'client/config/environment'], function (exports, _emberCliAppVersionComponentsAppVersion, _clientConfigEnvironment) {
-
-  var name = _clientConfigEnvironment['default'].APP.name;
-  var version = _clientConfigEnvironment['default'].APP.version;
-
-  exports['default'] = _emberCliAppVersionComponentsAppVersion['default'].extend({
-    version: version,
-    name: name
+define("client/components/-lf-get-outlet-state", ["exports", "liquid-fire/components/-lf-get-outlet-state"], function (exports, _liquidFireComponentsLfGetOutletState) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLfGetOutletState["default"];
+    }
   });
 });
 define('client/components/button-float-projname/component', ['exports', 'ember'], function (exports, _ember) {
@@ -47,10 +45,7 @@ define("client/components/button-float-projname/template", ["exports"], function
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -88,7 +83,7 @@ define("client/components/button-float-projname/template", ["exports"], function
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0, 0, 1]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.name", ["loc", [null, [1, 129], [1, 143]]]]],
+      statements: [["content", "model.name", ["loc", [null, [1, 129], [1, 143]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -116,10 +111,7 @@ define("client/components/button-float-small/template", ["exports"], function (e
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -154,7 +146,7 @@ define("client/components/button-float-small/template", ["exports"], function (e
         morphs[1] = dom.createMorphAt(dom.childAt(element0, [0]), 0, 0);
         return morphs;
       },
-      statements: [["attribute", "class", ["concat", ["animated fadeIn btn-float ", ["get", "class", ["loc", [null, [1, 40], [1, 45]]]], " drop-target"]]], ["inline", "fa-icon", ["question"], [], ["loc", [null, [1, 64], [1, 86]]]]],
+      statements: [["attribute", "class", ["concat", ["animated fadeIn btn-float ", ["get", "class", ["loc", [null, [1, 40], [1, 45]]], 0, 0, 0, 0], " drop-target"], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["inline", "fa-icon", ["question"], [], ["loc", [null, [1, 64], [1, 86]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -178,10 +170,7 @@ define("client/components/button-float/template", ["exports"], function (exports
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": {
-            "name": "triple-curlies"
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -214,18 +203,14 @@ define("client/components/button-float/template", ["exports"], function (exports
           morphs[1] = dom.createMorphAt(element0, 0, 0);
           return morphs;
         },
-        statements: [["attribute", "class", ["concat", ["animated fadeIn btn-float ", ["get", "class", ["loc", [null, [1, 65], [1, 70]]]]]]], ["content", "text", ["loc", [null, [1, 74], [1, 82]]]]],
+        statements: [["attribute", "class", ["concat", ["animated fadeIn btn-float ", ["get", "class", ["loc", [null, [1, 65], [1, 70]]], 0, 0, 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["content", "text", ["loc", [null, [1, 74], [1, 82]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -257,7 +242,7 @@ define("client/components/button-float/template", ["exports"], function (exports
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["block", "link-to", [["get", "params.route", ["loc", [null, [1, 11], [1, 23]]]]], [], 0, null, ["loc", [null, [1, 0], [1, 100]]]]],
+      statements: [["block", "link-to", [["get", "params.route", ["loc", [null, [1, 11], [1, 23]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [1, 0], [1, 100]]]]],
       locals: [],
       templates: [child0]
     };
@@ -319,11 +304,7 @@ define("client/components/camera-component/template", ["exports"], function (exp
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes", "wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -414,7 +395,7 @@ define("client/components/camera-component/template", ["exports"], function (exp
         morphs[2] = dom.createElementMorph(element4);
         return morphs;
       },
-      statements: [["element", "action", ["use"], [], ["loc", [null, [5, 14], [5, 31]]]], ["element", "action", ["retake"], [], ["loc", [null, [6, 14], [6, 34]]]], ["element", "action", ["snap"], [], ["loc", [null, [9, 14], [9, 32]]]]],
+      statements: [["element", "action", ["use"], [], ["loc", [null, [5, 14], [5, 31]]], 0, 0], ["element", "action", ["retake"], [], ["loc", [null, [6, 14], [6, 34]]], 0, 0], ["element", "action", ["snap"], [], ["loc", [null, [9, 14], [9, 32]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -436,8 +417,7 @@ define("client/components/display-list/template", ["exports"], function (exports
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -470,7 +450,7 @@ define("client/components/display-list/template", ["exports"], function (exports
             morphs[0] = dom.createUnsafeMorphAt(fragment, 1, 1, contextualElement);
             return morphs;
           },
-          statements: [["inline", "asset-icon", [["get", "node.image", ["loc", [null, [15, 26], [15, 36]]]]], [], ["loc", [null, [15, 12], [15, 39]]]]],
+          statements: [["inline", "asset-icon", [["get", "node.image", ["loc", [null, [15, 26], [15, 36]]], 0, 0, 0, 0]], [], ["loc", [null, [15, 12], [15, 39]]], 0, 0]],
           locals: [],
           templates: []
         };
@@ -479,8 +459,7 @@ define("client/components/display-list/template", ["exports"], function (exports
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -513,7 +492,7 @@ define("client/components/display-list/template", ["exports"], function (exports
               morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
               return morphs;
             },
-            statements: [["content", "node.name", ["loc", [null, [22, 14], [22, 27]]]]],
+            statements: [["content", "node.name", ["loc", [null, [22, 14], [22, 27]]], 0, 0, 0, 0]],
             locals: [],
             templates: []
           };
@@ -521,8 +500,7 @@ define("client/components/display-list/template", ["exports"], function (exports
         var child1 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -560,15 +538,14 @@ define("client/components/display-list/template", ["exports"], function (exports
               morphs[1] = dom.createMorphAt(fragment, 3, 3, contextualElement);
               return morphs;
             },
-            statements: [["content", "node.first-name", ["loc", [null, [24, 14], [24, 33]]]], ["content", "node.last-name", ["loc", [null, [24, 34], [24, 52]]]]],
+            statements: [["content", "node.first-name", ["loc", [null, [24, 14], [24, 33]]], 0, 0, 0, 0], ["content", "node.last-name", ["loc", [null, [24, 34], [24, 52]]], 0, 0, 0, 0]],
             locals: [],
             templates: []
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -599,15 +576,14 @@ define("client/components/display-list/template", ["exports"], function (exports
             dom.insertBoundary(fragment, null);
             return morphs;
           },
-          statements: [["block", "if", [["get", "node.name", ["loc", [null, [21, 18], [21, 27]]]]], [], 0, 1, ["loc", [null, [21, 12], [25, 19]]]]],
+          statements: [["block", "if", [["get", "node.name", ["loc", [null, [21, 18], [21, 27]]], 0, 0, 0, 0]], [], 0, 1, ["loc", [null, [21, 12], [25, 19]]]]],
           locals: [],
           templates: [child0, child1]
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -702,17 +678,14 @@ define("client/components/display-list/template", ["exports"], function (exports
           morphs[4] = dom.createMorphAt(element1, 1, 1);
           return morphs;
         },
-        statements: [["block", "if", [["get", "node.image", ["loc", [null, [14, 16], [14, 26]]]]], [], 0, null, ["loc", [null, [14, 10], [16, 17]]]], ["block", "link-to", ["mission", ["get", "node.id", ["loc", [null, [20, 31], [20, 38]]]]], [], 1, null, ["loc", [null, [20, 10], [26, 22]]]], ["inline", "time-ago", [], ["model", ["subexpr", "@mut", [["get", "node", ["loc", [null, [30, 29], [30, 33]]]]], [], []]], ["loc", [null, [30, 12], [30, 35]]]], ["element", "action", ["select", ["get", "node", ["loc", [null, [34, 33], [34, 37]]]]], [], ["loc", [null, [34, 15], [34, 39]]]], ["inline", "fa-icon", [["get", "icon", ["loc", [null, [35, 22], [35, 26]]]]], [], ["loc", [null, [35, 12], [35, 28]]]]],
+        statements: [["block", "if", [["get", "node.image", ["loc", [null, [14, 16], [14, 26]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [14, 10], [16, 17]]]], ["block", "link-to", ["mission", ["get", "node.id", ["loc", [null, [20, 31], [20, 38]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [20, 10], [26, 22]]]], ["inline", "time-ago", [], ["model", ["subexpr", "@mut", [["get", "node", ["loc", [null, [30, 29], [30, 33]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [30, 12], [30, 35]]], 0, 0], ["element", "action", ["select", ["get", "node", ["loc", [null, [34, 33], [34, 37]]], 0, 0, 0, 0]], [], ["loc", [null, [34, 15], [34, 39]]], 0, 0], ["inline", "fa-icon", [["get", "icon", ["loc", [null, [35, 22], [35, 26]]], 0, 0, 0, 0]], [], ["loc", [null, [35, 12], [35, 28]]], 0, 0]],
         locals: ["node"],
         templates: [child0, child1]
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -784,13 +757,13 @@ define("client/components/display-list/template", ["exports"], function (exports
         morphs[2] = dom.createMorphAt(dom.childAt(element2, [3]), 1, 1);
         return morphs;
       },
-      statements: [["inline", "query-filter-thead", [], ["attr", "name", "title", "Namn"], ["loc", [null, [5, 10], [5, 57]]]], ["inline", "query-filter-thead", [], ["attr", "created", "classNames", "text-right", "title", "Senast uppdaterad"], ["loc", [null, [5, 58], [5, 145]]]], ["block", "each", [["get", "model", ["loc", [null, [11, 12], [11, 17]]]]], [], 0, null, ["loc", [null, [11, 4], [39, 13]]]]],
+      statements: [["inline", "query-filter-thead", [], ["attr", "name", "title", "Namn"], ["loc", [null, [5, 10], [5, 57]]], 0, 0], ["inline", "query-filter-thead", [], ["attr", "created", "classNames", "text-right", "title", "Senast uppdaterad"], ["loc", [null, [5, 58], [5, 145]]], 0, 0], ["block", "each", [["get", "model", ["loc", [null, [11, 12], [11, 17]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [11, 4], [39, 13]]]]],
       locals: [],
       templates: [child0]
     };
   })());
 });
-define('client/components/edit-mission/component', ['exports', 'ember', 'client/utils/assets', 'npm:pdfobject'], function (exports, _ember, _clientUtilsAssets, _npmPdfobject) {
+define('client/components/edit-mission/component', ['exports', 'ember', 'client/utils/assets'], function (exports, _ember, _clientUtilsAssets) {
   exports['default'] = _ember['default'].Component.extend({
     global: _ember['default'].inject.service(),
     store: _ember['default'].inject.service(),
@@ -890,8 +863,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -933,8 +905,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -976,8 +947,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1015,7 +985,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
           morphs[0] = dom.createElementMorph(element0);
           return morphs;
         },
-        statements: [["element", "action", ["clear"], [], ["loc", [null, [24, 99], [24, 117]]]]],
+        statements: [["element", "action", ["clear"], [], ["loc", [null, [24, 99], [24, 117]]], 0, 0]],
         locals: [],
         templates: []
       };
@@ -1023,8 +993,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
     var child3 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1067,8 +1036,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
     var child4 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1110,10 +1078,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -1231,7 +1196,7 @@ define("client/components/edit-mission/template", ["exports"], function (exports
         morphs[5] = dom.createMorphAt(element3, 3, 3);
         return morphs;
       },
-      statements: [["element", "action", ["save"], ["on", "submit"], ["loc", [null, [2, 8], [2, 37]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [4, 10], [4, 21]]]]], [], 0, 1, ["loc", [null, [4, 4], [8, 11]]]], ["attribute", "value", ["get", "selected.name", ["loc", [null, [10, 63], [10, 76]]]]], ["content", "selected.body", ["loc", [null, [20, 83], [20, 100]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [23, 10], [23, 21]]]]], [], 2, null, ["loc", [null, [23, 4], [25, 11]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [27, 10], [27, 21]]]]], [], 3, 4, ["loc", [null, [27, 4], [33, 11]]]]],
+      statements: [["element", "action", ["save"], ["on", "submit"], ["loc", [null, [2, 8], [2, 37]]], 0, 0], ["block", "if", [["get", "selected.id", ["loc", [null, [4, 10], [4, 21]]], 0, 0, 0, 0]], [], 0, 1, ["loc", [null, [4, 4], [8, 11]]]], ["attribute", "value", ["get", "selected.name", ["loc", [null, [10, 63], [10, 76]]], 0, 0, 0, 0], 0, 0, 0, 0], ["content", "selected.body", ["loc", [null, [20, 83], [20, 100]]], 0, 0, 0, 0], ["block", "if", [["get", "selected.id", ["loc", [null, [23, 10], [23, 21]]], 0, 0, 0, 0]], [], 2, null, ["loc", [null, [23, 4], [25, 11]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [27, 10], [27, 21]]], 0, 0, 0, 0]], [], 3, 4, ["loc", [null, [27, 4], [33, 11]]]]],
       locals: [],
       templates: [child0, child1, child2, child3, child4]
     };
@@ -1335,8 +1300,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1378,8 +1342,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1421,8 +1384,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1460,7 +1422,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
           morphs[0] = dom.createElementMorph(element0);
           return morphs;
         },
-        statements: [["element", "action", ["clear"], [], ["loc", [null, [25, 99], [25, 117]]]]],
+        statements: [["element", "action", ["clear"], [], ["loc", [null, [25, 99], [25, 117]]], 0, 0]],
         locals: [],
         templates: []
       };
@@ -1468,8 +1430,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
     var child3 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1512,8 +1473,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
     var child4 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1555,10 +1515,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -1685,7 +1642,7 @@ define("client/components/edit-student/template", ["exports"], function (exports
         morphs[6] = dom.createMorphAt(element4, 3, 3);
         return morphs;
       },
-      statements: [["element", "action", ["save"], ["on", "submit"], ["loc", [null, [2, 8], [2, 37]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [4, 10], [4, 21]]]]], [], 0, 1, ["loc", [null, [4, 4], [8, 11]]]], ["attribute", "value", ["get", "selected.first-name", ["loc", [null, [10, 66], [10, 85]]]]], ["attribute", "value", ["get", "selected.last-name", ["loc", [null, [11, 68], [11, 86]]]]], ["content", "selected.body", ["loc", [null, [21, 83], [21, 100]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [24, 10], [24, 21]]]]], [], 2, null, ["loc", [null, [24, 4], [26, 11]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [28, 10], [28, 21]]]]], [], 3, 4, ["loc", [null, [28, 4], [34, 11]]]]],
+      statements: [["element", "action", ["save"], ["on", "submit"], ["loc", [null, [2, 8], [2, 37]]], 0, 0], ["block", "if", [["get", "selected.id", ["loc", [null, [4, 10], [4, 21]]], 0, 0, 0, 0]], [], 0, 1, ["loc", [null, [4, 4], [8, 11]]]], ["attribute", "value", ["get", "selected.first-name", ["loc", [null, [10, 66], [10, 85]]], 0, 0, 0, 0], 0, 0, 0, 0], ["attribute", "value", ["get", "selected.last-name", ["loc", [null, [11, 68], [11, 86]]], 0, 0, 0, 0], 0, 0, 0, 0], ["content", "selected.body", ["loc", [null, [21, 83], [21, 100]]], 0, 0, 0, 0], ["block", "if", [["get", "selected.id", ["loc", [null, [24, 10], [24, 21]]], 0, 0, 0, 0]], [], 2, null, ["loc", [null, [24, 4], [26, 11]]]], ["block", "if", [["get", "selected.id", ["loc", [null, [28, 10], [28, 21]]], 0, 0, 0, 0]], [], 3, 4, ["loc", [null, [28, 4], [34, 11]]]]],
       locals: [],
       templates: [child0, child1, child2, child3, child4]
     };
@@ -1696,22 +1653,6 @@ define('client/components/ember-load-remover', ['exports', 'ember-load/component
     enumerable: true,
     get: function get() {
       return _emberLoadComponentsEmberLoadRemover['default'];
-    }
-  });
-});
-define('client/components/ember-modal-dialog-positioned-container', ['exports', 'ember-modal-dialog/components/positioned-container'], function (exports, _emberModalDialogComponentsPositionedContainer) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberModalDialogComponentsPositionedContainer['default'];
-    }
-  });
-});
-define('client/components/ember-wormhole', ['exports', 'ember-wormhole/components/ember-wormhole'], function (exports, _emberWormholeComponentsEmberWormhole) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberWormholeComponentsEmberWormhole['default'];
     }
   });
 });
@@ -1739,6 +1680,14 @@ define('client/components/fa-stack', ['exports', 'ember-font-awesome/components/
     }
   });
 });
+define("client/components/illiquid-model", ["exports", "liquid-fire/components/illiquid-model"], function (exports, _liquidFireComponentsIlliquidModel) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsIlliquidModel["default"];
+    }
+  });
+});
 define("client/components/image-slider/component", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = _ember["default"].Component.extend({
     store: _ember["default"].inject.service(),
@@ -1759,10 +1708,7 @@ define("client/components/image-slider/template", ["exports"], function (exports
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": {
-            "name": "triple-curlies"
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -1799,18 +1745,14 @@ define("client/components/image-slider/template", ["exports"], function (exports
           morphs[0] = dom.createAttrMorph(element0, 'src');
           return morphs;
         },
-        statements: [["attribute", "src", ["get", "img.image", ["loc", [null, [2, 13], [2, 22]]]]]],
+        statements: [["attribute", "src", ["get", "img.image", ["loc", [null, [2, 13], [2, 22]]], 0, 0, 0, 0], 0, 0, 0, 0]],
         locals: ["img"],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -1841,7 +1783,7 @@ define("client/components/image-slider/template", ["exports"], function (exports
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "each", [["get", "images", ["loc", [null, [1, 8], [1, 14]]]]], [], 0, null, ["loc", [null, [1, 0], [3, 9]]]]],
+      statements: [["block", "each", [["get", "images", ["loc", [null, [1, 8], [1, 14]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [1, 0], [3, 9]]]]],
       locals: [],
       templates: [child0]
     };
@@ -1860,11 +1802,7 @@ define("client/components/information-photo/template", ["exports"], function (ex
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -1911,7 +1849,7 @@ define("client/components/information-photo/template", ["exports"], function (ex
         morphs[1] = dom.createAttrMorph(element0, 'src');
         return morphs;
       },
-      statements: [["content", "placeholder", ["loc", [null, [2, 2], [2, 17]]]], ["attribute", "src", ["concat", [["get", "url", ["loc", [null, [4, 12], [4, 15]]]]]]]],
+      statements: [["content", "placeholder", ["loc", [null, [2, 2], [2, 17]]], 0, 0, 0, 0], ["attribute", "src", ["concat", [["get", "url", ["loc", [null, [4, 12], [4, 15]]], 0, 0, 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -1921,11 +1859,7 @@ define("client/components/information-structure/template", ["exports"], function
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["empty-body"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -1956,220 +1890,37 @@ define("client/components/information-structure/template", ["exports"], function
     };
   })());
 });
-define("client/components/lf-outlet", ["exports", "liquid-fire/ember-internals"], function (exports, _liquidFireEmberInternals) {
-  exports["default"] = _liquidFireEmberInternals.StaticOutlet;
-});
-define('client/components/lf-overlay', ['exports', 'ember'], function (exports, _ember) {
-  var COUNTER = '__lf-modal-open-counter';
-
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'span',
-    classNames: ['lf-overlay'],
-
-    didInsertElement: function didInsertElement() {
-      var body = _ember['default'].$('body');
-      var counter = body.data(COUNTER) || 0;
-      body.addClass('lf-modal-open');
-      body.data(COUNTER, counter + 1);
-    },
-
-    willDestroy: function willDestroy() {
-      var body = _ember['default'].$('body');
-      var counter = body.data(COUNTER) || 0;
-      body.data(COUNTER, counter - 1);
-      if (counter < 2) {
-        body.removeClass('lf-modal-open lf-modal-closing');
-      }
+define("client/components/liquid-bind", ["exports", "liquid-fire/components/liquid-bind"], function (exports, _liquidFireComponentsLiquidBind) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidBind["default"];
     }
   });
 });
-define('client/components/liquid-bind', ['exports', 'ember'], function (exports, _ember) {
-
-  var LiquidBind = _ember['default'].Component.extend({
-    tagName: '',
-    positionalParams: ['value'] // needed for Ember 1.13.[0-5] and 2.0.0-beta.[1-3] support
-  });
-
-  LiquidBind.reopenClass({
-    positionalParams: ['value']
-  });
-
-  exports['default'] = LiquidBind;
-});
-define('client/components/liquid-child', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    classNames: ['liquid-child'],
-
-    didInsertElement: function didInsertElement() {
-      var $container = this.$();
-      if ($container) {
-        $container.css('visibility', 'hidden');
-      }
-      this.sendAction('liquidChildDidRender', this);
+define("client/components/liquid-child", ["exports", "liquid-fire/components/liquid-child"], function (exports, _liquidFireComponentsLiquidChild) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidChild["default"];
     }
-
   });
 });
-define("client/components/liquid-container", ["exports", "ember", "liquid-fire/growable", "client/components/liquid-measured"], function (exports, _ember, _liquidFireGrowable, _clientComponentsLiquidMeasured) {
-  exports["default"] = _ember["default"].Component.extend(_liquidFireGrowable["default"], {
-    classNames: ['liquid-container'],
-
-    lockSize: function lockSize(elt, want) {
-      elt.outerWidth(want.width);
-      elt.outerHeight(want.height);
-    },
-
-    unlockSize: function unlockSize() {
-      var _this = this;
-
-      var doUnlock = function doUnlock() {
-        _this.updateAnimatingClass(false);
-        var elt = _this.$();
-        if (elt) {
-          elt.css({ width: '', height: '' });
-        }
-      };
-      if (this._scaling) {
-        this._scaling.then(doUnlock);
-      } else {
-        doUnlock();
-      }
-    },
-
-    // We're doing this manually instead of via classNameBindings
-    // because it depends on upward-data-flow, which generates warnings
-    // under Glimmer.
-    updateAnimatingClass: function updateAnimatingClass(on) {
-      if (this.isDestroyed || !this._wasInserted) {
-        return;
-      }
-      if (arguments.length === 0) {
-        on = this.get('liquidAnimating');
-      } else {
-        this.set('liquidAnimating', on);
-      }
-      if (on) {
-        this.$().addClass('liquid-animating');
-      } else {
-        this.$().removeClass('liquid-animating');
-      }
-    },
-
-    startMonitoringSize: _ember["default"].on('didInsertElement', function () {
-      this._wasInserted = true;
-      this.updateAnimatingClass();
-    }),
-
-    actions: {
-
-      willTransition: function willTransition(versions) {
-        if (!this._wasInserted) {
-          return;
-        }
-
-        // Remember our own size before anything changes
-        var elt = this.$();
-        this._cachedSize = (0, _clientComponentsLiquidMeasured.measure)(elt);
-
-        // And make any children absolutely positioned with fixed sizes.
-        for (var i = 0; i < versions.length; i++) {
-          goAbsolute(versions[i]);
-        }
-
-        // Apply '.liquid-animating' to liquid-container allowing
-        // any customizable CSS control while an animating is occuring
-        this.updateAnimatingClass(true);
-      },
-
-      afterChildInsertion: function afterChildInsertion(versions) {
-        var elt = this.$();
-        var enableGrowth = this.get('enableGrowth') !== false;
-
-        // Measure  children
-        var sizes = [];
-        for (var i = 0; i < versions.length; i++) {
-          if (versions[i].view) {
-            sizes[i] = (0, _clientComponentsLiquidMeasured.measure)(versions[i].view.$());
-          }
-        }
-
-        // Measure ourself again to see how big the new children make
-        // us.
-        var want = (0, _clientComponentsLiquidMeasured.measure)(elt);
-        var have = this._cachedSize || want;
-
-        // Make ourself absolute
-        if (enableGrowth) {
-          this.lockSize(elt, have);
-        } else {
-          this.lockSize(elt, {
-            height: Math.max(want.height, have.height),
-            width: Math.max(want.width, have.width)
-          });
-        }
-
-        // Make the children absolute and fixed size.
-        for (i = 0; i < versions.length; i++) {
-          goAbsolute(versions[i], sizes[i]);
-        }
-
-        // Kick off our growth animation
-        if (enableGrowth) {
-          this._scaling = this.animateGrowth(elt, have, want);
-        }
-      },
-
-      afterTransition: function afterTransition(versions) {
-        for (var i = 0; i < versions.length; i++) {
-          goStatic(versions[i]);
-        }
-        this.unlockSize();
-      }
+define("client/components/liquid-container", ["exports", "liquid-fire/components/liquid-container"], function (exports, _liquidFireComponentsLiquidContainer) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidContainer["default"];
     }
   });
-
-  function goAbsolute(version, size) {
-    if (!version.view) {
-      return;
-    }
-    var elt = version.view.$();
-    var pos = elt.position();
-    if (!size) {
-      size = (0, _clientComponentsLiquidMeasured.measure)(elt);
-    }
-    elt.outerWidth(size.width);
-    elt.outerHeight(size.height);
-    elt.css({
-      position: 'absolute',
-      top: pos.top,
-      left: pos.left
-    });
-  }
-
-  function goStatic(version) {
-    if (version.view && !version.view.isDestroyed) {
-      version.view.$().css({ width: '', height: '', position: '' });
-    }
-  }
 });
-define('client/components/liquid-if', ['exports', 'ember', 'liquid-fire/ember-internals'], function (exports, _ember, _liquidFireEmberInternals) {
-
-  var LiquidIf = _ember['default'].Component.extend({
-    positionalParams: ['predicate'], // needed for Ember 1.13.[0-5] and 2.0.0-beta.[1-3] support
-    tagName: '',
-    helperName: 'liquid-if',
-    didReceiveAttrs: function didReceiveAttrs() {
-      this._super();
-      var predicate = (0, _liquidFireEmberInternals.shouldDisplay)(this.getAttr('predicate'));
-      this.set('showFirstBlock', this.inverted ? !predicate : predicate);
+define("client/components/liquid-if", ["exports", "liquid-fire/components/liquid-if"], function (exports, _liquidFireComponentsLiquidIf) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidIf["default"];
     }
   });
-
-  LiquidIf.reopenClass({
-    positionalParams: ['predicate']
-  });
-
-  exports['default'] = LiquidIf;
 });
 define("client/components/liquid-measured", ["exports", "liquid-fire/components/liquid-measured"], function (exports, _liquidFireComponentsLiquidMeasured) {
   Object.defineProperty(exports, "default", {
@@ -2185,121 +1936,13 @@ define("client/components/liquid-measured", ["exports", "liquid-fire/components/
     }
   });
 });
-define('client/components/liquid-modal', ['exports', 'ember', 'ember-getowner-polyfill'], function (exports, _ember, _emberGetownerPolyfill) {
-  exports['default'] = _ember['default'].Component.extend({
-    classNames: ['liquid-modal'],
-    currentContext: _ember['default'].computed('owner.modalContexts.lastObject', function () {
-      var context = this.get('owner.modalContexts.lastObject');
-      if (context) {
-        context.view = this.innerView(context);
-      }
-      return context;
-    }),
-
-    owner: _ember['default'].inject.service('liquid-fire-modals'),
-
-    innerView: function innerView(current) {
-      var self = this,
-          name = current.get('name'),
-          owner = (0, _emberGetownerPolyfill['default'])(this),
-          component = owner.lookup('component-lookup:main').lookupFactory(name);
-      _ember['default'].assert("Tried to render a modal using component '" + name + "', but couldn't find it.", !!component);
-
-      var args = _ember['default'].copy(current.get('params'));
-
-      args.registerMyself = _ember['default'].on('init', function () {
-        self.set('innerViewInstance', this);
-      });
-
-      // set source so we can bind other params to it
-      args._source = _ember['default'].computed(function () {
-        return current.get("source");
-      });
-
-      var otherParams = current.get("options.otherParams");
-      var from, to;
-      for (from in otherParams) {
-        to = otherParams[from];
-        args[to] = _ember['default'].computed.alias("_source." + from);
-      }
-
-      var actions = current.get("options.actions") || {};
-
-      // Override sendAction in the modal component so we can intercept and
-      // dynamically dispatch to the controller as expected
-      args.sendAction = function (name) {
-        var actionName = actions[name];
-        if (!actionName) {
-          this._super.apply(this, Array.prototype.slice.call(arguments));
-          return;
-        }
-
-        var controller = current.get("source");
-        var args = Array.prototype.slice.call(arguments, 1);
-        args.unshift(actionName);
-        controller.send.apply(controller, args);
-      };
-
-      return component.extend(args);
-    },
-
-    actions: {
-      outsideClick: function outsideClick() {
-        if (this.get('currentContext.options.dismissWithOutsideClick')) {
-          this.send('dismiss');
-        } else {
-          proxyToInnerInstance(this, 'outsideClick');
-        }
-      },
-      escape: function escape() {
-        if (this.get('currentContext.options.dismissWithEscape')) {
-          this.send('dismiss');
-        } else {
-          proxyToInnerInstance(this, 'escape');
-        }
-      },
-      dismiss: function dismiss() {
-        _ember['default'].$('body').addClass('lf-modal-closing');
-        var source = this.get('currentContext.source'),
-            proto = source.constructor.proto(),
-            params = this.get('currentContext.options.withParams'),
-            clearThem = {};
-
-        for (var key in params) {
-          if (proto[key] instanceof _ember['default'].ComputedProperty) {
-            clearThem[key] = undefined;
-          } else {
-            clearThem[key] = proto[key];
-          }
-        }
-        source.setProperties(clearThem);
-      }
+define("client/components/liquid-outlet", ["exports", "liquid-fire/components/liquid-outlet"], function (exports, _liquidFireComponentsLiquidOutlet) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidOutlet["default"];
     }
   });
-
-  function proxyToInnerInstance(self, message) {
-    var vi = self.get('innerViewInstance');
-    if (vi) {
-      vi.send(message);
-    }
-  }
-});
-define('client/components/liquid-outlet', ['exports', 'ember'], function (exports, _ember) {
-
-  var LiquidOutlet = _ember['default'].Component.extend({
-    positionalParams: ['inputOutletName'], // needed for Ember 1.13.[0-5] and 2.0.0-beta.[1-3] support
-    tagName: '',
-    didReceiveAttrs: function didReceiveAttrs() {
-      this._super();
-      this.set('outletName', this.attrs.inputOutletName || 'main');
-    }
-  });
-
-  LiquidOutlet.reopenClass({
-    positionalParams: ['inputOutletName']
-  });
-
-  exports['default'] = LiquidOutlet;
 });
 define("client/components/liquid-spacer", ["exports", "liquid-fire/components/liquid-spacer"], function (exports, _liquidFireComponentsLiquidSpacer) {
   Object.defineProperty(exports, "default", {
@@ -2309,241 +1952,30 @@ define("client/components/liquid-spacer", ["exports", "liquid-fire/components/li
     }
   });
 });
-define('client/components/liquid-unless', ['exports', 'client/components/liquid-if'], function (exports, _clientComponentsLiquidIf) {
-  exports['default'] = _clientComponentsLiquidIf['default'].extend({
-    helperName: 'liquid-unless',
-    layoutName: 'components/liquid-if',
-    inverted: true
-  });
-});
-define("client/components/liquid-versions", ["exports", "ember", "liquid-fire/ember-internals"], function (exports, _ember, _liquidFireEmberInternals) {
-
-  var get = _ember["default"].get;
-  var set = _ember["default"].set;
-
-  exports["default"] = _ember["default"].Component.extend({
-    tagName: "",
-    name: 'liquid-versions',
-
-    transitionMap: _ember["default"].inject.service('liquid-fire-transitions'),
-
-    didReceiveAttrs: function didReceiveAttrs() {
-      this._super();
-      if (!this.versions || this._lastVersion !== this.getAttr('value')) {
-        this.appendVersion();
-        this._lastVersion = this.getAttr('value');
-      }
-    },
-
-    appendVersion: function appendVersion() {
-      var versions = this.versions;
-      var firstTime = false;
-      var newValue = this.getAttr('value');
-      var oldValue;
-
-      if (!versions) {
-        firstTime = true;
-        versions = _ember["default"].A();
-      } else {
-        oldValue = versions[0];
-      }
-
-      // TODO: may need to extend the comparison to do the same kind of
-      // key-based diffing that htmlbars is doing.
-      if (!firstTime && (!oldValue && !newValue || oldValue === newValue)) {
-        return;
-      }
-
-      this.notifyContainer('willTransition', versions);
-      var newVersion = {
-        value: newValue,
-        shouldRender: newValue || get(this, 'renderWhenFalse')
-      };
-      versions.unshiftObject(newVersion);
-
-      this.firstTime = firstTime;
-      if (firstTime) {
-        set(this, 'versions', versions);
-      }
-
-      if (!newVersion.shouldRender && !firstTime) {
-        this._transition();
-      }
-    },
-
-    _transition: function _transition() {
-      var _this = this;
-
-      var versions = get(this, 'versions');
-      var transition;
-      var firstTime = this.firstTime;
-      this.firstTime = false;
-
-      this.notifyContainer('afterChildInsertion', versions);
-
-      transition = get(this, 'transitionMap').transitionFor({
-        versions: versions,
-        parentElement: _ember["default"].$((0, _liquidFireEmberInternals.containingElement)(this)),
-        use: get(this, 'use'),
-        // Using strings instead of booleans here is an
-        // optimization. The constraint system can match them more
-        // efficiently, since it treats boolean constraints as generic
-        // "match anything truthy/falsy" predicates, whereas string
-        // checks are a direct object property lookup.
-        firstTime: firstTime ? 'yes' : 'no',
-        helperName: get(this, 'name'),
-        outletName: get(this, 'outletName')
-      });
-
-      if (this._runningTransition) {
-        this._runningTransition.interrupt();
-      }
-      this._runningTransition = transition;
-
-      transition.run().then(function (wasInterrupted) {
-        // if we were interrupted, we don't handle the cleanup because
-        // another transition has already taken over.
-        if (!wasInterrupted) {
-          _this.finalizeVersions(versions);
-          _this.notifyContainer("afterTransition", versions);
-        }
-      }, function (err) {
-        _this.finalizeVersions(versions);
-        _this.notifyContainer("afterTransition", versions);
-        throw err;
-      });
-    },
-
-    finalizeVersions: function finalizeVersions(versions) {
-      versions.replace(1, versions.length - 1);
-    },
-
-    notifyContainer: function notifyContainer(method, versions) {
-      var target = get(this, 'notify');
-      if (target) {
-        target.send(method, versions);
-      }
-    },
-
-    actions: {
-      childDidRender: function childDidRender(child) {
-        var version = get(child, 'version');
-        set(version, 'view', child);
-        this._transition();
-      }
-    }
-
-  });
-});
-define('client/components/liquid-with', ['exports', 'ember'], function (exports, _ember) {
-
-  var LiquidWith = _ember['default'].Component.extend({
-    name: 'liquid-with',
-    positionalParams: ['value'], // needed for Ember 1.13.[0-5] and 2.0.0-beta.[1-3] support
-    tagName: '',
-    iAmDeprecated: _ember['default'].on('init', function () {
-      _ember['default'].deprecate("liquid-with is deprecated, use liquid-bind instead -- it accepts a block now.");
-    })
-  });
-
-  LiquidWith.reopenClass({
-    positionalParams: ['value']
-  });
-
-  exports['default'] = LiquidWith;
-});
-define("client/components/lm-container", ["exports", "ember", "liquid-fire/tabbable", "liquid-fire/is-browser"], function (exports, _ember, _liquidFireTabbable, _liquidFireIsBrowser) {
-
-  /**
-   * If you do something to move focus outside of the browser (like
-   * command+l to go to the address bar) and then tab back into the
-   * window, capture it and focus the first tabbable element in an active
-   * modal.
-   */
-  var lastOpenedModal = null;
-
-  if ((0, _liquidFireIsBrowser["default"])()) {
-    _ember["default"].$(document).on('focusin', handleTabIntoBrowser);
-  }
-
-  function handleTabIntoBrowser() {
-    if (lastOpenedModal) {
-      lastOpenedModal.focus();
-    }
-  }
-
-  exports["default"] = _ember["default"].Component.extend({
-    classNames: ['lm-container'],
-    attributeBindings: ['tabindex'],
-    tabindex: 0,
-
-    keyUp: function keyUp(event) {
-      // Escape key
-      if (event.keyCode === 27) {
-        this.sendAction();
-      }
-    },
-
-    keyDown: function keyDown(event) {
-      // Tab key
-      if (event.keyCode === 9) {
-        this.constrainTabNavigation(event);
-      }
-    },
-
-    didInsertElement: function didInsertElement() {
-      this.focus();
-      lastOpenedModal = this;
-    },
-
-    willDestroy: function willDestroy() {
-      lastOpenedModal = null;
-    },
-
-    focus: function focus() {
-      if (this.get('element').contains(document.activeElement)) {
-        // just let it be if we already contain the activeElement
-        return;
-      }
-      var target = this.$('[autofocus]');
-      if (!target.length) {
-        target = this.$(':tabbable');
-      }
-
-      if (!target.length) {
-        target = this.$();
-      }
-
-      target[0].focus();
-    },
-
-    constrainTabNavigation: function constrainTabNavigation(event) {
-      var tabbable = this.$(':tabbable');
-      var finalTabbable = tabbable[event.shiftKey ? 'first' : 'last']()[0];
-      var leavingFinalTabbable = finalTabbable === document.activeElement ||
-      // handle immediate shift+tab after opening with mouse
-      this.get('element') === document.activeElement;
-      if (!leavingFinalTabbable) {
-        return;
-      }
-      event.preventDefault();
-      tabbable[event.shiftKey ? 'last' : 'first']()[0].focus();
-    },
-
-    click: function click(event) {
-      if (event.target === this.get('element')) {
-        this.sendAction('clickAway');
-      }
+define('client/components/liquid-sync', ['exports', 'liquid-fire/components/liquid-sync'], function (exports, _liquidFireComponentsLiquidSync) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidSync['default'];
     }
   });
 });
-/*
-   Parts of this file were adapted from ic-modal
-
-   https://github.com/instructure/ic-modal
-   Released under The MIT License (MIT)
-   Copyright (c) 2014 Instructure, Inc.
-*/
+define("client/components/liquid-unless", ["exports", "liquid-fire/components/liquid-unless"], function (exports, _liquidFireComponentsLiquidUnless) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidUnless["default"];
+    }
+  });
+});
+define("client/components/liquid-versions", ["exports", "liquid-fire/components/liquid-versions"], function (exports, _liquidFireComponentsLiquidVersions) {
+  Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireComponentsLiquidVersions["default"];
+    }
+  });
+});
 define("client/components/mission-alert/component", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = _ember["default"].Component.extend({
     mission: _ember["default"].inject.service(),
@@ -2595,11 +2027,7 @@ define("client/components/mission-alert/template", ["exports"], function (export
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -2663,7 +2091,7 @@ define("client/components/mission-alert/template", ["exports"], function (export
         morphs[2] = dom.createElementMorph(element1);
         return morphs;
       },
-      statements: [["inline", "fa-icon", ["exclamation"], [], ["loc", [null, [1, 41], [1, 66]]]], ["content", "latest.name", ["loc", [null, [1, 103], [1, 118]]]], ["element", "action", ["close"], [], ["loc", [null, [2, 99], [2, 118]]]]],
+      statements: [["inline", "fa-icon", ["exclamation"], [], ["loc", [null, [1, 41], [1, 66]]], 0, 0], ["content", "latest.name", ["loc", [null, [1, 103], [1, 118]]], 0, 0, 0, 0], ["element", "action", ["close"], [], ["loc", [null, [2, 99], [2, 118]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -2697,8 +2125,7 @@ define("client/components/mission-button/template", ["exports"], function (expor
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -2731,17 +2158,14 @@ define("client/components/mission-button/template", ["exports"], function (expor
             morphs[0] = dom.createUnsafeMorphAt(fragment, 1, 1, contextualElement);
             return morphs;
           },
-          statements: [["inline", "asset-icon", [["get", "model.image", ["loc", [null, [4, 20], [4, 31]]]], "hide-for-small-only"], [], ["loc", [null, [4, 6], [4, 56]]]]],
+          statements: [["inline", "asset-icon", [["get", "model.image", ["loc", [null, [4, 20], [4, 31]]], 0, 0, 0, 0], "hide-for-small-only"], [], ["loc", [null, [4, 6], [4, 56]]], 0, 0]],
           locals: [],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": {
-            "name": "triple-curlies"
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -2804,18 +2228,14 @@ define("client/components/mission-button/template", ["exports"], function (expor
           morphs[3] = dom.createMorphAt(element1, 2, 2);
           return morphs;
         },
-        statements: [["block", "if", [["get", "model.image", ["loc", [null, [3, 10], [3, 21]]]]], [], 0, null, ["loc", [null, [3, 4], [5, 11]]]], ["content", "model.name", ["loc", [null, [6, 30], [6, 44]]]], ["content", "text", ["loc", [null, [7, 35], [7, 43]]]], ["inline", "fa-icon", ["angle-right faa-horizontal m--icon"], ["pull", "right"], ["loc", [null, [7, 49], [7, 110]]]]],
+        statements: [["block", "if", [["get", "model.image", ["loc", [null, [3, 10], [3, 21]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [3, 4], [5, 11]]]], ["content", "model.name", ["loc", [null, [6, 30], [6, 44]]], 0, 0, 0, 0], ["content", "text", ["loc", [null, [7, 35], [7, 43]]], 0, 0, 0, 0], ["inline", "fa-icon", ["angle-right faa-horizontal m--icon"], ["pull", "right"], ["loc", [null, [7, 49], [7, 110]]], 0, 0]],
         locals: [],
         templates: [child0]
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -2846,7 +2266,7 @@ define("client/components/mission-button/template", ["exports"], function (expor
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "link-to", ["team", ["get", "model.id", ["loc", [null, [1, 18], [1, 26]]]]], [], 0, null, ["loc", [null, [1, 0], [9, 12]]]]],
+      statements: [["block", "link-to", ["team", ["get", "model.id", ["loc", [null, [1, 18], [1, 26]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [1, 0], [9, 12]]]]],
       locals: [],
       templates: [child0]
     };
@@ -2878,8 +2298,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -2912,7 +2331,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "mission.mission-team", ["loc", [null, [4, 2], [4, 26]]]]],
+        statements: [["content", "mission.mission-team", ["loc", [null, [4, 2], [4, 26]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2920,8 +2339,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -2954,7 +2372,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "mission.mission-structure", ["loc", [null, [9, 2], [9, 31]]]]],
+        statements: [["content", "mission.mission-structure", ["loc", [null, [9, 2], [9, 31]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -2962,8 +2380,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -2996,7 +2413,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "mission.mission-knowledge", ["loc", [null, [15, 2], [15, 31]]]]],
+        statements: [["content", "mission.mission-knowledge", ["loc", [null, [15, 2], [15, 31]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3004,8 +2421,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
     var child3 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -3038,7 +2454,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "mission.mission-explore", ["loc", [null, [21, 2], [21, 29]]]]],
+        statements: [["content", "mission.mission-explore", ["loc", [null, [21, 2], [21, 29]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -3046,8 +2462,7 @@ define("client/components/mission-component/template", ["exports"], function (ex
     var child4 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -3080,18 +2495,14 @@ define("client/components/mission-component/template", ["exports"], function (ex
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "mission.mission-write", ["loc", [null, [26, 2], [26, 27]]]]],
+        statements: [["content", "mission.mission-write", ["loc", [null, [26, 2], [26, 27]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -3163,34 +2574,44 @@ define("client/components/mission-component/template", ["exports"], function (ex
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [3, 17], [3, 30]]]], "team"], [], ["loc", [null, [3, 13], [3, 38]]]]], ["class", "tab"], 0, null, ["loc", [null, [3, 0], [5, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [8, 17], [8, 30]]]], "structure"], [], ["loc", [null, [8, 13], [8, 43]]]]], ["class", "tab"], 1, null, ["loc", [null, [8, 0], [10, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [14, 17], [14, 30]]]], "knowledge"], [], ["loc", [null, [14, 13], [14, 43]]]]], ["class", "tab"], 2, null, ["loc", [null, [14, 0], [16, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [20, 17], [20, 30]]]], "explore"], [], ["loc", [null, [20, 13], [20, 41]]]]], ["class", "tab"], 3, null, ["loc", [null, [20, 0], [22, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [25, 17], [25, 30]]]], "write"], [], ["loc", [null, [25, 13], [25, 39]]]]], ["class", "tab"], 4, null, ["loc", [null, [25, 0], [27, 14]]]]],
+      statements: [["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [3, 17], [3, 30]]], 0, 0, 0, 0], "team"], [], ["loc", [null, [3, 13], [3, 38]]], 0, 0]], ["class", "tab"], 0, null, ["loc", [null, [3, 0], [5, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [8, 17], [8, 30]]], 0, 0, 0, 0], "structure"], [], ["loc", [null, [8, 13], [8, 43]]], 0, 0]], ["class", "tab"], 1, null, ["loc", [null, [8, 0], [10, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [14, 17], [14, 30]]], 0, 0, 0, 0], "knowledge"], [], ["loc", [null, [14, 13], [14, 43]]], 0, 0]], ["class", "tab"], 2, null, ["loc", [null, [14, 0], [16, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [20, 17], [20, 30]]], 0, 0, 0, 0], "explore"], [], ["loc", [null, [20, 13], [20, 41]]], 0, 0]], ["class", "tab"], 3, null, ["loc", [null, [20, 0], [22, 14]]]], ["block", "liquid-if", [["subexpr", "eq", [["get", "mission.route", ["loc", [null, [25, 17], [25, 30]]], 0, 0, 0, 0], "write"], [], ["loc", [null, [25, 13], [25, 39]]], 0, 0]], ["class", "tab"], 4, null, ["loc", [null, [25, 0], [27, 14]]]]],
       locals: [],
       templates: [child0, child1, child2, child3, child4]
     };
   })());
 });
-define('client/components/mission-report-tag-filter/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
+define("client/components/mission-report-tag-filter/component", ["exports", "ember"], function (exports, _ember) {
+  exports["default"] = _ember["default"].Component.extend({
+    store: _ember["default"].inject.service(),
     classNames: ["menu-margin"],
-    subject: ['Engelska', 'Svenska', 'Naturvetenskap'],
+    params: null,
+    _setup: (function () {
+      this.set("params", this.router.router.state.fullQueryParams);
+    }).on("init"),
 
-    semester: ['Vårterminen 2015', 'Hösttreminen 2015', 'Vårterminen 2016'],
+    missions: (function () {
+      return this.get("store").findAll("mission");
+    }).property("missions"),
 
-    klass: ['Åk 1', 'Åk 2', 'Åk 3'],
+    users: (function () {
+      return this.get("store").findAll("user");
+    }).property("users"),
 
-    _jQuery: (function () {
-      _ember['default'].$(".subject").select2({
-        minimumResultsForSearch: Infinity
-      });
+    classes: (function () {
+      return this.get("store").findAll("class");
+    }).property("classes"),
 
-      _ember['default'].$(".semester").select2({
-        minimumResultsForSearch: Infinity
-      });
-
-      _ember['default'].$(".klass").select2({
-        minimumResultsForSearch: Infinity
-      });
-    }).on("didInsertElement").observes("selected")
+    actions: {
+      filterMission: function filterMission(value) {
+        this.router.transitionTo({ queryParams: { mission: value } });
+      },
+      filterUser: function filterUser(value) {
+        this.router.transitionTo({ queryParams: { user: value } });
+      },
+      filterClass: function filterClass(value) {
+        this.router.transitionTo({ queryParams: { "class": value } });
+      }
+    }
   });
 });
 define("client/components/mission-report-tag-filter/template", ["exports"], function (exports) {
@@ -3198,16 +2619,15 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
-              "line": 4,
+              "line": 5,
               "column": 6
             },
             "end": {
-              "line": 6,
+              "line": 7,
               "column": 6
             }
           },
@@ -3231,29 +2651,29 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var element2 = dom.childAt(fragment, [1]);
-          var morphs = new Array(2);
+          var morphs = new Array(3);
           morphs[0] = dom.createAttrMorph(element2, 'value');
-          morphs[1] = dom.createMorphAt(element2, 0, 0);
+          morphs[1] = dom.createAttrMorph(element2, 'selected');
+          morphs[2] = dom.createMorphAt(element2, 0, 0);
           return morphs;
         },
-        statements: [["attribute", "value", ["concat", [["get", "subject", ["loc", [null, [5, 27], [5, 34]]]]]]], ["content", "subject", ["loc", [null, [5, 38], [5, 49]]]]],
-        locals: ["subject"],
+        statements: [["attribute", "value", ["concat", [["get", "mission.id", ["loc", [null, [6, 27], [6, 37]]], 0, 0, 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["attribute", "selected", ["subexpr", "eq", [["get", "params.mission", ["loc", [null, [6, 55], [6, 69]]], 0, 0, 0, 0], ["get", "mission.id", ["loc", [null, [6, 70], [6, 80]]], 0, 0, 0, 0]], [], ["loc", [null, [null, null], [6, 82]]], 0, 0], 0, 0, 0, 0], ["content", "mission.name", ["loc", [null, [6, 83], [6, 99]]], 0, 0, 0, 0]],
+        locals: ["mission"],
         templates: []
       };
     })();
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
-              "line": 13,
+              "line": 15,
               "column": 6
             },
             "end": {
-              "line": 15,
+              "line": 17,
               "column": 6
             }
           },
@@ -3270,6 +2690,10 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
           var el1 = dom.createElement("option");
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode(" ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -3277,29 +2701,30 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var element1 = dom.childAt(fragment, [1]);
-          var morphs = new Array(2);
+          var morphs = new Array(4);
           morphs[0] = dom.createAttrMorph(element1, 'value');
-          morphs[1] = dom.createMorphAt(element1, 0, 0);
+          morphs[1] = dom.createAttrMorph(element1, 'selected');
+          morphs[2] = dom.createMorphAt(element1, 0, 0);
+          morphs[3] = dom.createMorphAt(element1, 2, 2);
           return morphs;
         },
-        statements: [["attribute", "value", ["concat", [["get", "semester", ["loc", [null, [14, 27], [14, 35]]]]]]], ["content", "semester", ["loc", [null, [14, 39], [14, 51]]]]],
-        locals: ["semester"],
+        statements: [["attribute", "value", ["concat", [["get", "user.id", ["loc", [null, [16, 27], [16, 34]]], 0, 0, 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["attribute", "selected", ["subexpr", "eq", [["get", "params.user", ["loc", [null, [16, 52], [16, 63]]], 0, 0, 0, 0], ["get", "user.id", ["loc", [null, [16, 64], [16, 71]]], 0, 0, 0, 0]], [], ["loc", [null, [null, null], [16, 73]]], 0, 0], 0, 0, 0, 0], ["content", "user.first-name", ["loc", [null, [16, 74], [16, 93]]], 0, 0, 0, 0], ["content", "user.last-name", ["loc", [null, [16, 94], [16, 112]]], 0, 0, 0, 0]],
+        locals: ["user"],
         templates: []
       };
     })();
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
-              "line": 23,
+              "line": 26,
               "column": 6
             },
             "end": {
-              "line": 25,
+              "line": 28,
               "column": 6
             }
           },
@@ -3323,23 +2748,20 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var element0 = dom.childAt(fragment, [1]);
-          var morphs = new Array(2);
+          var morphs = new Array(3);
           morphs[0] = dom.createAttrMorph(element0, 'value');
-          morphs[1] = dom.createMorphAt(element0, 0, 0);
+          morphs[1] = dom.createAttrMorph(element0, 'selected');
+          morphs[2] = dom.createMorphAt(element0, 0, 0);
           return morphs;
         },
-        statements: [["attribute", "value", ["concat", [["get", "klass", ["loc", [null, [24, 27], [24, 32]]]]]]], ["content", "klass", ["loc", [null, [24, 36], [24, 45]]]]],
-        locals: ["klass"],
+        statements: [["attribute", "value", ["concat", [["get", "class.id", ["loc", [null, [27, 27], [27, 35]]], 0, 0, 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["attribute", "selected", ["subexpr", "eq", [["get", "params.class", ["loc", [null, [27, 53], [27, 65]]], 0, 0, 0, 0], ["get", "class.id", ["loc", [null, [27, 66], [27, 74]]], 0, 0, 0, 0]], [], ["loc", [null, [null, null], [27, 76]]], 0, 0], 0, 0, 0, 0], ["content", "class.title", ["loc", [null, [27, 77], [27, 92]]], 0, 0, 0, 0]],
+        locals: ["class"],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -3347,7 +2769,7 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
             "column": 0
           },
           "end": {
-            "line": 30,
+            "line": 33,
             "column": 0
           }
         },
@@ -3365,13 +2787,20 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("label");
         dom.setAttribute(el2, "class", "jr--title");
-        var el3 = dom.createTextNode("Ämne");
+        var el3 = dom.createTextNode("Uppdrag");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n    ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("select");
-        dom.setAttribute(el2, "class", "subject");
+        dom.setAttribute(el2, "class", "mission");
+        var el3 = dom.createTextNode("\n      ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("option");
+        dom.setAttribute(el3, "value", "undefined");
+        var el4 = dom.createTextNode("Alla");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
         dom.appendChild(el2, el3);
         var el3 = dom.createComment("");
@@ -3390,13 +2819,20 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("label");
         dom.setAttribute(el2, "class", "jr--title");
-        var el3 = dom.createTextNode("Termin");
+        var el3 = dom.createTextNode("Elev");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n    ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("select");
-        dom.setAttribute(el2, "class", "semester");
+        dom.setAttribute(el2, "class", "user");
+        var el3 = dom.createTextNode("\n      ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("option");
+        dom.setAttribute(el3, "value", "undefined");
+        var el4 = dom.createTextNode("Alla");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
         dom.appendChild(el2, el3);
         var el3 = dom.createComment("");
@@ -3422,6 +2858,13 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("select");
         dom.setAttribute(el2, "class", "klass");
+        var el3 = dom.createTextNode("\n      ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("option");
+        dom.setAttribute(el3, "value", "undefined");
+        var el4 = dom.createTextNode("Alla");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n");
         dom.appendChild(el2, el3);
         var el3 = dom.createComment("");
@@ -3437,13 +2880,25 @@ define("client/components/mission-report-tag-filter/template", ["exports"], func
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(3);
-        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0, 3]), 1, 1);
-        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2, 3]), 1, 1);
-        morphs[2] = dom.createMorphAt(dom.childAt(fragment, [4, 3]), 1, 1);
+        var element3 = dom.childAt(fragment, [0, 3]);
+        var element4 = dom.childAt(element3, [1]);
+        var element5 = dom.childAt(fragment, [2, 3]);
+        var element6 = dom.childAt(element5, [1]);
+        var element7 = dom.childAt(fragment, [4, 3]);
+        var element8 = dom.childAt(element7, [1]);
+        var morphs = new Array(9);
+        morphs[0] = dom.createAttrMorph(element3, 'onchange');
+        morphs[1] = dom.createAttrMorph(element4, 'selected');
+        morphs[2] = dom.createMorphAt(element3, 3, 3);
+        morphs[3] = dom.createAttrMorph(element5, 'onchange');
+        morphs[4] = dom.createAttrMorph(element6, 'selected');
+        morphs[5] = dom.createMorphAt(element5, 3, 3);
+        morphs[6] = dom.createAttrMorph(element7, 'onchange');
+        morphs[7] = dom.createAttrMorph(element8, 'selected');
+        morphs[8] = dom.createMorphAt(element7, 3, 3);
         return morphs;
       },
-      statements: [["block", "each", [["get", "subject", ["loc", [null, [4, 14], [4, 21]]]]], [], 0, null, ["loc", [null, [4, 6], [6, 15]]]], ["block", "each", [["get", "semester", ["loc", [null, [13, 14], [13, 22]]]]], [], 1, null, ["loc", [null, [13, 6], [15, 15]]]], ["block", "each", [["get", "klass", ["loc", [null, [23, 14], [23, 19]]]]], [], 2, null, ["loc", [null, [23, 6], [25, 15]]]]],
+      statements: [["attribute", "onchange", ["subexpr", "action", ["filterMission"], ["value", "target.value"], ["loc", [null, [null, null], [3, 85]]], 0, 0], 0, 0, 0, 0], ["attribute", "selected", ["subexpr", "eq", [["get", "params.mission", ["loc", [null, [4, 44], [4, 58]]], 0, 0, 0, 0], 0], [], ["loc", [null, [null, null], [4, 62]]], 0, 0], 0, 0, 0, 0], ["block", "each", [["get", "missions", ["loc", [null, [5, 14], [5, 22]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [5, 6], [7, 15]]]], ["attribute", "onchange", ["subexpr", "action", ["filterUser"], ["value", "target.value"], ["loc", [null, [null, null], [13, 77]]], 0, 0], 0, 0, 0, 0], ["attribute", "selected", ["subexpr", "eq", [["get", "params.user", ["loc", [null, [14, 44], [14, 55]]], 0, 0, 0, 0], 0], [], ["loc", [null, [null, null], [14, 59]]], 0, 0], 0, 0, 0, 0], ["block", "each", [["get", "users", ["loc", [null, [15, 14], [15, 19]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [15, 6], [17, 15]]]], ["attribute", "onchange", ["subexpr", "action", ["filterClass"], ["value", "target.value"], ["loc", [null, [null, null], [24, 81]]], 0, 0], 0, 0, 0, 0], ["attribute", "selected", ["subexpr", "eq", [["get", "params.class", ["loc", [null, [25, 44], [25, 56]]], 0, 0, 0, 0], 0], [], ["loc", [null, [null, null], [25, 60]]], 0, 0], 0, 0, 0, 0], ["block", "each", [["get", "classes", ["loc", [null, [26, 14], [26, 21]]], 0, 0, 0, 0]], [], 2, null, ["loc", [null, [26, 6], [28, 15]]]]],
       locals: [],
       templates: [child0, child1, child2]
     };
@@ -3462,8 +2917,7 @@ define("client/components/mission-report/template", ["exports"], function (expor
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -3499,17 +2953,14 @@ define("client/components/mission-report/template", ["exports"], function (expor
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
             return morphs;
           },
-          statements: [["content", "tag", ["loc", [null, [12, 25], [12, 32]]]]],
+          statements: [["content", "tag", ["loc", [null, [12, 25], [12, 32]]], 0, 0, 0, 0]],
           locals: ["tag"],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": {
-            "name": "triple-curlies"
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -3592,18 +3043,14 @@ define("client/components/mission-report/template", ["exports"], function (expor
           morphs[3] = dom.createMorphAt(element0, 7, 7);
           return morphs;
         },
-        statements: [["content", "model.name", ["loc", [null, [4, 33], [4, 49]]]], ["inline", "team", [["get", "model.team", ["loc", [null, [7, 38], [7, 48]]]]], [], ["loc", [null, [7, 31], [7, 50]]]], ["block", "each", [["get", "tags", ["loc", [null, [11, 12], [11, 16]]]]], [], 0, null, ["loc", [null, [11, 4], [13, 13]]]], ["inline", "fa-icon", ["angle-right faa-horizontal m--icon mr2"], ["pull", "right"], ["loc", [null, [15, 4], [15, 69]]]]],
+        statements: [["content", "model.name", ["loc", [null, [4, 33], [4, 49]]], 0, 0, 0, 0], ["inline", "team", [["get", "model.team", ["loc", [null, [7, 38], [7, 48]]], 0, 0, 0, 0]], [], ["loc", [null, [7, 31], [7, 50]]], 0, 0], ["block", "each", [["get", "tags", ["loc", [null, [11, 12], [11, 16]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [11, 4], [13, 13]]]], ["inline", "fa-icon", ["angle-right faa-horizontal m--icon mr2"], ["pull", "right"], ["loc", [null, [15, 4], [15, 69]]], 0, 0]],
         locals: [],
         templates: [child0]
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -3634,27 +3081,11 @@ define("client/components/mission-report/template", ["exports"], function (expor
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "link-to", ["rapport", ["get", "model.id", ["loc", [null, [1, 21], [1, 29]]]]], ["class", ["subexpr", "@mut", [["get", "buttonClass", ["loc", [null, [1, 36], [1, 47]]]]], [], []]], 0, null, ["loc", [null, [1, 0], [17, 14]]]]],
+      statements: [["block", "link-to", ["rapport", ["get", "model.id", ["loc", [null, [1, 21], [1, 29]]], 0, 0, 0, 0]], ["class", ["subexpr", "@mut", [["get", "buttonClass", ["loc", [null, [1, 36], [1, 47]]], 0, 0, 0, 0]], [], [], 0, 0]], 0, null, ["loc", [null, [1, 0], [17, 14]]]]],
       locals: [],
       templates: [child0]
     };
   })());
-});
-define('client/components/modal-dialog-overlay', ['exports', 'ember-modal-dialog/components/modal-dialog-overlay'], function (exports, _emberModalDialogComponentsModalDialogOverlay) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberModalDialogComponentsModalDialogOverlay['default'];
-    }
-  });
-});
-define('client/components/modal-dialog', ['exports', 'ember-modal-dialog/components/modal-dialog'], function (exports, _emberModalDialogComponentsModalDialog) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberModalDialogComponentsModalDialog['default'];
-    }
-  });
 });
 define('client/components/nav-notification/component', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
@@ -3666,10 +3097,7 @@ define("client/components/nav-notification/template", ["exports"], function (exp
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -3703,7 +3131,7 @@ define("client/components/nav-notification/template", ["exports"], function (exp
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]), 0, 0);
         return morphs;
       },
-      statements: [["content", "count", ["loc", [null, [1, 26], [1, 35]]]]],
+      statements: [["content", "count", ["loc", [null, [1, 26], [1, 35]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -3726,8 +3154,11 @@ define("client/components/navigation-global/component", ["exports", "ember"], fu
 
     actions: {
       logout: function logout() {
+        this.cookie.removeCookie('user');
+        this.cookie.removeCookie('school');
         this.set("global.user", null);
         this.set("global.school", null);
+        window.location.reload(true);
       }
     }
 
@@ -3738,8 +3169,7 @@ define("client/components/navigation-global/template", ["exports"], function (ex
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -3774,8 +3204,7 @@ define("client/components/navigation-global/template", ["exports"], function (ex
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -3811,8 +3240,7 @@ define("client/components/navigation-global/template", ["exports"], function (ex
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -3846,8 +3274,7 @@ define("client/components/navigation-global/template", ["exports"], function (ex
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -3896,8 +3323,7 @@ define("client/components/navigation-global/template", ["exports"], function (ex
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -3931,8 +3357,7 @@ define("client/components/navigation-global/template", ["exports"], function (ex
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -3972,15 +3397,14 @@ define("client/components/navigation-global/template", ["exports"], function (ex
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 1, 1);
             return morphs;
           },
-          statements: [["block", "link-to", [["get", "mission.lastRoute", ["loc", [null, [23, 21], [23, 38]]]], ["get", "global.mission.id", ["loc", [null, [23, 39], [23, 56]]]]], ["classNames", "last"], 0, null, ["loc", [null, [23, 10], [23, 110]]]]],
+          statements: [["block", "link-to", [["get", "mission.lastRoute", ["loc", [null, [23, 21], [23, 38]]], 0, 0, 0, 0], ["get", "global.mission.id", ["loc", [null, [23, 39], [23, 56]]], 0, 0, 0, 0]], ["classNames", "last"], 0, null, ["loc", [null, [23, 10], [23, 110]]]]],
           locals: [],
           templates: [child0]
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -4011,58 +3435,14 @@ define("client/components/navigation-global/template", ["exports"], function (ex
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "if", [["subexpr", "missionVisible", [["get", "router.currentRouteName", ["loc", [null, [21, 28], [21, 51]]]]], [], ["loc", [null, [21, 12], [21, 52]]]]], [], 0, null, ["loc", [null, [21, 6], [25, 13]]]]],
+        statements: [["block", "if", [["subexpr", "missionVisible", [["get", "router.currentRouteName", ["loc", [null, [21, 28], [21, 51]]], 0, 0, 0, 0]], [], ["loc", [null, [21, 12], [21, 52]]], 0, 0]], [], 0, null, ["loc", [null, [21, 6], [25, 13]]]]],
         locals: [],
         templates: [child0]
       };
     })();
-    var child4 = (function () {
-      return {
-        meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 33,
-              "column": 74
-            },
-            "end": {
-              "line": 33,
-              "column": 123
-            }
-          },
-          "moduleName": "client/components/navigation-global/template.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("Logga ut ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["inline", "fa-icon", ["logout"], [], ["loc", [null, [33, 103], [33, 123]]]]],
-        locals: [],
-        templates: []
-      };
-    })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -4182,6 +3562,8 @@ define("client/components/navigation-global/template", ["exports"], function (ex
         var el7 = dom.createElement("button");
         dom.setAttribute(el7, "type", "logout");
         dom.setAttribute(el7, "name", "button");
+        var el8 = dom.createTextNode("Logga ut ");
+        dom.appendChild(el7, el8);
         var el8 = dom.createComment("");
         dom.appendChild(el7, el8);
         dom.appendChild(el6, el7);
@@ -4219,12 +3601,12 @@ define("client/components/navigation-global/template", ["exports"], function (ex
         morphs[6] = dom.createMorphAt(element3, 2, 2);
         morphs[7] = dom.createMorphAt(element3, 4, 4);
         morphs[8] = dom.createElementMorph(element4);
-        morphs[9] = dom.createMorphAt(element4, 0, 0);
+        morphs[9] = dom.createMorphAt(element4, 1, 1);
         return morphs;
       },
-      statements: [["block", "link-to", ["index"], [], 0, null, ["loc", [null, [4, 6], [4, 41]]]], ["block", "link-to", ["rapports"], [], 1, null, ["loc", [null, [7, 6], [7, 48]]]], ["block", "if", [["subexpr", "eq", [["get", "global.user.type", ["loc", [null, [9, 14], [9, 30]]]], "admin"], [], ["loc", [null, [9, 10], [9, 39]]]]], [], 2, null, ["loc", [null, [9, 4], [13, 11]]]], ["content", "mission.tab", ["loc", [null, [17, 10], [17, 25]]]], ["block", "if", [["get", "mission.lastRapport", ["loc", [null, [20, 10], [20, 29]]]]], [], 3, null, ["loc", [null, [20, 4], [26, 11]]]], ["inline", "asset-avatar", [["get", "global.user.avatar", ["loc", [null, [30, 37], [30, 55]]]]], [], ["loc", [null, [30, 21], [30, 58]]]], ["content", "global.user.first-name", ["loc", [null, [30, 70], [30, 96]]]], ["inline", "fa-icon", ["angle-down"], [], ["loc", [null, [30, 98], [30, 122]]]], ["element", "action", ["logout"], [], ["loc", [null, [33, 52], [33, 73]]]], ["block", "link-to", ["login"], [], 4, null, ["loc", [null, [33, 74], [33, 135]]]]],
+      statements: [["block", "link-to", ["index"], [], 0, null, ["loc", [null, [4, 6], [4, 41]]]], ["block", "link-to", ["rapports"], [], 1, null, ["loc", [null, [7, 6], [7, 48]]]], ["block", "if", [["subexpr", "eq", [["get", "global.user.type", ["loc", [null, [9, 14], [9, 30]]], 0, 0, 0, 0], "admin"], [], ["loc", [null, [9, 10], [9, 39]]], 0, 0]], [], 2, null, ["loc", [null, [9, 4], [13, 11]]]], ["content", "mission.tab", ["loc", [null, [17, 10], [17, 25]]], 0, 0, 0, 0], ["block", "if", [["get", "mission.lastRapport", ["loc", [null, [20, 10], [20, 29]]], 0, 0, 0, 0]], [], 3, null, ["loc", [null, [20, 4], [26, 11]]]], ["inline", "asset-avatar", [["get", "global.user.avatar", ["loc", [null, [30, 37], [30, 55]]], 0, 0, 0, 0]], [], ["loc", [null, [30, 21], [30, 58]]], 0, 0], ["content", "global.user.first-name", ["loc", [null, [30, 70], [30, 96]]], 0, 0, 0, 0], ["inline", "fa-icon", ["angle-down"], [], ["loc", [null, [30, 98], [30, 122]]], 0, 0], ["element", "action", ["logout"], [], ["loc", [null, [33, 52], [33, 73]]], 0, 0], ["inline", "fa-icon", ["logout"], [], ["loc", [null, [33, 104], [33, 124]]], 0, 0]],
       locals: [],
-      templates: [child0, child1, child2, child3, child4]
+      templates: [child0, child1, child2, child3]
     };
   })());
 });
@@ -4235,11 +3617,7 @@ define("client/components/navigation-user/template", ["exports"], function (expo
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -4272,7 +3650,7 @@ define("client/components/navigation-user/template", ["exports"], function (expo
         morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
         return morphs;
       },
-      statements: [["inline", "fa-icon", ["chevron-down"], [], ["loc", [null, [1, 15], [1, 41]]]]],
+      statements: [["inline", "fa-icon", ["chevron-down"], [], ["loc", [null, [1, 15], [1, 41]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -4288,10 +3666,7 @@ define("client/components/news-component/template", ["exports"], function (expor
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -4377,11 +3752,7 @@ define("client/components/query-filter-thead/template", ["exports"], function (e
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type", "multiple-nodes"]
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -4417,18 +3788,14 @@ define("client/components/query-filter-thead/template", ["exports"], function (e
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["content", "title", ["loc", [null, [1, 48], [1, 57]]]], ["inline", "fa-icon", [["get", "icon", ["loc", [null, [1, 68], [1, 72]]]]], [], ["loc", [null, [1, 58], [1, 74]]]]],
+        statements: [["content", "title", ["loc", [null, [1, 48], [1, 57]]], 0, 0, 0, 0], ["inline", "fa-icon", [["get", "icon", ["loc", [null, [1, 68], [1, 72]]], 0, 0, 0, 0]], [], ["loc", [null, [1, 58], [1, 74]]], 0, 0]],
         locals: [],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -4459,7 +3826,7 @@ define("client/components/query-filter-thead/template", ["exports"], function (e
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "link-to", [["subexpr", "query-params", [], ["sort", ["get", "attr", ["loc", [null, [1, 30], [1, 34]]]], "order", ["get", "dir", ["loc", [null, [1, 41], [1, 44]]]]], ["loc", [null, [1, 11], [1, 46]]]]], [], 0, null, ["loc", [null, [1, 0], [1, 86]]]]],
+      statements: [["block", "link-to", [["subexpr", "query-params", [], ["sort", ["get", "attr", ["loc", [null, [1, 30], [1, 34]]], 0, 0, 0, 0], "order", ["get", "dir", ["loc", [null, [1, 41], [1, 44]]], 0, 0, 0, 0]], ["loc", [null, [1, 11], [1, 46]]], 0, 0]], [], 0, null, ["loc", [null, [1, 0], [1, 86]]]]],
       locals: [],
       templates: [child0]
     };
@@ -4474,10 +3841,7 @@ define("client/components/scroll-view/template", ["exports"], function (exports)
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -4513,7 +3877,7 @@ define("client/components/scroll-view/template", ["exports"], function (exports)
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]), 1, 1);
         return morphs;
       },
-      statements: [["content", "yield", ["loc", [null, [2, 2], [2, 11]]]]],
+      statements: [["content", "yield", ["loc", [null, [2, 2], [2, 11]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -4561,8 +3925,7 @@ define("client/components/step-component/template", ["exports"], function (expor
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -4598,15 +3961,14 @@ define("client/components/step-component/template", ["exports"], function (expor
               morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
               return morphs;
             },
-            statements: [["content", "step.title", ["loc", [null, [7, 33], [7, 47]]]]],
+            statements: [["content", "step.title", ["loc", [null, [7, 33], [7, 47]]], 0, 0, 0, 0]],
             locals: [],
             templates: []
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -4656,15 +4018,14 @@ define("client/components/step-component/template", ["exports"], function (expor
             morphs[2] = dom.createMorphAt(element3, 1, 1);
             return morphs;
           },
-          statements: [["attribute", "class", ["concat", ["step ", ["get", "step.classNames", ["loc", [null, [4, 25], [4, 40]]]]]]], ["element", "action", ["choose", ["get", "step", ["loc", [null, [5, 50], [5, 54]]]]], [], ["loc", [null, [5, 31], [5, 57]]]], ["block", "link-to", [["get", "step.linkTo", ["loc", [null, [6, 25], [6, 36]]]]], [], 0, null, ["loc", [null, [6, 14], [8, 26]]]]],
+          statements: [["attribute", "class", ["concat", ["step ", ["get", "step.classNames", ["loc", [null, [4, 25], [4, 40]]], 0, 0, 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["element", "action", ["choose", ["get", "step", ["loc", [null, [5, 50], [5, 54]]], 0, 0, 0, 0]], [], ["loc", [null, [5, 31], [5, 57]]], 0, 0], ["block", "link-to", [["get", "step.linkTo", ["loc", [null, [6, 25], [6, 36]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [6, 14], [8, 26]]]]],
           locals: ["step", "index"],
           templates: [child0]
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -4695,7 +4056,7 @@ define("client/components/step-component/template", ["exports"], function (expor
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "each", [["get", "mission.steps", ["loc", [null, [3, 12], [3, 25]]]]], [], 0, null, ["loc", [null, [3, 4], [11, 13]]]]],
+        statements: [["block", "each", [["get", "mission.steps", ["loc", [null, [3, 12], [3, 25]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [3, 4], [11, 13]]]]],
         locals: [],
         templates: [child0]
       };
@@ -4704,8 +4065,7 @@ define("client/components/step-component/template", ["exports"], function (expor
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -4749,7 +4109,7 @@ define("client/components/step-component/template", ["exports"], function (expor
             morphs[0] = dom.createElementMorph(element1);
             return morphs;
           },
-          statements: [["element", "action", ["choose", "back"], [], ["loc", [null, [15, 27], [15, 56]]]]],
+          statements: [["element", "action", ["choose", "back"], [], ["loc", [null, [15, 27], [15, 56]]], 0, 0]],
           locals: [],
           templates: []
         };
@@ -4757,8 +4117,7 @@ define("client/components/step-component/template", ["exports"], function (expor
       var child1 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -4802,15 +4161,14 @@ define("client/components/step-component/template", ["exports"], function (expor
             morphs[0] = dom.createElementMorph(element0);
             return morphs;
           },
-          statements: [["element", "action", ["createRecord"], [], ["loc", [null, [22, 29], [22, 56]]]]],
+          statements: [["element", "action", ["createRecord"], [], ["loc", [null, [22, 29], [22, 56]]], 0, 0]],
           locals: [],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -4869,10 +4227,7 @@ define("client/components/step-component/template", ["exports"], function (expor
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -4908,7 +4263,7 @@ define("client/components/step-component/template", ["exports"], function (expor
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]), 1, 1);
         return morphs;
       },
-      statements: [["block", "if", [["subexpr", "not-eq", [["get", "router.currentRouteName", ["loc", [null, [2, 16], [2, 39]]]], "write"], [], ["loc", [null, [2, 8], [2, 48]]]]], [], 0, 1, ["loc", [null, [2, 2], [27, 9]]]]],
+      statements: [["block", "if", [["subexpr", "not-eq", [["get", "router.currentRouteName", ["loc", [null, [2, 16], [2, 39]]], 0, 0, 0, 0], "write"], [], ["loc", [null, [2, 8], [2, 48]]], 0, 0]], [], 0, 1, ["loc", [null, [2, 2], [27, 9]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -5028,8 +4383,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5082,7 +4436,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
             morphs[1] = dom.createAttrMorph(element4, 'src');
             return morphs;
           },
-          statements: [["element", "action", ["delete", ["get", "img", ["loc", [null, [6, 48], [6, 51]]]], ["get", "index", ["loc", [null, [6, 52], [6, 57]]]]], [], ["loc", [null, [6, 29], [6, 60]]]], ["attribute", "src", ["get", "img", ["loc", [null, [7, 20], [7, 23]]]]]],
+          statements: [["element", "action", ["delete", ["get", "img", ["loc", [null, [6, 48], [6, 51]]], 0, 0, 0, 0], ["get", "index", ["loc", [null, [6, 52], [6, 57]]], 0, 0, 0, 0]], [], ["loc", [null, [6, 29], [6, 60]]], 0, 0], ["attribute", "src", ["get", "img", ["loc", [null, [7, 20], [7, 23]]], 0, 0, 0, 0], 0, 0, 0, 0]],
           locals: ["img"],
           templates: []
         };
@@ -5090,8 +4444,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
       var child1 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5151,7 +4504,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
             morphs[4] = dom.createAttrMorph(element1, 'onchange');
             return morphs;
           },
-          statements: [["attribute", "for", ["subexpr", "uniqId", [["get", "this", ["loc", [null, [18, 29], [18, 33]]]]], [], ["loc", [null, [18, 20], [18, 35]]]]], ["inline", "fa-icon", ["file-image-o"], ["size", 1], ["loc", [null, [19, 10], [19, 43]]]], ["attribute", "id", ["subexpr", "uniqId", [["get", "this", ["loc", [null, [21, 74], [21, 78]]]]], [], ["loc", [null, [21, 65], [21, 80]]]]], ["attribute", "name", ["subexpr", "uniqId", [["get", "this", ["loc", [null, [21, 96], [21, 100]]]]], [], ["loc", [null, [21, 87], [21, 102]]]]], ["attribute", "onchange", ["subexpr", "action", ["upload"], [], ["loc", [null, [21, 113], [21, 133]]]]]],
+          statements: [["attribute", "for", ["subexpr", "uniqId", [["get", "this", ["loc", [null, [18, 29], [18, 33]]], 0, 0, 0, 0]], [], ["loc", [null, [null, null], [18, 35]]], 0, 0], 0, 0, 0, 0], ["inline", "fa-icon", ["file-image-o"], ["size", 1], ["loc", [null, [19, 10], [19, 43]]], 0, 0], ["attribute", "id", ["subexpr", "uniqId", [["get", "this", ["loc", [null, [21, 74], [21, 78]]], 0, 0, 0, 0]], [], ["loc", [null, [null, null], [21, 80]]], 0, 0], 0, 0, 0, 0], ["attribute", "name", ["subexpr", "uniqId", [["get", "this", ["loc", [null, [21, 96], [21, 100]]], 0, 0, 0, 0]], [], ["loc", [null, [null, null], [21, 102]]], 0, 0], 0, 0, 0, 0], ["attribute", "onchange", ["subexpr", "action", ["upload"], [], ["loc", [null, [null, null], [21, 133]]], 0, 0], 0, 0, 0, 0]],
           locals: [],
           templates: []
         };
@@ -5159,8 +4512,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
       var child2 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5195,7 +4547,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
             return morphs;
           },
-          statements: [["content", "row", ["loc", [null, [28, 10], [28, 17]]]]],
+          statements: [["content", "row", ["loc", [null, [28, 10], [28, 17]]], 0, 0, 0, 0]],
           locals: ["row"],
           templates: []
         };
@@ -5205,8 +4557,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
           var child0 = (function () {
             return {
               meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
+                "revision": "Ember@2.9.0",
                 "loc": {
                   "source": null,
                   "start": {
@@ -5241,15 +4592,14 @@ define("client/components/structure-block/template", ["exports"], function (expo
                 morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
                 return morphs;
               },
-              statements: [["content", "prev", ["loc", [null, [37, 14], [37, 22]]]]],
+              statements: [["content", "prev", ["loc", [null, [37, 14], [37, 22]]], 0, 0, 0, 0]],
               locals: ["prev"],
               templates: []
             };
           })();
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -5296,15 +4646,14 @@ define("client/components/structure-block/template", ["exports"], function (expo
               morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 3, 3);
               return morphs;
             },
-            statements: [["block", "each", [["get", "data.knowledge", ["loc", [null, [36, 16], [36, 30]]]]], [], 0, null, ["loc", [null, [36, 8], [38, 17]]]]],
+            statements: [["block", "each", [["get", "data.knowledge", ["loc", [null, [36, 16], [36, 30]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [36, 8], [38, 17]]]]],
             locals: [],
             templates: [child0]
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5335,18 +4684,14 @@ define("client/components/structure-block/template", ["exports"], function (expo
             dom.insertBoundary(fragment, null);
             return morphs;
           },
-          statements: [["block", "if", [["subexpr", "gt", [["get", "data.knowledge.length", ["loc", [null, [33, 14], [33, 35]]]], 0], [], ["loc", [null, [33, 10], [33, 38]]]]], [], 0, null, ["loc", [null, [33, 4], [40, 11]]]]],
+          statements: [["block", "if", [["subexpr", "gt", [["get", "data.knowledge.length", ["loc", [null, [33, 14], [33, 35]]], 0, 0, 0, 0], 0], [], ["loc", [null, [33, 10], [33, 38]]], 0, 0]], [], 0, null, ["loc", [null, [33, 4], [40, 11]]]]],
           locals: [],
           templates: [child0]
         };
       })();
       return {
         meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["multiple-nodes", "wrong-type"]
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -5418,7 +4763,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["content", "data.title", ["loc", [null, [2, 45], [2, 59]]]], ["block", "each", [["get", "data.images", ["loc", [null, [4, 12], [4, 23]]]]], [], 0, null, ["loc", [null, [4, 4], [9, 13]]]], ["block", "if", [["subexpr", "eq", [["get", "type", ["loc", [null, [10, 14], [10, 18]]]], "explore"], [], ["loc", [null, [10, 10], [10, 29]]]]], [], 1, null, ["loc", [null, [10, 4], [23, 11]]]], ["attribute", "id", ["get", "data.title", ["loc", [null, [26, 12], [26, 22]]]]], ["attribute", "contenteditable", ["get", "editable", ["loc", [null, [26, 44], [26, 52]]]]], ["block", "each", [["get", "rows", ["loc", [null, [27, 12], [27, 16]]]]], [], 2, null, ["loc", [null, [27, 4], [29, 13]]]], ["block", "if", [["subexpr", "eq", [["get", "type", ["loc", [null, [32, 12], [32, 16]]]], "explore"], [], ["loc", [null, [32, 8], [32, 27]]]]], [], 3, null, ["loc", [null, [32, 2], [41, 9]]]]],
+        statements: [["content", "data.title", ["loc", [null, [2, 45], [2, 59]]], 0, 0, 0, 0], ["block", "each", [["get", "data.images", ["loc", [null, [4, 12], [4, 23]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [4, 4], [9, 13]]]], ["block", "if", [["subexpr", "eq", [["get", "type", ["loc", [null, [10, 14], [10, 18]]], 0, 0, 0, 0], "explore"], [], ["loc", [null, [10, 10], [10, 29]]], 0, 0]], [], 1, null, ["loc", [null, [10, 4], [23, 11]]]], ["attribute", "id", ["get", "data.title", ["loc", [null, [26, 12], [26, 22]]], 0, 0, 0, 0], 0, 0, 0, 0], ["attribute", "contenteditable", ["get", "editable", ["loc", [null, [26, 44], [26, 52]]], 0, 0, 0, 0], 0, 0, 0, 0], ["block", "each", [["get", "rows", ["loc", [null, [27, 12], [27, 16]]], 0, 0, 0, 0]], [], 2, null, ["loc", [null, [27, 4], [29, 13]]]], ["block", "if", [["subexpr", "eq", [["get", "type", ["loc", [null, [32, 12], [32, 16]]], 0, 0, 0, 0], "explore"], [], ["loc", [null, [32, 8], [32, 27]]], 0, 0]], [], 3, null, ["loc", [null, [32, 2], [41, 9]]]]],
         locals: [],
         templates: [child0, child1, child2, child3]
       };
@@ -5428,8 +4773,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -5462,15 +4806,14 @@ define("client/components/structure-block/template", ["exports"], function (expo
               morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
               return morphs;
             },
-            statements: [["inline", "camera-component", [], ["index", ["subexpr", "@mut", [["get", "index", ["loc", [null, [47, 31], [47, 36]]]]], [], []], "close", ["subexpr", "@mut", [["get", "toggleModal", ["loc", [null, [47, 43], [47, 54]]]]], [], []], "self", ["subexpr", "@mut", [["get", "this", ["loc", [null, [47, 60], [47, 64]]]]], [], []]], ["loc", [null, [47, 6], [47, 67]]]]],
+            statements: [["inline", "camera-component", [], ["index", ["subexpr", "@mut", [["get", "index", ["loc", [null, [47, 31], [47, 36]]], 0, 0, 0, 0]], [], [], 0, 0], "close", ["subexpr", "@mut", [["get", "toggleModal", ["loc", [null, [47, 43], [47, 54]]], 0, 0, 0, 0]], [], [], 0, 0], "self", ["subexpr", "@mut", [["get", "this", ["loc", [null, [47, 60], [47, 64]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [47, 6], [47, 67]]], 0, 0]],
             locals: [],
             templates: []
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5508,8 +4851,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -5540,18 +4882,14 @@ define("client/components/structure-block/template", ["exports"], function (expo
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "if", [["get", "cameraVisible", ["loc", [null, [45, 8], [45, 21]]]]], [], 0, null, ["loc", [null, [45, 2], [49, 9]]]]],
+        statements: [["block", "if", [["get", "cameraVisible", ["loc", [null, [45, 8], [45, 21]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [45, 2], [49, 9]]]]],
         locals: [],
         templates: [child0]
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -5587,7 +4925,7 @@ define("client/components/structure-block/template", ["exports"], function (expo
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "if", [["get", "data", ["loc", [null, [1, 6], [1, 10]]]]], [], 0, null, ["loc", [null, [1, 0], [42, 7]]]], ["block", "if", [["get", "camera", ["loc", [null, [44, 6], [44, 12]]]]], [], 1, null, ["loc", [null, [44, 0], [50, 7]]]]],
+      statements: [["block", "if", [["get", "data", ["loc", [null, [1, 6], [1, 10]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [1, 0], [42, 7]]]], ["block", "if", [["get", "camera", ["loc", [null, [44, 6], [44, 12]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [44, 0], [50, 7]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -5651,8 +4989,7 @@ define("client/components/structure-component/template", ["exports"], function (
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5685,7 +5022,7 @@ define("client/components/structure-component/template", ["exports"], function (
             morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
             return morphs;
           },
-          statements: [["inline", "structure-block", [], ["type", ["subexpr", "@mut", [["get", "type", ["loc", [null, [4, 29], [4, 33]]]]], [], []], "classNames", "height-full", "camera", ["subexpr", "@mut", [["get", "camera", ["loc", [null, [4, 66], [4, 72]]]]], [], []], "index", ["subexpr", "@mut", [["get", "index", ["loc", [null, [4, 79], [4, 84]]]]], [], []]], ["loc", [null, [4, 6], [4, 86]]]]],
+          statements: [["inline", "structure-block", [], ["type", ["subexpr", "@mut", [["get", "type", ["loc", [null, [4, 29], [4, 33]]], 0, 0, 0, 0]], [], [], 0, 0], "classNames", "height-full", "camera", ["subexpr", "@mut", [["get", "camera", ["loc", [null, [4, 66], [4, 72]]], 0, 0, 0, 0]], [], [], 0, 0], "index", ["subexpr", "@mut", [["get", "index", ["loc", [null, [4, 79], [4, 84]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [4, 6], [4, 86]]], 0, 0]],
           locals: [],
           templates: []
         };
@@ -5693,8 +5030,7 @@ define("client/components/structure-component/template", ["exports"], function (
       var child1 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -5727,15 +5063,14 @@ define("client/components/structure-component/template", ["exports"], function (
             morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
             return morphs;
           },
-          statements: [["inline", "structure-block", [], ["type", ["subexpr", "@mut", [["get", "type", ["loc", [null, [6, 29], [6, 33]]]]], [], []], "camera", ["subexpr", "@mut", [["get", "camera", ["loc", [null, [6, 41], [6, 47]]]]], [], []], "index", ["subexpr", "@mut", [["get", "index", ["loc", [null, [6, 54], [6, 59]]]]], [], []]], ["loc", [null, [6, 6], [6, 61]]]]],
+          statements: [["inline", "structure-block", [], ["type", ["subexpr", "@mut", [["get", "type", ["loc", [null, [6, 29], [6, 33]]], 0, 0, 0, 0]], [], [], 0, 0], "camera", ["subexpr", "@mut", [["get", "camera", ["loc", [null, [6, 41], [6, 47]]], 0, 0, 0, 0]], [], [], 0, 0], "index", ["subexpr", "@mut", [["get", "index", ["loc", [null, [6, 54], [6, 59]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [6, 6], [6, 61]]], 0, 0]],
           locals: [],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -5766,7 +5101,7 @@ define("client/components/structure-component/template", ["exports"], function (
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "if", [["subexpr", "eq", [["get", "missing", ["loc", [null, [3, 14], [3, 21]]]], 2], [], ["loc", [null, [3, 10], [3, 24]]]]], [], 0, 1, ["loc", [null, [3, 4], [7, 11]]]]],
+        statements: [["block", "if", [["subexpr", "eq", [["get", "missing", ["loc", [null, [3, 14], [3, 21]]], 0, 0, 0, 0], 2], [], ["loc", [null, [3, 10], [3, 24]]], 0, 0]], [], 0, 1, ["loc", [null, [3, 4], [7, 11]]]]],
         locals: ["data", "index"],
         templates: [child0, child1]
       };
@@ -5774,8 +5109,7 @@ define("client/components/structure-component/template", ["exports"], function (
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -5808,7 +5142,7 @@ define("client/components/structure-component/template", ["exports"], function (
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "structure-block", ["loc", [null, [10, 4], [10, 24]]]]],
+        statements: [["content", "structure-block", ["loc", [null, [10, 4], [10, 24]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -5816,8 +5150,7 @@ define("client/components/structure-component/template", ["exports"], function (
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -5860,17 +5193,14 @@ define("client/components/structure-component/template", ["exports"], function (
           morphs[2] = dom.createMorphAt(fragment, 5, 5, contextualElement);
           return morphs;
         },
-        statements: [["content", "structure-block", ["loc", [null, [15, 4], [15, 24]]]], ["content", "structure-block", ["loc", [null, [16, 4], [16, 24]]]], ["content", "structure-block", ["loc", [null, [17, 4], [17, 24]]]]],
+        statements: [["content", "structure-block", ["loc", [null, [15, 4], [15, 24]]], 0, 0, 0, 0], ["content", "structure-block", ["loc", [null, [16, 4], [16, 24]]], 0, 0, 0, 0], ["content", "structure-block", ["loc", [null, [17, 4], [17, 24]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -5915,19 +5245,11 @@ define("client/components/structure-component/template", ["exports"], function (
         morphs[2] = dom.createMorphAt(element0, 4, 4);
         return morphs;
       },
-      statements: [["block", "each", [["get", "structures", ["loc", [null, [2, 10], [2, 20]]]]], [], 0, null, ["loc", [null, [2, 2], [8, 11]]]], ["block", "if", [["subexpr", "eq", [["get", "missing", ["loc", [null, [9, 12], [9, 19]]]], 1], [], ["loc", [null, [9, 8], [9, 22]]]]], [], 1, null, ["loc", [null, [9, 2], [11, 9]]]], ["block", "if", [["subexpr", "eq", [["get", "missing", ["loc", [null, [14, 12], [14, 19]]]], 3], [], ["loc", [null, [14, 8], [14, 22]]]]], [], 2, null, ["loc", [null, [14, 2], [18, 9]]]]],
+      statements: [["block", "each", [["get", "structures", ["loc", [null, [2, 10], [2, 20]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [2, 2], [8, 11]]]], ["block", "if", [["subexpr", "eq", [["get", "missing", ["loc", [null, [9, 12], [9, 19]]], 0, 0, 0, 0], 1], [], ["loc", [null, [9, 8], [9, 22]]], 0, 0]], [], 1, null, ["loc", [null, [9, 2], [11, 9]]]], ["block", "if", [["subexpr", "eq", [["get", "missing", ["loc", [null, [14, 12], [14, 19]]], 0, 0, 0, 0], 3], [], ["loc", [null, [14, 8], [14, 22]]], 0, 0]], [], 2, null, ["loc", [null, [14, 2], [18, 9]]]]],
       locals: [],
       templates: [child0, child1, child2]
     };
   })());
-});
-define('client/components/tether-dialog', ['exports', 'ember-modal-dialog/components/tether-dialog'], function (exports, _emberModalDialogComponentsTetherDialog) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberModalDialogComponentsTetherDialog['default'];
-    }
-  });
 });
 define("client/components/time-ago/component", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = _ember["default"].Component.extend({
@@ -5964,11 +5286,7 @@ define("client/components/time-ago/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -5999,7 +5317,7 @@ define("client/components/time-ago/template", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["content", "text", ["loc", [null, [1, 0], [1, 8]]]]],
+      statements: [["content", "text", ["loc", [null, [1, 0], [1, 8]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -6073,7 +5391,9 @@ define("client/components/user-missions/component", ["exports", "ember"], functi
     },
 
     _jQuery: (function () {
-      this.set("reloadBtn", Ladda.create(document.getElementById('reload')));
+      if (document.getElementById('reload')) {
+        this.set("reloadBtn", Ladda.create(document.getElementById('reload')));
+      }
     }).on("didInsertElement"),
 
     actions: {
@@ -6092,8 +5412,7 @@ define("client/components/user-missions/template", ["exports"], function (export
           var child0 = (function () {
             return {
               meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
+                "revision": "Ember@2.9.0",
                 "loc": {
                   "source": null,
                   "start": {
@@ -6126,7 +5445,7 @@ define("client/components/user-missions/template", ["exports"], function (export
                 morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
                 return morphs;
               },
-              statements: [["inline", "mission-button", [], ["model", ["subexpr", "@mut", [["get", "newMission", ["loc", [null, [9, 35], [9, 45]]]]], [], []], "text", "Återgå till uppdrag"], ["loc", [null, [9, 12], [9, 74]]]]],
+              statements: [["inline", "mission-button", [], ["model", ["subexpr", "@mut", [["get", "newMission", ["loc", [null, [9, 35], [9, 45]]], 0, 0, 0, 0]], [], [], 0, 0], "text", "Återgå till uppdrag"], ["loc", [null, [9, 12], [9, 74]]], 0, 0]],
               locals: [],
               templates: []
             };
@@ -6134,8 +5453,7 @@ define("client/components/user-missions/template", ["exports"], function (export
           var child1 = (function () {
             return {
               meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
+                "revision": "Ember@2.9.0",
                 "loc": {
                   "source": null,
                   "start": {
@@ -6168,15 +5486,14 @@ define("client/components/user-missions/template", ["exports"], function (export
                 morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
                 return morphs;
               },
-              statements: [["inline", "mission-button", [], ["model", ["subexpr", "@mut", [["get", "newMission", ["loc", [null, [11, 35], [11, 45]]]]], [], []], "text", "Starta uppdrag"], ["loc", [null, [11, 12], [11, 69]]]]],
+              statements: [["inline", "mission-button", [], ["model", ["subexpr", "@mut", [["get", "newMission", ["loc", [null, [11, 35], [11, 45]]], 0, 0, 0, 0]], [], [], 0, 0], "text", "Starta uppdrag"], ["loc", [null, [11, 12], [11, 69]]], 0, 0]],
               locals: [],
               templates: []
             };
           })();
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -6207,15 +5524,14 @@ define("client/components/user-missions/template", ["exports"], function (export
               dom.insertBoundary(fragment, null);
               return morphs;
             },
-            statements: [["block", "if", [["subexpr", "eq", [["get", "newMission.id", ["loc", [null, [8, 20], [8, 33]]]], ["get", "mission.lastRapport.mission-id", ["loc", [null, [8, 34], [8, 64]]]]], [], ["loc", [null, [8, 16], [8, 65]]]]], [], 0, 1, ["loc", [null, [8, 10], [12, 17]]]]],
+            statements: [["block", "if", [["subexpr", "eq", [["get", "newMission.id", ["loc", [null, [8, 20], [8, 33]]], 0, 0, 0, 0], ["get", "mission.lastRapport.mission-id", ["loc", [null, [8, 34], [8, 64]]], 0, 0, 0, 0]], [], ["loc", [null, [8, 16], [8, 65]]], 0, 0]], [], 0, 1, ["loc", [null, [8, 10], [12, 17]]]]],
             locals: ["newMission"],
             templates: [child0, child1]
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -6274,7 +5590,7 @@ define("client/components/user-missions/template", ["exports"], function (export
             morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3, 1]), 3, 3);
             return morphs;
           },
-          statements: [["inline", "mission-alert", [], ["model", ["subexpr", "@mut", [["get", "new", ["loc", [null, [3, 26], [3, 29]]]]], [], []]], ["loc", [null, [3, 4], [3, 31]]]], ["block", "each", [["get", "new", ["loc", [null, [7, 16], [7, 19]]]]], [], 0, null, ["loc", [null, [7, 8], [13, 17]]]]],
+          statements: [["inline", "mission-alert", [], ["model", ["subexpr", "@mut", [["get", "new", ["loc", [null, [3, 26], [3, 29]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [3, 4], [3, 31]]], 0, 0], ["block", "each", [["get", "new", ["loc", [null, [7, 16], [7, 19]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [7, 8], [13, 17]]]]],
           locals: [],
           templates: [child0]
         };
@@ -6283,8 +5599,7 @@ define("client/components/user-missions/template", ["exports"], function (export
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -6317,15 +5632,14 @@ define("client/components/user-missions/template", ["exports"], function (export
               morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
               return morphs;
             },
-            statements: [["inline", "mission-button", [], ["model", ["subexpr", "@mut", [["get", "mission", ["loc", [null, [23, 33], [23, 40]]]]], [], []], "text", "Utför uppdraget igen"], ["loc", [null, [23, 10], [23, 70]]]]],
+            statements: [["inline", "mission-button", [], ["model", ["subexpr", "@mut", [["get", "mission", ["loc", [null, [23, 33], [23, 40]]], 0, 0, 0, 0]], [], [], 0, 0], "text", "Utför uppdraget igen"], ["loc", [null, [23, 10], [23, 70]]], 0, 0]],
             locals: ["mission"],
             templates: []
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -6379,18 +5693,14 @@ define("client/components/user-missions/template", ["exports"], function (export
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 3, 3);
             return morphs;
           },
-          statements: [["block", "each", [["get", "old", ["loc", [null, [22, 16], [22, 19]]]]], [], 0, null, ["loc", [null, [22, 8], [24, 17]]]]],
+          statements: [["block", "each", [["get", "old", ["loc", [null, [22, 16], [22, 19]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [22, 8], [24, 17]]]]],
           locals: [],
           templates: [child0]
         };
       })();
       return {
         meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type", "multiple-nodes"]
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -6426,7 +5736,7 @@ define("client/components/user-missions/template", ["exports"], function (export
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "if", [["get", "new", ["loc", [null, [2, 8], [2, 11]]]]], [], 0, null, ["loc", [null, [2, 2], [16, 9]]]], ["block", "if", [["get", "old", ["loc", [null, [18, 8], [18, 11]]]]], [], 1, null, ["loc", [null, [18, 2], [27, 9]]]]],
+        statements: [["block", "if", [["get", "new", ["loc", [null, [2, 8], [2, 11]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [2, 2], [16, 9]]]], ["block", "if", [["get", "old", ["loc", [null, [18, 8], [18, 11]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [18, 2], [27, 9]]]]],
         locals: [],
         templates: [child0, child1]
       };
@@ -6434,8 +5744,7 @@ define("client/components/user-missions/template", ["exports"], function (export
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -6484,18 +5793,14 @@ define("client/components/user-missions/template", ["exports"], function (export
           morphs[0] = dom.createElementMorph(element0);
           return morphs;
         },
-        statements: [["element", "action", ["reload"], [], ["loc", [null, [30, 69], [30, 88]]]]],
+        statements: [["element", "action", ["reload"], [], ["loc", [null, [30, 69], [30, 88]]], 0, 0]],
         locals: [],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -6526,19 +5831,11 @@ define("client/components/user-missions/template", ["exports"], function (export
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "if", [["subexpr", "not-eq", [["get", "missions.length", ["loc", [null, [1, 14], [1, 29]]]], 0], [], ["loc", [null, [1, 6], [1, 32]]]]], [], 0, 1, ["loc", [null, [1, 0], [31, 7]]]]],
+      statements: [["block", "if", [["subexpr", "not-eq", [["get", "missions.length", ["loc", [null, [1, 14], [1, 29]]], 0, 0, 0, 0], 0], [], ["loc", [null, [1, 6], [1, 32]]], 0, 0]], [], 0, 1, ["loc", [null, [1, 0], [31, 7]]]]],
       locals: [],
       templates: [child0, child1]
     };
   })());
-});
-define('client/components/x-file-input', ['exports', 'emberx-file-input/components/x-file-input'], function (exports, _emberxFileInputComponentsXFileInput) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberxFileInputComponentsXFileInput['default'];
-    }
-  });
 });
 define('client/controllers/application', ['exports', 'ember', 'client/utils/helper'], function (exports, _ember, _clientUtilsHelper) {
   exports['default'] = _ember['default'].Controller.extend({
@@ -6554,9 +5851,6 @@ define('client/controllers/application', ['exports', 'ember', 'client/utils/help
       }
     }).on("init").observes("global.user")
   });
-});
-define('client/controllers/array', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Controller;
 });
 define('client/controllers/dashboard-missions', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller.extend({
@@ -6656,12 +5950,47 @@ define("client/controllers/login", ["exports", "ember"], function (exports, _emb
         this.set("global.user", this.get("store").peekRecord("user", this.get("user")));
         this.cookie.setCookie('school', this.get("school"), { expires: 7, path: '/' });
         this.cookie.setCookie('user', this.get("user"), { expires: 7, path: '/' });
+        window.location.reload(true);
       }
     }
   });
 });
-define('client/controllers/object', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Controller;
+define('client/controllers/rapports', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Controller.extend({
+    model: null,
+    queryParams: ['mission', 'class', 'user'],
+    updating: false,
+    rapports: null,
+    _watch: (function () {
+      var model = this.get('model');
+      if (model) {
+        var self = this;
+        if (parseInt(self.mission) > 0) {
+          model = model.filterBy("mission-id", parseInt(self.mission));
+        }
+
+        if (parseInt(self.user) > 0) {
+          model = model.filter(function (item, index, enumerable) {
+            var team = JSON.parse(item.get("team"));
+            for (var i = 0; i < team.length; i++) {
+              if (parseInt(team[i].id) === parseInt(self.user)) {
+                return true;
+              }
+            }
+          });
+        }
+
+        if (parseInt(self['class']) > 0) {
+          model = model.filterBy("class-id", parseInt(self['class']));
+        }
+
+        var arr = model.map(function (rapport, index, enumerable) {
+          return rapport;
+        });
+      }
+      this.set("rapports", arr);
+    }).observes("model.@each", "mission", "class", "user").on("init")
+  });
 });
 define("client/controllers/structure", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = _ember["default"].Controller.extend({
@@ -6750,8 +6079,10 @@ define("client/controllers/team", ["exports", "ember"], function (exports, _embe
     },
 
     group: _ember["default"].computed('model.@each', function () {
+      var user = this.get("global.user");
       var model = this.get('model');
-      var arr = model.filterBy('type', "student").map(function (user, index, enumerable) {
+
+      var arr = model.filterBy('type', "student").filterBy('class-id', user.content.data["class-id"]).map(function (user, index, enumerable) {
         return {
           id: user.get("id"),
           name: user.get("first-name") + " " + user.get("last-name")
@@ -6892,6 +6223,16 @@ define('client/helpers/and', ['exports', 'ember', 'ember-truth-helpers/helpers/a
 
   exports['default'] = forExport;
 });
+define('client/helpers/app-version', ['exports', 'ember', 'client/config/environment'], function (exports, _ember, _clientConfigEnvironment) {
+  exports.appVersion = appVersion;
+  var version = _clientConfigEnvironment['default'].APP.version;
+
+  function appVersion() {
+    return version;
+  }
+
+  exports['default'] = _ember['default'].Helper.helper(appVersion);
+});
 define('client/helpers/asset-avatar', ['exports', 'ember', 'client/utils/assets'], function (exports, _ember, _clientUtilsAssets) {
   exports.assetIcon = assetIcon;
 
@@ -6988,6 +6329,34 @@ define('client/helpers/is-array', ['exports', 'ember', 'ember-truth-helpers/help
   }
 
   exports['default'] = forExport;
+});
+define('client/helpers/lf-lock-model', ['exports', 'liquid-fire/helpers/lf-lock-model'], function (exports, _liquidFireHelpersLfLockModel) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireHelpersLfLockModel['default'];
+    }
+  });
+  Object.defineProperty(exports, 'lfLockModel', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireHelpersLfLockModel.lfLockModel;
+    }
+  });
+});
+define('client/helpers/lf-or', ['exports', 'liquid-fire/helpers/lf-or'], function (exports, _liquidFireHelpersLfOr) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireHelpersLfOr['default'];
+    }
+  });
+  Object.defineProperty(exports, 'lfOr', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireHelpersLfOr.lfOr;
+    }
+  });
 });
 define('client/helpers/lt', ['exports', 'ember', 'ember-truth-helpers/helpers/lt'], function (exports, _ember, _emberTruthHelpersHelpersLt) {
 
@@ -7146,16 +6515,13 @@ define('client/helpers/xor', ['exports', 'ember', 'ember-truth-helpers/helpers/x
 
   exports['default'] = forExport;
 });
-define('client/initializers/add-modals-container', ['exports', 'ember-modal-dialog/initializers/add-modals-container'], function (exports, _emberModalDialogInitializersAddModalsContainer) {
-  exports['default'] = {
-    name: 'add-modals-container',
-    initialize: _emberModalDialogInitializersAddModalsContainer['default']
-  };
-});
 define('client/initializers/app-version', ['exports', 'ember-cli-app-version/initializer-factory', 'client/config/environment'], function (exports, _emberCliAppVersionInitializerFactory, _clientConfigEnvironment) {
+  var _config$APP = _clientConfigEnvironment['default'].APP;
+  var name = _config$APP.name;
+  var version = _config$APP.version;
   exports['default'] = {
     name: 'App Version',
-    initialize: (0, _emberCliAppVersionInitializerFactory['default'])(_clientConfigEnvironment['default'].APP.name, _clientConfigEnvironment['default'].APP.version)
+    initialize: (0, _emberCliAppVersionInitializerFactory['default'])(name, version)
   };
 });
 define('client/initializers/component-router-injector', ['exports'], function (exports) {
@@ -7164,6 +6530,7 @@ define('client/initializers/component-router-injector', ['exports'], function (e
   function initialize(application) {
     // Injects all Ember components with a router object:
     application.inject('component', 'router', 'router:main');
+    //application.inject('controller', 'router', 'router:main');
   }
 
   exports['default'] = {
@@ -7341,42 +6708,13 @@ define('client/initializers/injectStore', ['exports', 'ember'], function (export
     initialize: _ember['default'].K
   };
 });
-define("client/initializers/liquid-fire", ["exports", "liquid-fire/router-dsl-ext", "liquid-fire/ember-internals"], function (exports, _liquidFireRouterDslExt, _liquidFireEmberInternals) {
-  (0, _liquidFireEmberInternals.registerKeywords)();
+define("client/initializers/liquid-fire", ["exports", "liquid-fire/ember-internals"], function (exports, _liquidFireEmberInternals) {
+
+  (0, _liquidFireEmberInternals.initialize)();
 
   exports["default"] = {
     name: 'liquid-fire',
     initialize: function initialize() {}
-  };
-});
-// This initializer exists only to make sure that the following
-// imports happen before the app boots.
-define('client/initializers/navigation', ['exports', 'client/config/environment'], function (exports, _clientConfigEnvironment) {
-  exports.initialize = initialize;
-
-  function initialize() /* application */{
-    var application = arguments[1] || arguments[0];
-    var uiNavigator = _clientConfigEnvironment['default'].uiNavigator;
-
-    uiNavigator = uiNavigator || {};
-
-    var _ref = uiNavigator || [];
-
-    var injectionFactories = _ref.injectionFactories;
-
-    application.register('config:navigator', uiNavigator, { instantiate: false });
-    if (injectionFactories.length > 0) {
-      application.inject('service:navigator', 'uiNavigator', 'config:navigator');
-
-      injectionFactories.forEach(function (factory) {
-        application.inject(factory, 'navigator', 'service:navigator');
-      });
-    }
-  }
-
-  exports['default'] = {
-    name: 'navigator',
-    initialize: initialize
   };
 });
 define('client/initializers/store', ['exports', 'ember'], function (exports, _ember) {
@@ -7508,6 +6846,15 @@ define('client/lib/cookie', ['exports', 'ember'], function (exports, _ember) {
     }
   });
 });
+define('client/models/class', ['exports', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships'], function (exports, _emberDataModel, _emberDataAttr, _emberDataRelationships) {
+  exports['default'] = _emberDataModel['default'].extend({
+    "title": (0, _emberDataAttr['default'])('string'),
+    "school-id": (0, _emberDataAttr['default'])('number'),
+    "class-id": (0, _emberDataAttr['default'])('number'),
+    "updated": (0, _emberDataAttr['default'])('string'),
+    "created": (0, _emberDataAttr['default'])('string')
+  });
+});
 define('client/models/image', ['exports', 'ember-data/model', 'ember-data/attr', 'ember-data/relationships'], function (exports, _emberDataModel, _emberDataAttr, _emberDataRelationships) {
   exports['default'] = _emberDataModel['default'].extend({
     name: (0, _emberDataAttr['default'])('string'),
@@ -7555,16 +6902,11 @@ define('client/models/user', ['exports', 'ember-data/model', 'ember-data/attr', 
     "last-name": (0, _emberDataAttr['default'])('string'),
     "slug": "kalle-karlsson",
     "school-id": (0, _emberDataAttr['default'])('number'),
+    "class-id": (0, _emberDataAttr['default'])('number'),
     "type": (0, _emberDataAttr['default'])('string'),
     "avatar": (0, _emberDataAttr['default'])('string'),
     "updated": (0, _emberDataAttr['default'])('string'),
-    "created": (0, _emberDataAttr['default'])('string'),
-
-    "class": "3A",
-    "adress": "Strandvägen 17",
-    "postal": "30269",
-    "city": "Halmstad"
-
+    "created": (0, _emberDataAttr['default'])('string')
   });
 });
 define('client/resolver', ['exports', 'ember-resolver'], function (exports, _emberResolver) {
@@ -7573,7 +6915,8 @@ define('client/resolver', ['exports', 'ember-resolver'], function (exports, _emb
 define('client/router', ['exports', 'ember', 'client/config/environment'], function (exports, _ember, _clientConfigEnvironment) {
 
   var Router = _ember['default'].Router.extend({
-    location: _clientConfigEnvironment['default'].locationType
+    location: _clientConfigEnvironment['default'].locationType,
+    rootURL: _clientConfigEnvironment['default'].rootURL
   });
 
   Router.map(function () {
@@ -7606,20 +6949,17 @@ define('client/router', ['exports', 'ember', 'client/config/environment'], funct
 
   exports['default'] = Router;
 });
-define('client/routes/application', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Route.extend({
-    global: _ember['default'].inject.service(),
-    store: _ember['default'].inject.service(),
+define("client/routes/application", ["exports", "ember"], function (exports, _ember) {
+  exports["default"] = _ember["default"].Route.extend({
+    global: _ember["default"].inject.service(),
+    store: _ember["default"].inject.service(),
+    transition: null,
     beforeModel: function beforeModel(transition) {
+      this.set("transition", transition);
       this.get("check")(this.controllerFor('application'), transition);
     },
-
-    afterModel: function afterModel() {
-      console.log("after");
-      var loadingIndicatorClass = this.get('ember-load-config.loadingIndicatorClass') || 'ember-load-indicator';
-      _ember['default'].$('.' + loadingIndicatorClass).remove();
-    },
     check: function check(self, transition) {
+
       if (self.cookie) {
         if (self.get("global.user") === null || self.get("global.school") === null) {
           var school = self.cookie.getCookie('school');
@@ -7629,12 +6969,21 @@ define('client/routes/application', ['exports', 'ember'], function (exports, _em
             self.set("global.user", self.get("store").find("user", user));
 
             if (transition.targetName === "login") {
-              console.log("go to index");
               self.transitionToRoute('index');
             }
           } else {
             self.transitionToRoute('login');
           }
+        }
+      }
+    },
+
+    setupController: function setupController(controller, model) {
+      var transition = this.get("transition");
+      if (transition) {
+        if (transition.handlerInfos.length > 1) {
+          var path = transition.handlerInfos[1].name;
+          controller.set("path", path);
         }
       }
     },
@@ -7698,14 +7047,20 @@ define("client/routes/index", ["exports", "ember"], function (exports, _ember) {
     },
     model: function model(params) {
       if (this.get("global.school.id")) {
-        return this.get("store").query("mission", { "school-id": this.get("global.school.id") });
+        return this.get("store").query("mission", {
+          "school-id": this.get("global.school.id")
+        });
       }
     },
 
     setupController: function setupController(controller, model) {
       controller.set('model', {
-        "missions": this.get("store").query("mission", { "school-id": this.get("global.school.id") }),
-        "rapports": this.get("store").query("rapport", { "school-id": this.get("global.school.id") })
+        "missions": this.get("store").query("mission", {
+          "school-id": this.get("global.school.id")
+        }),
+        "rapports": this.get("store").query("rapport", {
+          "school-id": this.get("global.school.id")
+        })
 
       });
       //this.set("global.mission", model);
@@ -7835,8 +7190,19 @@ define('client/routes/rapport', ['exports', 'ember'], function (exports, _ember)
 });
 define("client/routes/rapports", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = _ember["default"].Route.extend({
-    model: function model() {
+    model: function model(params) {
       return this.store.findAll("rapport");
+    },
+    queryParams: {
+      mission: {
+        refreshModel: true
+      },
+      user: {
+        refreshModel: true
+      },
+      "class": {
+        refreshModel: true
+      }
     }
   });
 });
@@ -7990,9 +7356,6 @@ define('client/services/global', ['exports', 'ember'], function (exports, _ember
     user: null,
     mission: null
   });
-});
-define("client/services/liquid-fire-modals", ["exports", "liquid-fire/modals"], function (exports, _liquidFireModals) {
-  exports["default"] = _liquidFireModals["default"];
 });
 define("client/services/liquid-fire-transitions", ["exports", "liquid-fire/transition-map"], function (exports, _liquidFireTransitionMap) {
   exports["default"] = _liquidFireTransitionMap["default"];
@@ -8192,25 +7555,13 @@ define("client/services/mission", ["exports", "ember"], function (exports, _embe
   }],
   */
 });
-define('client/services/modal-dialog', ['exports', 'ember-modal-dialog/services/modal-dialog'], function (exports, _emberModalDialogServicesModalDialog) {
-  exports['default'] = _emberModalDialogServicesModalDialog['default'];
-});
-define('client/services/navigator', ['exports', 'ui-navigator-service/services/navigator'], function (exports, _uiNavigatorServiceServicesNavigator) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _uiNavigatorServiceServicesNavigator['default'];
-    }
-  });
-});
 define("client/templates/application", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -8243,18 +7594,14 @@ define("client/templates/application", ["exports"], function (exports) {
             morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
             return morphs;
           },
-          statements: [["content", "navigation-global", ["loc", [null, [3, 4], [3, 25]]]]],
+          statements: [["content", "navigation-global", ["loc", [null, [3, 4], [3, 25]]], 0, 0, 0, 0]],
           locals: [],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type", "multiple-nodes"]
-          },
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -8303,7 +7650,7 @@ define("client/templates/application", ["exports"], function (exports) {
           dom.insertBoundary(fragment, 0);
           return morphs;
         },
-        statements: [["block", "if", [["get", "isAuthenticated", ["loc", [null, [2, 8], [2, 23]]]]], [], 0, null, ["loc", [null, [2, 2], [4, 9]]]], ["inline", "liquid-outlet", [], ["class", "reset-transform"], ["loc", [null, [6, 4], [6, 45]]]], ["content", "ember-load-remover", ["loc", [null, [9, 2], [9, 24]]]]],
+        statements: [["block", "if", [["get", "isAuthenticated", ["loc", [null, [2, 8], [2, 23]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [2, 2], [4, 9]]]], ["inline", "liquid-outlet", [], ["class", "reset-transform"], ["loc", [null, [6, 4], [6, 45]]], 0, 0], ["content", "ember-load-remover", ["loc", [null, [9, 2], [9, 24]]], 0, 0, 0, 0]],
         locals: [],
         templates: [child0]
       };
@@ -8311,8 +7658,7 @@ define("client/templates/application", ["exports"], function (exports) {
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -8377,11 +7723,7 @@ define("client/templates/application", ["exports"], function (exports) {
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -8412,1637 +7754,17 @@ define("client/templates/application", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "if", [["get", "global.user", ["loc", [null, [1, 6], [1, 17]]]]], [], 0, 1, ["loc", [null, [1, 0], [19, 7]]]]],
+      statements: [["block", "if", [["subexpr", "or", [["get", "global.user", ["loc", [null, [1, 10], [1, 21]]], 0, 0, 0, 0], ["subexpr", "eq", [["get", "path", ["loc", [null, [1, 26], [1, 30]]], 0, 0, 0, 0], "login"], [], ["loc", [null, [1, 22], [1, 39]]], 0, 0]], [], ["loc", [null, [1, 6], [1, 40]]], 0, 0]], [], 0, 1, ["loc", [null, [1, 0], [19, 7]]]]],
       locals: [],
       templates: [child0, child1]
     };
   })());
-});
-define("client/templates/components/liquid-bind", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 5,
-                  "column": 4
-                },
-                "end": {
-                  "line": 7,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-bind.hbs"
-            },
-            isEmpty: false,
-            arity: 0,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["inline", "yield", [["get", "version", ["loc", [null, [6, 15], [6, 22]]]]], [], ["loc", [null, [6, 6], [6, 26]]]]],
-            locals: [],
-            templates: []
-          };
-        })();
-        var child1 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 7,
-                  "column": 4
-                },
-                "end": {
-                  "line": 9,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-bind.hbs"
-            },
-            isEmpty: false,
-            arity: 0,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["content", "version", ["loc", [null, [8, 6], [8, 20]]]]],
-            locals: [],
-            templates: []
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 2,
-                "column": 2
-              },
-              "end": {
-                "line": 11,
-                "column": 0
-              }
-            },
-            "moduleName": "client/templates/components/liquid-bind.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "if", [["get", "hasBlock", ["loc", [null, [5, 11], [5, 19]]]]], [], 0, 1, ["loc", [null, [5, 4], [9, 12]]]]],
-          locals: ["version"],
-          templates: [child0, child1]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type"]
-          },
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 12,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-bind.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-versions", [], ["value", ["subexpr", "@mut", [["get", "attrs.value", ["loc", [null, [2, 28], [2, 39]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [2, 44], [2, 47]]]]], [], []], "outletName", ["subexpr", "@mut", [["get", "attrs.outletName", ["loc", [null, [3, 32], [3, 48]]]]], [], []], "name", "liquid-bind", "renderWhenFalse", true, "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [4, 67], [4, 72]]]]], [], []]], 0, null, ["loc", [null, [2, 2], [11, 22]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })();
-    var child1 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          var child0 = (function () {
-            return {
-              meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
-                "loc": {
-                  "source": null,
-                  "start": {
-                    "line": 25,
-                    "column": 6
-                  },
-                  "end": {
-                    "line": 27,
-                    "column": 6
-                  }
-                },
-                "moduleName": "client/templates/components/liquid-bind.hbs"
-              },
-              isEmpty: false,
-              arity: 0,
-              cachedFragment: null,
-              hasRendered: false,
-              buildFragment: function buildFragment(dom) {
-                var el0 = dom.createDocumentFragment();
-                var el1 = dom.createComment("");
-                dom.appendChild(el0, el1);
-                return el0;
-              },
-              buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-                var morphs = new Array(1);
-                morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-                dom.insertBoundary(fragment, 0);
-                dom.insertBoundary(fragment, null);
-                return morphs;
-              },
-              statements: [["inline", "yield", [["get", "version", ["loc", [null, [26, 17], [26, 24]]]]], [], ["loc", [null, [26, 8], [26, 28]]]]],
-              locals: [],
-              templates: []
-            };
-          })();
-          var child1 = (function () {
-            return {
-              meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
-                "loc": {
-                  "source": null,
-                  "start": {
-                    "line": 27,
-                    "column": 6
-                  },
-                  "end": {
-                    "line": 29,
-                    "column": 6
-                  }
-                },
-                "moduleName": "client/templates/components/liquid-bind.hbs"
-              },
-              isEmpty: false,
-              arity: 0,
-              cachedFragment: null,
-              hasRendered: false,
-              buildFragment: function buildFragment(dom) {
-                var el0 = dom.createDocumentFragment();
-                var el1 = dom.createComment("");
-                dom.appendChild(el0, el1);
-                return el0;
-              },
-              buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-                var morphs = new Array(1);
-                morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-                dom.insertBoundary(fragment, 0);
-                dom.insertBoundary(fragment, null);
-                return morphs;
-              },
-              statements: [["content", "version", ["loc", [null, [28, 8], [28, 22]]]]],
-              locals: [],
-              templates: []
-            };
-          })();
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 21,
-                  "column": 4
-                },
-                "end": {
-                  "line": 31,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-bind.hbs"
-            },
-            isEmpty: false,
-            arity: 1,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["block", "if", [["get", "hasBlock", ["loc", [null, [25, 13], [25, 21]]]]], [], 0, 1, ["loc", [null, [25, 6], [29, 14]]]]],
-            locals: ["version"],
-            templates: [child0, child1]
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 13,
-                "column": 2
-              },
-              "end": {
-                "line": 32,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-bind.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "liquid-versions", [], ["value", ["subexpr", "@mut", [["get", "attrs.value", ["loc", [null, [21, 30], [21, 41]]]]], [], []], "notify", ["subexpr", "@mut", [["get", "container", ["loc", [null, [21, 49], [21, 58]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [21, 63], [21, 66]]]]], [], []], "outletName", ["subexpr", "@mut", [["get", "attrs.outletName", ["loc", [null, [22, 34], [22, 50]]]]], [], []], "name", "liquid-bind", "renderWhenFalse", true], 0, null, ["loc", [null, [21, 4], [31, 26]]]]],
-          locals: ["container"],
-          templates: [child0]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 12,
-              "column": 0
-            },
-            "end": {
-              "line": 33,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-bind.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-container", [], ["id", ["subexpr", "@mut", [["get", "id", ["loc", [null, [14, 9], [14, 11]]]]], [], []], "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [15, 12], [15, 17]]]]], [], []], "growDuration", ["subexpr", "@mut", [["get", "growDuration", ["loc", [null, [16, 19], [16, 31]]]]], [], []], "growPixelsPerSecond", ["subexpr", "@mut", [["get", "growPixelsPerSecond", ["loc", [null, [17, 26], [17, 45]]]]], [], []], "growEasing", ["subexpr", "@mut", [["get", "growEasing", ["loc", [null, [18, 17], [18, 27]]]]], [], []], "enableGrowth", ["subexpr", "@mut", [["get", "enableGrowth", ["loc", [null, [19, 19], [19, 31]]]]], [], []]], 0, null, ["loc", [null, [13, 2], [32, 25]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 34,
-            "column": 0
-          }
-        },
-        "moduleName": "client/templates/components/liquid-bind.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["block", "if", [["get", "containerless", ["loc", [null, [1, 6], [1, 19]]]]], [], 0, 1, ["loc", [null, [1, 0], [33, 7]]]]],
-      locals: [],
-      templates: [child0, child1]
-    };
-  })());
-});
-define("client/templates/components/liquid-container", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 1,
-            "column": 14
-          }
-        },
-        "moduleName": "client/templates/components/liquid-container.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["inline", "yield", [["get", "this", ["loc", [null, [1, 8], [1, 12]]]]], [], ["loc", [null, [1, 0], [1, 14]]]]],
-      locals: [],
-      templates: []
-    };
-  })());
-});
-define("client/templates/components/liquid-if", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 4,
-                  "column": 4
-                },
-                "end": {
-                  "line": 6,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-if.hbs"
-            },
-            isEmpty: false,
-            arity: 0,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("      ");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("\n");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-              return morphs;
-            },
-            statements: [["content", "yield", ["loc", [null, [5, 6], [5, 15]]]]],
-            locals: [],
-            templates: []
-          };
-        })();
-        var child1 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 6,
-                  "column": 4
-                },
-                "end": {
-                  "line": 8,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-if.hbs"
-            },
-            isEmpty: false,
-            arity: 0,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("      ");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("\n");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-              return morphs;
-            },
-            statements: [["inline", "yield", [], ["to", "inverse"], ["loc", [null, [7, 6], [7, 28]]]]],
-            locals: [],
-            templates: []
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 2,
-                "column": 2
-              },
-              "end": {
-                "line": 9,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-if.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "if", [["get", "valueVersion", ["loc", [null, [4, 10], [4, 22]]]]], [], 0, 1, ["loc", [null, [4, 4], [8, 11]]]]],
-          locals: ["valueVersion"],
-          templates: [child0, child1]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type"]
-          },
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 10,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-if.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-versions", [], ["value", ["subexpr", "@mut", [["get", "showFirstBlock", ["loc", [null, [2, 27], [2, 41]]]]], [], []], "name", ["subexpr", "@mut", [["get", "helperName", ["loc", [null, [2, 47], [2, 57]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [3, 27], [3, 30]]]]], [], []], "renderWhenFalse", ["subexpr", "hasBlock", ["inverse"], [], ["loc", [null, [3, 47], [3, 67]]]], "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [3, 74], [3, 79]]]]], [], []]], 0, null, ["loc", [null, [2, 2], [9, 22]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })();
-    var child1 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          var child0 = (function () {
-            return {
-              meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
-                "loc": {
-                  "source": null,
-                  "start": {
-                    "line": 21,
-                    "column": 6
-                  },
-                  "end": {
-                    "line": 23,
-                    "column": 6
-                  }
-                },
-                "moduleName": "client/templates/components/liquid-if.hbs"
-              },
-              isEmpty: false,
-              arity: 0,
-              cachedFragment: null,
-              hasRendered: false,
-              buildFragment: function buildFragment(dom) {
-                var el0 = dom.createDocumentFragment();
-                var el1 = dom.createTextNode("        ");
-                dom.appendChild(el0, el1);
-                var el1 = dom.createComment("");
-                dom.appendChild(el0, el1);
-                var el1 = dom.createTextNode("\n");
-                dom.appendChild(el0, el1);
-                return el0;
-              },
-              buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-                var morphs = new Array(1);
-                morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-                return morphs;
-              },
-              statements: [["content", "yield", ["loc", [null, [22, 8], [22, 17]]]]],
-              locals: [],
-              templates: []
-            };
-          })();
-          var child1 = (function () {
-            return {
-              meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
-                "loc": {
-                  "source": null,
-                  "start": {
-                    "line": 23,
-                    "column": 6
-                  },
-                  "end": {
-                    "line": 25,
-                    "column": 6
-                  }
-                },
-                "moduleName": "client/templates/components/liquid-if.hbs"
-              },
-              isEmpty: false,
-              arity: 0,
-              cachedFragment: null,
-              hasRendered: false,
-              buildFragment: function buildFragment(dom) {
-                var el0 = dom.createDocumentFragment();
-                var el1 = dom.createTextNode("        ");
-                dom.appendChild(el0, el1);
-                var el1 = dom.createComment("");
-                dom.appendChild(el0, el1);
-                var el1 = dom.createTextNode("\n");
-                dom.appendChild(el0, el1);
-                return el0;
-              },
-              buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-                var morphs = new Array(1);
-                morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-                return morphs;
-              },
-              statements: [["inline", "yield", [], ["to", "inverse"], ["loc", [null, [24, 8], [24, 30]]]]],
-              locals: [],
-              templates: []
-            };
-          })();
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 19,
-                  "column": 4
-                },
-                "end": {
-                  "line": 26,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-if.hbs"
-            },
-            isEmpty: false,
-            arity: 1,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["block", "if", [["get", "valueVersion", ["loc", [null, [21, 12], [21, 24]]]]], [], 0, 1, ["loc", [null, [21, 6], [25, 13]]]]],
-            locals: ["valueVersion"],
-            templates: [child0, child1]
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 11,
-                "column": 2
-              },
-              "end": {
-                "line": 27,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-if.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "liquid-versions", [], ["value", ["subexpr", "@mut", [["get", "showFirstBlock", ["loc", [null, [19, 29], [19, 43]]]]], [], []], "notify", ["subexpr", "@mut", [["get", "container", ["loc", [null, [19, 51], [19, 60]]]]], [], []], "name", ["subexpr", "@mut", [["get", "helperName", ["loc", [null, [19, 66], [19, 76]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [20, 8], [20, 11]]]]], [], []], "renderWhenFalse", ["subexpr", "hasBlock", ["inverse"], [], ["loc", [null, [20, 28], [20, 48]]]]], 0, null, ["loc", [null, [19, 4], [26, 24]]]]],
-          locals: ["container"],
-          templates: [child0]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 10,
-              "column": 0
-            },
-            "end": {
-              "line": 28,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-if.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-container", [], ["id", ["subexpr", "@mut", [["get", "id", ["loc", [null, [12, 9], [12, 11]]]]], [], []], "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [13, 12], [13, 17]]]]], [], []], "growDuration", ["subexpr", "@mut", [["get", "growDuration", ["loc", [null, [14, 19], [14, 31]]]]], [], []], "growPixelsPerSecond", ["subexpr", "@mut", [["get", "growPixelsPerSecond", ["loc", [null, [15, 26], [15, 45]]]]], [], []], "growEasing", ["subexpr", "@mut", [["get", "growEasing", ["loc", [null, [16, 17], [16, 27]]]]], [], []], "enableGrowth", ["subexpr", "@mut", [["get", "enableGrowth", ["loc", [null, [17, 19], [17, 31]]]]], [], []]], 0, null, ["loc", [null, [11, 2], [27, 23]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 29,
-            "column": 0
-          }
-        },
-        "moduleName": "client/templates/components/liquid-if.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["block", "if", [["get", "containerless", ["loc", [null, [1, 6], [1, 19]]]]], [], 0, 1, ["loc", [null, [1, 0], [28, 7]]]]],
-      locals: [],
-      templates: [child0, child1]
-    };
-  })());
-});
-define("client/templates/components/liquid-modal", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      var child0 = (function () {
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 2,
-                "column": 2
-              },
-              "end": {
-                "line": 6,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-modal.hbs"
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("    ");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createElement("div");
-            dom.setAttribute(el1, "role", "dialog");
-            var el2 = dom.createTextNode("\n      ");
-            dom.appendChild(el1, el2);
-            var el2 = dom.createComment("");
-            dom.appendChild(el1, el2);
-            var el2 = dom.createTextNode("\n    ");
-            dom.appendChild(el1, el2);
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var element0 = dom.childAt(fragment, [1]);
-            var morphs = new Array(4);
-            morphs[0] = dom.createAttrMorph(element0, 'class');
-            morphs[1] = dom.createAttrMorph(element0, 'aria-labelledby');
-            morphs[2] = dom.createAttrMorph(element0, 'aria-label');
-            morphs[3] = dom.createMorphAt(element0, 1, 1);
-            return morphs;
-          },
-          statements: [["attribute", "class", ["concat", ["lf-dialog ", ["get", "cc.options.dialogClass", ["loc", [null, [3, 28], [3, 50]]]]]]], ["attribute", "aria-labelledby", ["get", "cc.options.ariaLabelledBy", ["loc", [null, [3, 86], [3, 111]]]]], ["attribute", "aria-label", ["get", "cc.options.ariaLabel", ["loc", [null, [3, 127], [3, 147]]]]], ["inline", "lf-vue", [["get", "cc.view", ["loc", [null, [4, 15], [4, 22]]]]], ["dismiss", "dismiss"], ["loc", [null, [4, 6], [4, 42]]]]],
-          locals: [],
-          templates: []
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type", "multiple-nodes"]
-          },
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 8,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-modal.hbs"
-        },
-        isEmpty: false,
-        arity: 1,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("  ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(2);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          morphs[1] = dom.createMorphAt(fragment, 2, 2, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          return morphs;
-        },
-        statements: [["block", "lm-container", [], ["action", "escape", "clickAway", "outsideClick"], 0, null, ["loc", [null, [2, 2], [6, 19]]]], ["content", "lf-overlay", ["loc", [null, [7, 2], [7, 16]]]]],
-        locals: ["cc"],
-        templates: [child0]
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 9,
-            "column": 0
-          }
-        },
-        "moduleName": "client/templates/components/liquid-modal.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["block", "liquid-versions", [], ["name", "liquid-modal", "value", ["subexpr", "@mut", [["get", "currentContext", ["loc", [null, [1, 45], [1, 59]]]]], [], []], "renderWhenFalse", false], 0, null, ["loc", [null, [1, 0], [8, 20]]]]],
-      locals: [],
-      templates: [child0]
-    };
-  })());
-});
-define("client/templates/components/liquid-outlet", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 15,
-                  "column": 6
-                },
-                "end": {
-                  "line": 17,
-                  "column": 6
-                }
-              },
-              "moduleName": "client/templates/components/liquid-outlet.hbs"
-            },
-            isEmpty: false,
-            arity: 0,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["inline", "outlet", [["get", "outletName", ["loc", [null, [16, 17], [16, 27]]]]], [], ["loc", [null, [16, 8], [16, 29]]]]],
-            locals: [],
-            templates: []
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 2,
-                "column": 2
-              },
-              "end": {
-                "line": 19,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-outlet.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "set-outlet-state", [["get", "outletName", ["loc", [null, [15, 26], [15, 36]]]], ["get", "version.outletState", ["loc", [null, [15, 37], [15, 56]]]]], [], 0, null, ["loc", [null, [15, 6], [17, 28]]]]],
-          locals: ["version"],
-          templates: [child0]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type"]
-          },
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 20,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-outlet.hbs"
-        },
-        isEmpty: false,
-        arity: 1,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-bind", [["get", "outletState", ["loc", [null, [2, 17], [2, 28]]]]], ["id", ["subexpr", "@mut", [["get", "id", ["loc", [null, [3, 9], [3, 11]]]]], [], []], "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [4, 12], [4, 17]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [5, 10], [5, 13]]]]], [], []], "name", "liquid-outlet", "outletName", ["subexpr", "@mut", [["get", "outletName", ["loc", [null, [7, 17], [7, 27]]]]], [], []], "containerless", ["subexpr", "@mut", [["get", "containerless", ["loc", [null, [8, 20], [8, 33]]]]], [], []], "growDuration", ["subexpr", "@mut", [["get", "growDuration", ["loc", [null, [9, 19], [9, 31]]]]], [], []], "growPixelsPerSecond", ["subexpr", "@mut", [["get", "growPixelsPerSecond", ["loc", [null, [10, 26], [10, 45]]]]], [], []], "growEasing", ["subexpr", "@mut", [["get", "growEasing", ["loc", [null, [11, 17], [11, 27]]]]], [], []], "enableGrowth", ["subexpr", "@mut", [["get", "enableGrowth", ["loc", [null, [12, 19], [12, 31]]]]], [], []]], 0, null, ["loc", [null, [2, 2], [19, 20]]]]],
-        locals: ["outletState"],
-        templates: [child0]
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 21,
-            "column": 0
-          }
-        },
-        "moduleName": "client/templates/components/liquid-outlet.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["block", "get-outlet-state", [["get", "outletName", ["loc", [null, [1, 21], [1, 31]]]]], [], 0, null, ["loc", [null, [1, 0], [20, 21]]]]],
-      locals: [],
-      templates: [child0]
-    };
-  })());
-});
-define("client/templates/components/liquid-versions", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 3,
-                  "column": 4
-                },
-                "end": {
-                  "line": 5,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-versions.hbs"
-            },
-            isEmpty: false,
-            arity: 0,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["inline", "yield", [["get", "version.value", ["loc", [null, [4, 14], [4, 27]]]]], [], ["loc", [null, [4, 6], [4, 31]]]]],
-            locals: [],
-            templates: []
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 2,
-                "column": 2
-              },
-              "end": {
-                "line": 6,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-versions.hbs"
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "liquid-child", [], ["version", ["subexpr", "@mut", [["get", "version", ["loc", [null, [3, 28], [3, 35]]]]], [], []], "liquidChildDidRender", "childDidRender", "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [3, 80], [3, 85]]]]], [], []]], 0, null, ["loc", [null, [3, 4], [5, 21]]]]],
-          locals: [],
-          templates: [child0]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type"]
-          },
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 7,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-versions.hbs"
-        },
-        isEmpty: false,
-        arity: 1,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "if", [["get", "version.shouldRender", ["loc", [null, [2, 8], [2, 28]]]]], [], 0, null, ["loc", [null, [2, 2], [6, 9]]]]],
-        locals: ["version"],
-        templates: [child0]
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 8,
-            "column": 0
-          }
-        },
-        "moduleName": "client/templates/components/liquid-versions.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["block", "each", [["get", "versions", ["loc", [null, [1, 8], [1, 16]]]]], ["key", "@identity"], 0, null, ["loc", [null, [1, 0], [7, 9]]]]],
-      locals: [],
-      templates: [child0]
-    };
-  })());
-});
-define("client/templates/components/liquid-with", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      var child0 = (function () {
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 2,
-                "column": 2
-              },
-              "end": {
-                "line": 4,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-with.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["inline", "yield", [["get", "version", ["loc", [null, [3, 13], [3, 20]]]]], [], ["loc", [null, [3, 4], [3, 24]]]]],
-          locals: ["version"],
-          templates: []
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": {
-            "name": "missing-wrapper",
-            "problems": ["wrong-type"]
-          },
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 1,
-              "column": 0
-            },
-            "end": {
-              "line": 5,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-with.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-versions", [], ["value", ["subexpr", "@mut", [["get", "attrs.value", ["loc", [null, [2, 28], [2, 39]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [2, 44], [2, 47]]]]], [], []], "name", ["subexpr", "@mut", [["get", "name", ["loc", [null, [2, 53], [2, 57]]]]], [], []], "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [2, 64], [2, 69]]]]], [], []]], 0, null, ["loc", [null, [2, 2], [4, 23]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })();
-    var child1 = (function () {
-      var child0 = (function () {
-        var child0 = (function () {
-          return {
-            meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
-              "loc": {
-                "source": null,
-                "start": {
-                  "line": 14,
-                  "column": 4
-                },
-                "end": {
-                  "line": 16,
-                  "column": 4
-                }
-              },
-              "moduleName": "client/templates/components/liquid-with.hbs"
-            },
-            isEmpty: false,
-            arity: 1,
-            cachedFragment: null,
-            hasRendered: false,
-            buildFragment: function buildFragment(dom) {
-              var el0 = dom.createDocumentFragment();
-              var el1 = dom.createComment("");
-              dom.appendChild(el0, el1);
-              return el0;
-            },
-            buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-              var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-              dom.insertBoundary(fragment, 0);
-              dom.insertBoundary(fragment, null);
-              return morphs;
-            },
-            statements: [["inline", "yield", [["get", "version", ["loc", [null, [15, 15], [15, 22]]]]], [], ["loc", [null, [15, 6], [15, 26]]]]],
-            locals: ["version"],
-            templates: []
-          };
-        })();
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 6,
-                "column": 2
-              },
-              "end": {
-                "line": 17,
-                "column": 2
-              }
-            },
-            "moduleName": "client/templates/components/liquid-with.hbs"
-          },
-          isEmpty: false,
-          arity: 1,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createComment("");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-            var morphs = new Array(1);
-            morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-            dom.insertBoundary(fragment, 0);
-            dom.insertBoundary(fragment, null);
-            return morphs;
-          },
-          statements: [["block", "liquid-versions", [], ["value", ["subexpr", "@mut", [["get", "attrs.value", ["loc", [null, [14, 30], [14, 41]]]]], [], []], "notify", ["subexpr", "@mut", [["get", "container", ["loc", [null, [14, 49], [14, 58]]]]], [], []], "use", ["subexpr", "@mut", [["get", "use", ["loc", [null, [14, 63], [14, 66]]]]], [], []], "name", ["subexpr", "@mut", [["get", "name", ["loc", [null, [14, 72], [14, 76]]]]], [], []]], 0, null, ["loc", [null, [14, 4], [16, 25]]]]],
-          locals: ["container"],
-          templates: [child0]
-        };
-      })();
-      return {
-        meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 5,
-              "column": 0
-            },
-            "end": {
-              "line": 18,
-              "column": 0
-            }
-          },
-          "moduleName": "client/templates/components/liquid-with.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-          dom.insertBoundary(fragment, 0);
-          dom.insertBoundary(fragment, null);
-          return morphs;
-        },
-        statements: [["block", "liquid-container", [], ["id", ["subexpr", "@mut", [["get", "id", ["loc", [null, [7, 9], [7, 11]]]]], [], []], "class", ["subexpr", "@mut", [["get", "class", ["loc", [null, [8, 12], [8, 17]]]]], [], []], "growDuration", ["subexpr", "@mut", [["get", "growDuration", ["loc", [null, [9, 19], [9, 31]]]]], [], []], "growPixelsPerSecond", ["subexpr", "@mut", [["get", "growPixelsPerSecond", ["loc", [null, [10, 26], [10, 45]]]]], [], []], "growEasing", ["subexpr", "@mut", [["get", "growEasing", ["loc", [null, [11, 17], [11, 27]]]]], [], []], "enableGrowth", ["subexpr", "@mut", [["get", "enableGrowth", ["loc", [null, [12, 19], [12, 31]]]]], [], []]], 0, null, ["loc", [null, [6, 2], [17, 23]]]]],
-        locals: [],
-        templates: [child0]
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 19,
-            "column": 0
-          }
-        },
-        "moduleName": "client/templates/components/liquid-with.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["block", "if", [["get", "containerless", ["loc", [null, [1, 6], [1, 19]]]]], [], 0, 1, ["loc", [null, [1, 0], [18, 7]]]]],
-      locals: [],
-      templates: [child0, child1]
-    };
-  })());
-});
-define('client/templates/components/modal-dialog', ['exports', 'ember-modal-dialog/templates/components/modal-dialog'], function (exports, _emberModalDialogTemplatesComponentsModalDialog) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberModalDialogTemplatesComponentsModalDialog['default'];
-    }
-  });
-});
-define('client/templates/components/tether-dialog', ['exports', 'ember-modal-dialog/templates/components/tether-dialog'], function (exports, _emberModalDialogTemplatesComponentsTetherDialog) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberModalDialogTemplatesComponentsTetherDialog['default'];
-    }
-  });
 });
 define("client/templates/dashboard-missions", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10094,7 +7816,7 @@ define("client/templates/dashboard-missions", ["exports"], function (exports) {
         morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 1, 1);
         return morphs;
       },
-      statements: [["inline", "display-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [3, 25], [3, 30]]]]], [], []], "icon", "edit", "parent", ["subexpr", "@mut", [["get", "this", ["loc", [null, [3, 50], [3, 54]]]]], [], []]], ["loc", [null, [3, 4], [3, 56]]]], ["inline", "edit-mission", [], ["selected", ["subexpr", "@mut", [["get", "selected", ["loc", [null, [6, 28], [6, 36]]]]], [], []], "icons", ["subexpr", "@mut", [["get", "icons", ["loc", [null, [6, 43], [6, 48]]]]], [], []]], ["loc", [null, [6, 4], [6, 50]]]]],
+      statements: [["inline", "display-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [3, 25], [3, 30]]], 0, 0, 0, 0]], [], [], 0, 0], "icon", "edit", "parent", ["subexpr", "@mut", [["get", "this", ["loc", [null, [3, 50], [3, 54]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [3, 4], [3, 56]]], 0, 0], ["inline", "edit-mission", [], ["selected", ["subexpr", "@mut", [["get", "selected", ["loc", [null, [6, 28], [6, 36]]], 0, 0, 0, 0]], [], [], 0, 0], "icons", ["subexpr", "@mut", [["get", "icons", ["loc", [null, [6, 43], [6, 48]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [6, 4], [6, 50]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10104,11 +7826,7 @@ define("client/templates/dashboard-rapports", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10139,7 +7857,7 @@ define("client/templates/dashboard-rapports", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["inline", "display-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 21], [1, 26]]]]], [], []], "icon", "caret-right"], ["loc", [null, [1, 0], [1, 47]]]]],
+      statements: [["inline", "display-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 21], [1, 26]]], 0, 0, 0, 0]], [], [], 0, 0], "icon", "caret-right"], ["loc", [null, [1, 0], [1, 47]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10149,11 +7867,7 @@ define("client/templates/dashboard-students", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10201,7 +7915,7 @@ define("client/templates/dashboard-students", ["exports"], function (exports) {
         morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2]), 1, 1);
         return morphs;
       },
-      statements: [["inline", "display-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [2, 23], [2, 28]]]]], [], []], "icon", "edit", "parent", ["subexpr", "@mut", [["get", "this", ["loc", [null, [2, 48], [2, 52]]]]], [], []]], ["loc", [null, [2, 2], [2, 54]]]], ["inline", "edit-student", [], ["selected", ["subexpr", "@mut", [["get", "selected", ["loc", [null, [5, 26], [5, 34]]]]], [], []], "icons", ["subexpr", "@mut", [["get", "icons", ["loc", [null, [5, 41], [5, 46]]]]], [], []]], ["loc", [null, [5, 2], [5, 48]]]]],
+      statements: [["inline", "display-list", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [2, 23], [2, 28]]], 0, 0, 0, 0]], [], [], 0, 0], "icon", "edit", "parent", ["subexpr", "@mut", [["get", "this", ["loc", [null, [2, 48], [2, 52]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [2, 2], [2, 54]]], 0, 0], ["inline", "edit-student", [], ["selected", ["subexpr", "@mut", [["get", "selected", ["loc", [null, [5, 26], [5, 34]]], 0, 0, 0, 0]], [], [], 0, 0], "icons", ["subexpr", "@mut", [["get", "icons", ["loc", [null, [5, 41], [5, 46]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [5, 2], [5, 48]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10211,10 +7925,7 @@ define("client/templates/dashboard", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10250,7 +7961,7 @@ define("client/templates/dashboard", ["exports"], function (exports) {
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]), 1, 1);
         return morphs;
       },
-      statements: [["content", "liquid-outlet", ["loc", [null, [2, 2], [2, 19]]]]],
+      statements: [["content", "liquid-outlet", ["loc", [null, [2, 2], [2, 19]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -10260,11 +7971,7 @@ define("client/templates/explore", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10295,7 +8002,7 @@ define("client/templates/explore", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["inline", "structure-component", [], ["type", "explore", "camera", "true"], ["loc", [null, [1, 0], [1, 52]]]]],
+      statements: [["inline", "structure-component", [], ["type", "explore", "camera", "true"], ["loc", [null, [1, 0], [1, 52]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10305,11 +8012,7 @@ define("client/templates/index", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes", "wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10365,7 +8068,7 @@ define("client/templates/index", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["content", "global.user.first-name", ["loc", [null, [3, 55], [3, 81]]]], ["inline", "user-missions", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [6, 22], [6, 27]]]]], [], []]], ["loc", [null, [6, 0], [6, 29]]]]],
+      statements: [["content", "global.user.first-name", ["loc", [null, [3, 55], [3, 81]]], 0, 0, 0, 0], ["inline", "user-missions", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [6, 22], [6, 27]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [6, 0], [6, 29]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10375,11 +8078,7 @@ define("client/templates/jutarum", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10411,7 +8110,7 @@ define("client/templates/jutarum", ["exports"], function (exports) {
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]]],
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -10421,11 +8120,7 @@ define("client/templates/knowledge", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10457,7 +8152,7 @@ define("client/templates/knowledge", ["exports"], function (exports) {
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["inline", "structure-component", [], ["type", "knowledge"], ["loc", [null, [1, 0], [1, 40]]]]],
+      statements: [["inline", "structure-component", [], ["type", "knowledge"], ["loc", [null, [1, 0], [1, 40]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10468,8 +8163,7 @@ define("client/templates/login", ["exports"], function (exports) {
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -10506,7 +8200,7 @@ define("client/templates/login", ["exports"], function (exports) {
           morphs[1] = dom.createMorphAt(element2, 0, 0);
           return morphs;
         },
-        statements: [["attribute", "value", ["get", "school.id", ["loc", [null, [10, 24], [10, 33]]]]], ["content", "school.name", ["loc", [null, [10, 36], [10, 51]]]]],
+        statements: [["attribute", "value", ["get", "school.id", ["loc", [null, [10, 24], [10, 33]]], 0, 0, 0, 0], 0, 0, 0, 0], ["content", "school.name", ["loc", [null, [10, 36], [10, 51]]], 0, 0, 0, 0]],
         locals: ["school"],
         templates: []
       };
@@ -10514,8 +8208,7 @@ define("client/templates/login", ["exports"], function (exports) {
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -10557,7 +8250,7 @@ define("client/templates/login", ["exports"], function (exports) {
           morphs[2] = dom.createMorphAt(element1, 2, 2);
           return morphs;
         },
-        statements: [["attribute", "value", ["get", "user.id", ["loc", [null, [17, 24], [17, 31]]]]], ["content", "user.first-name", ["loc", [null, [17, 34], [17, 53]]]], ["content", "user.last-name", ["loc", [null, [17, 54], [17, 72]]]]],
+        statements: [["attribute", "value", ["get", "user.id", ["loc", [null, [17, 24], [17, 31]]], 0, 0, 0, 0], 0, 0, 0, 0], ["content", "user.first-name", ["loc", [null, [17, 34], [17, 53]]], 0, 0, 0, 0], ["content", "user.last-name", ["loc", [null, [17, 54], [17, 72]]], 0, 0, 0, 0]],
         locals: ["user"],
         templates: []
       };
@@ -10565,8 +8258,7 @@ define("client/templates/login", ["exports"], function (exports) {
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -10599,18 +8291,14 @@ define("client/templates/login", ["exports"], function (exports) {
           morphs[0] = dom.createElementMorph(element0);
           return morphs;
         },
-        statements: [["element", "action", ["submit"], [], ["loc", [null, [20, 47], [20, 66]]]]],
+        statements: [["element", "action", ["submit"], [], ["loc", [null, [20, 47], [20, 66]]], 0, 0]],
         locals: [],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10713,7 +8401,7 @@ define("client/templates/login", ["exports"], function (exports) {
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]], ["attribute", "onchange", ["subexpr", "action", [["subexpr", "mut", [["get", "school", ["loc", [null, [7, 47], [7, 53]]]]], [], ["loc", [null, [7, 42], [7, 54]]]]], ["value", "target.value"], ["loc", [null, [7, 33], [7, 77]]]]], ["block", "each", [["get", "model", ["loc", [null, [9, 14], [9, 19]]]]], [], 0, null, ["loc", [null, [9, 6], [11, 15]]]], ["attribute", "onchange", ["subexpr", "action", [["subexpr", "mut", [["get", "user", ["loc", [null, [14, 47], [14, 51]]]]], [], ["loc", [null, [14, 42], [14, 52]]]]], ["value", "target.value"], ["loc", [null, [14, 33], [14, 76]]]]], ["block", "each", [["get", "users", ["loc", [null, [16, 14], [16, 19]]]]], [], 1, null, ["loc", [null, [16, 6], [18, 15]]]], ["block", "link-to", ["index"], [], 2, null, ["loc", [null, [20, 4], [20, 96]]]]],
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]], 0, 0, 0, 0], ["attribute", "onchange", ["subexpr", "action", [["subexpr", "mut", [["get", "school", ["loc", [null, [7, 47], [7, 53]]], 0, 0, 0, 0]], [], ["loc", [null, [7, 42], [7, 54]]], 0, 0]], ["value", "target.value"], ["loc", [null, [null, null], [7, 77]]], 0, 0], 0, 0, 0, 0], ["block", "each", [["get", "model", ["loc", [null, [9, 14], [9, 19]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [9, 6], [11, 15]]]], ["attribute", "onchange", ["subexpr", "action", [["subexpr", "mut", [["get", "user", ["loc", [null, [14, 47], [14, 51]]], 0, 0, 0, 0]], [], ["loc", [null, [14, 42], [14, 52]]], 0, 0]], ["value", "target.value"], ["loc", [null, [null, null], [14, 76]]], 0, 0], 0, 0, 0, 0], ["block", "each", [["get", "users", ["loc", [null, [16, 14], [16, 19]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [16, 6], [18, 15]]]], ["block", "link-to", ["index"], [], 2, null, ["loc", [null, [20, 4], [20, 96]]]]],
       locals: [],
       templates: [child0, child1, child2]
     };
@@ -10723,11 +8411,7 @@ define("client/templates/mission", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10773,7 +8457,7 @@ define("client/templates/mission", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]], ["inline", "button-float", [], ["class", "fixed-left", "prefix", "back"], ["loc", [null, [2, 0], [2, 49]]]], ["inline", "button-float-projname", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [3, 30], [3, 35]]]]], [], []], "class", "fixed-center"], ["loc", [null, [3, 0], [3, 58]]]], ["inline", "button-float", [], ["class", "fixed-right", "prefix", "next"], ["loc", [null, [4, 0], [4, 50]]]]],
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]], 0, 0, 0, 0], ["inline", "button-float", [], ["class", "fixed-left", "prefix", "back"], ["loc", [null, [2, 0], [2, 49]]], 0, 0], ["inline", "button-float-projname", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [3, 30], [3, 35]]], 0, 0, 0, 0]], [], [], 0, 0], "class", "fixed-center"], ["loc", [null, [3, 0], [3, 58]]], 0, 0], ["inline", "button-float", [], ["class", "fixed-right", "prefix", "next"], ["loc", [null, [4, 0], [4, 50]]], 0, 0]],
       locals: [],
       templates: []
     };
@@ -10783,11 +8467,7 @@ define("client/templates/missions", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10823,7 +8503,7 @@ define("client/templates/missions", ["exports"], function (exports) {
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["inline", "step-component", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 23], [1, 28]]]]], [], []]], ["loc", [null, [1, 0], [1, 30]]]], ["content", "outlet", ["loc", [null, [2, 0], [2, 10]]]]],
+      statements: [["inline", "step-component", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 23], [1, 28]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [1, 0], [1, 30]]], 0, 0], ["content", "outlet", ["loc", [null, [2, 0], [2, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -10833,11 +8513,7 @@ define("client/templates/not-found", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -10876,7 +8552,7 @@ define("client/templates/not-found", ["exports"], function (exports) {
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]]],
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -10887,8 +8563,7 @@ define("client/templates/rapport", ["exports"], function (exports) {
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -10924,18 +8599,14 @@ define("client/templates/rapport", ["exports"], function (exports) {
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
           return morphs;
         },
-        statements: [["content", "tag.title", ["loc", [null, [17, 29], [17, 42]]]]],
+        statements: [["content", "tag.title", ["loc", [null, [17, 29], [17, 42]]], 0, 0, 0, 0]],
         locals: ["tag"],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -11042,7 +8713,7 @@ define("client/templates/rapport", ["exports"], function (exports) {
         morphs[4] = dom.createUnsafeMorphAt(dom.childAt(element0, [13]), 1, 1);
         return morphs;
       },
-      statements: [["inline", "image-slider", [], ["id", ["subexpr", "@mut", [["get", "model.id", ["loc", [null, [2, 20], [2, 28]]]]], [], []]], ["loc", [null, [2, 2], [2, 30]]]], ["content", "model.name", ["loc", [null, [7, 47], [7, 63]]]], ["inline", "team", [["get", "model.team", ["loc", [null, [11, 13], [11, 23]]]]], [], ["loc", [null, [11, 6], [11, 25]]]], ["block", "each", [["subexpr", "parse", [["get", "model.structure", ["loc", [null, [16, 21], [16, 36]]]]], [], ["loc", [null, [16, 14], [16, 37]]]]], [], 0, null, ["loc", [null, [16, 6], [18, 15]]]], ["content", "model.body", ["loc", [null, [22, 6], [22, 22]]]]],
+      statements: [["inline", "image-slider", [], ["id", ["subexpr", "@mut", [["get", "model.id", ["loc", [null, [2, 20], [2, 28]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [2, 2], [2, 30]]], 0, 0], ["content", "model.name", ["loc", [null, [7, 47], [7, 63]]], 0, 0, 0, 0], ["inline", "team", [["get", "model.team", ["loc", [null, [11, 13], [11, 23]]], 0, 0, 0, 0]], [], ["loc", [null, [11, 6], [11, 25]]], 0, 0], ["block", "each", [["subexpr", "parse", [["get", "model.structure", ["loc", [null, [16, 21], [16, 36]]], 0, 0, 0, 0]], [], ["loc", [null, [16, 14], [16, 37]]], 0, 0]], [], 0, null, ["loc", [null, [16, 6], [18, 15]]]], ["content", "model.body", ["loc", [null, [22, 6], [22, 22]]], 0, 0, 0, 0]],
       locals: [],
       templates: [child0]
     };
@@ -11053,68 +8724,105 @@ define("client/templates/rapports", ["exports"], function (exports) {
     var child0 = (function () {
       var child0 = (function () {
         var child0 = (function () {
+          var child0 = (function () {
+            return {
+              meta: {
+                "revision": "Ember@2.9.0",
+                "loc": {
+                  "source": null,
+                  "start": {
+                    "line": 10,
+                    "column": 12
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 12
+                  }
+                },
+                "moduleName": "client/templates/rapports.hbs"
+              },
+              isEmpty: false,
+              arity: 0,
+              cachedFragment: null,
+              hasRendered: false,
+              buildFragment: function buildFragment(dom) {
+                var el0 = dom.createDocumentFragment();
+                var el1 = dom.createTextNode("              ");
+                dom.appendChild(el0, el1);
+                var el1 = dom.createElement("li");
+                var el2 = dom.createComment("");
+                dom.appendChild(el1, el2);
+                dom.appendChild(el0, el1);
+                var el1 = dom.createTextNode("\n");
+                dom.appendChild(el0, el1);
+                return el0;
+              },
+              buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+                var morphs = new Array(1);
+                morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
+                return morphs;
+              },
+              statements: [["inline", "mission-report", [], ["model", ["subexpr", "@mut", [["get", "node", ["loc", [null, [11, 41], [11, 45]]], 0, 0, 0, 0]], [], [], 0, 0]], ["loc", [null, [11, 18], [11, 47]]], 0, 0]],
+              locals: [],
+              templates: []
+            };
+          })();
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
                   "line": 9,
-                  "column": 8
+                  "column": 10
                 },
                 "end": {
-                  "line": 11,
-                  "column": 8
+                  "line": 13,
+                  "column": 10
                 }
               },
               "moduleName": "client/templates/rapports.hbs"
             },
             isEmpty: false,
-            arity: 0,
+            arity: 1,
             cachedFragment: null,
             hasRendered: false,
             buildFragment: function buildFragment(dom) {
               var el0 = dom.createDocumentFragment();
-              var el1 = dom.createTextNode("          ");
-              dom.appendChild(el0, el1);
-              var el1 = dom.createElement("li");
-              var el2 = dom.createComment("");
-              dom.appendChild(el1, el2);
-              dom.appendChild(el0, el1);
-              var el1 = dom.createTextNode("\n");
+              var el1 = dom.createComment("");
               dom.appendChild(el0, el1);
               return el0;
             },
             buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
               var morphs = new Array(1);
-              morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
+              morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+              dom.insertBoundary(fragment, 0);
+              dom.insertBoundary(fragment, null);
               return morphs;
             },
-            statements: [["inline", "mission-report", [], ["model", ["subexpr", "@mut", [["get", "node", ["loc", [null, [10, 37], [10, 41]]]]], [], []]], ["loc", [null, [10, 14], [10, 43]]]]],
-            locals: [],
-            templates: []
+            statements: [["block", "if", [["get", "node.id", ["loc", [null, [10, 18], [10, 25]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [10, 12], [12, 19]]]]],
+            locals: ["node"],
+            templates: [child0]
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
                 "line": 8,
-                "column": 6
+                "column": 8
               },
               "end": {
-                "line": 12,
-                "column": 6
+                "line": 14,
+                "column": 8
               }
             },
             "moduleName": "client/templates/rapports.hbs"
           },
           isEmpty: false,
-          arity: 1,
+          arity: 0,
           cachedFragment: null,
           hasRendered: false,
           buildFragment: function buildFragment(dom) {
@@ -11130,15 +8838,56 @@ define("client/templates/rapports", ["exports"], function (exports) {
             dom.insertBoundary(fragment, null);
             return morphs;
           },
-          statements: [["block", "if", [["get", "node.id", ["loc", [null, [9, 14], [9, 21]]]]], [], 0, null, ["loc", [null, [9, 8], [11, 15]]]]],
-          locals: ["node"],
+          statements: [["block", "each", [["get", "rapports", ["loc", [null, [9, 18], [9, 26]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [9, 10], [13, 19]]]]],
+          locals: [],
           templates: [child0]
+        };
+      })();
+      var child1 = (function () {
+        return {
+          meta: {
+            "revision": "Ember@2.9.0",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 14,
+                "column": 8
+              },
+              "end": {
+                "line": 16,
+                "column": 8
+              }
+            },
+            "moduleName": "client/templates/rapports.hbs"
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("          ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("h3");
+            dom.setAttribute(el1, "class", "text-center p3");
+            var el2 = dom.createTextNode("Inga träffar");
+            dom.appendChild(el1, el2);
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -11146,7 +8895,7 @@ define("client/templates/rapports", ["exports"], function (exports) {
               "column": 6
             },
             "end": {
-              "line": 13,
+              "line": 17,
               "column": 6
             }
           },
@@ -11169,24 +8918,23 @@ define("client/templates/rapports", ["exports"], function (exports) {
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "each", [["get", "model", ["loc", [null, [8, 14], [8, 19]]]]], [], 0, null, ["loc", [null, [8, 6], [12, 15]]]]],
+        statements: [["block", "if", [["get", "rapports", ["loc", [null, [8, 14], [8, 22]]], 0, 0, 0, 0]], [], 0, 1, ["loc", [null, [8, 8], [16, 15]]]]],
         locals: [],
-        templates: [child0]
+        templates: [child0, child1]
       };
     })();
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
-              "line": 13,
+              "line": 17,
               "column": 6
             },
             "end": {
-              "line": 15,
+              "line": 19,
               "column": 6
             }
           },
@@ -11219,11 +8967,7 @@ define("client/templates/rapports", ["exports"], function (exports) {
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -11231,7 +8975,7 @@ define("client/templates/rapports", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 22,
             "column": 6
           }
         },
@@ -11285,7 +9029,7 @@ define("client/templates/rapports", ["exports"], function (exports) {
         morphs[1] = dom.createMorphAt(dom.childAt(fragment, [2, 1, 1]), 1, 1);
         return morphs;
       },
-      statements: [["content", "mission-report-tag-filter", ["loc", [null, [2, 2], [2, 31]]]], ["block", "if", [["get", "model.length", ["loc", [null, [7, 12], [7, 24]]]]], [], 0, 1, ["loc", [null, [7, 6], [15, 13]]]]],
+      statements: [["content", "mission-report-tag-filter", ["loc", [null, [2, 2], [2, 31]]], 0, 0, 0, 0], ["block", "if", [["get", "model", ["loc", [null, [7, 12], [7, 17]]], 0, 0, 0, 0]], [], 0, 1, ["loc", [null, [7, 6], [19, 13]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -11295,11 +9039,7 @@ define("client/templates/step", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -11331,7 +9071,7 @@ define("client/templates/step", ["exports"], function (exports) {
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]]],
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -11342,8 +9082,7 @@ define("client/templates/structure", ["exports"], function (exports) {
     var child0 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -11380,7 +9119,7 @@ define("client/templates/structure", ["exports"], function (exports) {
           morphs[1] = dom.createMorphAt(element1, 0, 0);
           return morphs;
         },
-        statements: [["element", "action", ["select", ["get", "structure", ["loc", [null, [5, 31], [5, 40]]]]], [], ["loc", [null, [5, 12], [5, 43]]]], ["content", "structure", ["loc", [null, [5, 44], [5, 57]]]]],
+        statements: [["element", "action", ["select", ["get", "structure", ["loc", [null, [5, 31], [5, 40]]], 0, 0, 0, 0]], [], ["loc", [null, [5, 12], [5, 43]]], 0, 0], ["content", "structure", ["loc", [null, [5, 44], [5, 57]]], 0, 0, 0, 0]],
         locals: ["structure"],
         templates: []
       };
@@ -11388,8 +9127,7 @@ define("client/templates/structure", ["exports"], function (exports) {
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -11426,17 +9164,14 @@ define("client/templates/structure", ["exports"], function (exports) {
           morphs[1] = dom.createMorphAt(element0, 0, 0);
           return morphs;
         },
-        statements: [["element", "action", ["remove", ["get", "structure", ["loc", [null, [12, 31], [12, 40]]]]], [], ["loc", [null, [12, 12], [12, 43]]]], ["content", "structure", ["loc", [null, [12, 44], [12, 57]]]]],
+        statements: [["element", "action", ["remove", ["get", "structure", ["loc", [null, [12, 31], [12, 40]]], 0, 0, 0, 0]], [], ["loc", [null, [12, 12], [12, 43]]], 0, 0], ["content", "structure", ["loc", [null, [12, 44], [12, 57]]], 0, 0, 0, 0]],
         locals: ["structure"],
         templates: []
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -11506,7 +9241,7 @@ define("client/templates/structure", ["exports"], function (exports) {
         morphs[1] = dom.createMorphAt(dom.childAt(element2, [3, 1]), 1, 1);
         return morphs;
       },
-      statements: [["block", "each", [["get", "group", ["loc", [null, [4, 14], [4, 19]]]]], [], 0, null, ["loc", [null, [4, 6], [6, 15]]]], ["block", "each", [["get", "selected", ["loc", [null, [11, 14], [11, 22]]]]], [], 1, null, ["loc", [null, [11, 6], [13, 15]]]]],
+      statements: [["block", "each", [["get", "group", ["loc", [null, [4, 14], [4, 19]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [4, 6], [6, 15]]]], ["block", "each", [["get", "selected", ["loc", [null, [11, 14], [11, 22]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [11, 6], [13, 15]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -11520,8 +9255,7 @@ define("client/templates/team", ["exports"], function (exports) {
           var child0 = (function () {
             return {
               meta: {
-                "fragmentReason": false,
-                "revision": "Ember@2.4.6",
+                "revision": "Ember@2.9.0",
                 "loc": {
                   "source": null,
                   "start": {
@@ -11558,15 +9292,14 @@ define("client/templates/team", ["exports"], function (exports) {
                 morphs[1] = dom.createMorphAt(element1, 0, 0);
                 return morphs;
               },
-              statements: [["element", "action", ["select", ["get", "person", ["loc", [null, [8, 35], [8, 41]]]]], [], ["loc", [null, [8, 16], [8, 44]]]], ["content", "person.name", ["loc", [null, [8, 45], [8, 60]]]]],
+              statements: [["element", "action", ["select", ["get", "person", ["loc", [null, [8, 35], [8, 41]]], 0, 0, 0, 0]], [], ["loc", [null, [8, 16], [8, 44]]], 0, 0], ["content", "person.name", ["loc", [null, [8, 45], [8, 60]]], 0, 0, 0, 0]],
               locals: [],
               templates: []
             };
           })();
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -11597,15 +9330,14 @@ define("client/templates/team", ["exports"], function (exports) {
               dom.insertBoundary(fragment, null);
               return morphs;
             },
-            statements: [["block", "if", [["subexpr", "not-eq", [["get", "person.id", ["loc", [null, [7, 24], [7, 33]]]], "null"], [], ["loc", [null, [7, 16], [7, 41]]]]], [], 0, null, ["loc", [null, [7, 10], [9, 17]]]]],
+            statements: [["block", "if", [["subexpr", "not-eq", [["get", "person.id", ["loc", [null, [7, 24], [7, 33]]], 0, 0, 0, 0], "null"], [], ["loc", [null, [7, 16], [7, 41]]], 0, 0]], [], 0, null, ["loc", [null, [7, 10], [9, 17]]]]],
             locals: [],
             templates: [child0]
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -11636,15 +9368,14 @@ define("client/templates/team", ["exports"], function (exports) {
             dom.insertBoundary(fragment, null);
             return morphs;
           },
-          statements: [["block", "if", [["subexpr", "not-eq", [["get", "person.id", ["loc", [null, [6, 22], [6, 31]]]], ["get", "global.user.id", ["loc", [null, [6, 32], [6, 46]]]]], [], ["loc", [null, [6, 14], [6, 47]]]]], [], 0, null, ["loc", [null, [6, 8], [10, 15]]]]],
+          statements: [["block", "if", [["subexpr", "not-eq", [["get", "person.id", ["loc", [null, [6, 22], [6, 31]]], 0, 0, 0, 0], ["get", "global.user.id", ["loc", [null, [6, 32], [6, 46]]], 0, 0, 0, 0]], [], ["loc", [null, [6, 14], [6, 47]]], 0, 0]], [], 0, null, ["loc", [null, [6, 8], [10, 15]]]]],
           locals: ["person"],
           templates: [child0]
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -11675,7 +9406,7 @@ define("client/templates/team", ["exports"], function (exports) {
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "each", [["get", "group", ["loc", [null, [5, 14], [5, 19]]]]], [], 0, null, ["loc", [null, [5, 6], [11, 15]]]]],
+        statements: [["block", "each", [["get", "group", ["loc", [null, [5, 14], [5, 19]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [5, 6], [11, 15]]]]],
         locals: [],
         templates: [child0]
       };
@@ -11684,8 +9415,7 @@ define("client/templates/team", ["exports"], function (exports) {
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -11722,15 +9452,14 @@ define("client/templates/team", ["exports"], function (exports) {
             morphs[1] = dom.createMorphAt(element0, 0, 0);
             return morphs;
           },
-          statements: [["element", "action", ["remove", ["get", "person", ["loc", [null, [21, 33], [21, 39]]]]], [], ["loc", [null, [21, 14], [21, 42]]]], ["content", "person.name", ["loc", [null, [21, 43], [21, 58]]]]],
+          statements: [["element", "action", ["remove", ["get", "person", ["loc", [null, [21, 33], [21, 39]]], 0, 0, 0, 0]], [], ["loc", [null, [21, 14], [21, 42]]], 0, 0], ["content", "person.name", ["loc", [null, [21, 43], [21, 58]]], 0, 0, 0, 0]],
           locals: [],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -11761,17 +9490,14 @@ define("client/templates/team", ["exports"], function (exports) {
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [["block", "if", [["subexpr", "not-eq", [["get", "person.id", ["loc", [null, [20, 22], [20, 31]]]], "null"], [], ["loc", [null, [20, 14], [20, 39]]]]], [], 0, null, ["loc", [null, [20, 8], [22, 15]]]]],
+        statements: [["block", "if", [["subexpr", "not-eq", [["get", "person.id", ["loc", [null, [20, 22], [20, 31]]], 0, 0, 0, 0], "null"], [], ["loc", [null, [20, 14], [20, 39]]], 0, 0]], [], 0, null, ["loc", [null, [20, 8], [22, 15]]]]],
         locals: ["person"],
         templates: [child0]
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -11855,7 +9581,7 @@ define("client/templates/team", ["exports"], function (exports) {
         morphs[3] = dom.createMorphAt(element3, 3, 3);
         return morphs;
       },
-      statements: [["block", "if", [["get", "model", ["loc", [null, [4, 12], [4, 17]]]]], [], 0, null, ["loc", [null, [4, 6], [12, 13]]]], ["content", "global.user.first-name", ["loc", [null, [18, 10], [18, 36]]]], ["content", "global.user.last-name", ["loc", [null, [18, 37], [18, 62]]]], ["block", "each", [["get", "selected", ["loc", [null, [19, 14], [19, 22]]]]], [], 1, null, ["loc", [null, [19, 6], [23, 15]]]]],
+      statements: [["block", "if", [["get", "model", ["loc", [null, [4, 12], [4, 17]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [4, 6], [12, 13]]]], ["content", "global.user.first-name", ["loc", [null, [18, 10], [18, 36]]], 0, 0, 0, 0], ["content", "global.user.last-name", ["loc", [null, [18, 37], [18, 62]]], 0, 0, 0, 0], ["block", "each", [["get", "selected", ["loc", [null, [19, 14], [19, 22]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [19, 6], [23, 15]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -11865,10 +9591,7 @@ define("client/templates/user", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -11939,7 +9662,7 @@ define("client/templates/user", ["exports"], function (exports) {
         morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0, 1, 3, 1]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.name", ["loc", [null, [7, 41], [7, 55]]]]],
+      statements: [["content", "model.name", ["loc", [null, [7, 41], [7, 55]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -11951,8 +9674,7 @@ define("client/templates/write", ["exports"], function (exports) {
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -12004,15 +9726,14 @@ define("client/templates/write", ["exports"], function (exports) {
             morphs[2] = dom.createMorphAt(dom.childAt(element3, [3]), 0, 0);
             return morphs;
           },
-          statements: [["element", "action", ["remove", ["get", "img.index", ["loc", [null, [6, 47], [6, 56]]]], ["get", "img.image", ["loc", [null, [6, 58], [6, 67]]]]], [], ["loc", [null, [6, 29], [6, 70]]]], ["attribute", "src", ["get", "img.image", ["loc", [null, [7, 24], [7, 33]]]]], ["content", "img.name", ["loc", [null, [8, 51], [8, 63]]]]],
+          statements: [["element", "action", ["remove", ["get", "img.index", ["loc", [null, [6, 47], [6, 56]]], 0, 0, 0, 0], ["get", "img.image", ["loc", [null, [6, 58], [6, 67]]], 0, 0, 0, 0]], [], ["loc", [null, [6, 29], [6, 70]]], 0, 0], ["attribute", "src", ["get", "img.image", ["loc", [null, [7, 24], [7, 33]]], 0, 0, 0, 0], 0, 0, 0, 0], ["content", "img.name", ["loc", [null, [8, 51], [8, 63]]], 0, 0, 0, 0]],
           locals: ["img"],
           templates: []
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -12052,7 +9773,7 @@ define("client/templates/write", ["exports"], function (exports) {
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 1, 1);
           return morphs;
         },
-        statements: [["block", "each", [["get", "mission.images", ["loc", [null, [5, 16], [5, 30]]]]], [], 0, null, ["loc", [null, [5, 8], [10, 17]]]]],
+        statements: [["block", "each", [["get", "mission.images", ["loc", [null, [5, 16], [5, 30]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [5, 8], [10, 17]]]]],
         locals: [],
         templates: [child0]
       };
@@ -12060,8 +9781,7 @@ define("client/templates/write", ["exports"], function (exports) {
     var child1 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -12094,7 +9814,7 @@ define("client/templates/write", ["exports"], function (exports) {
           morphs[0] = dom.createUnsafeMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [["content", "mission.lastRapport.body", ["loc", [null, [16, 8], [16, 38]]]]],
+        statements: [["content", "mission.lastRapport.body", ["loc", [null, [16, 8], [16, 38]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -12102,8 +9822,7 @@ define("client/templates/write", ["exports"], function (exports) {
     var child2 = (function () {
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -12139,8 +9858,7 @@ define("client/templates/write", ["exports"], function (exports) {
       var child0 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -12184,7 +9902,7 @@ define("client/templates/write", ["exports"], function (exports) {
             morphs[1] = dom.createAttrMorph(element1, 'src');
             return morphs;
           },
-          statements: [["element", "action", ["add", ["get", "index", ["loc", [null, [28, 44], [28, 49]]]], ["get", "structure.title", ["loc", [null, [28, 50], [28, 65]]]], ["get", "img", ["loc", [null, [28, 66], [28, 69]]]]], [], ["loc", [null, [28, 29], [28, 72]]]], ["attribute", "src", ["get", "img", ["loc", [null, [29, 24], [29, 27]]]]]],
+          statements: [["element", "action", ["add", ["get", "index", ["loc", [null, [28, 44], [28, 49]]], 0, 0, 0, 0], ["get", "structure.title", ["loc", [null, [28, 50], [28, 65]]], 0, 0, 0, 0], ["get", "img", ["loc", [null, [28, 66], [28, 69]]], 0, 0, 0, 0]], [], ["loc", [null, [28, 29], [28, 72]]], 0, 0], ["attribute", "src", ["get", "img", ["loc", [null, [29, 24], [29, 27]]], 0, 0, 0, 0], 0, 0, 0, 0]],
           locals: ["img"],
           templates: []
         };
@@ -12192,8 +9910,7 @@ define("client/templates/write", ["exports"], function (exports) {
       var child1 = (function () {
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -12236,8 +9953,7 @@ define("client/templates/write", ["exports"], function (exports) {
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -12272,15 +9988,14 @@ define("client/templates/write", ["exports"], function (exports) {
               morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
               return morphs;
             },
-            statements: [["content", "e", ["loc", [null, [41, 16], [41, 21]]]]],
+            statements: [["content", "e", ["loc", [null, [41, 16], [41, 21]]], 0, 0, 0, 0]],
             locals: ["e"],
             templates: []
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -12326,7 +10041,7 @@ define("client/templates/write", ["exports"], function (exports) {
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 3, 3);
             return morphs;
           },
-          statements: [["block", "each", [["get", "structure.explore", ["loc", [null, [40, 18], [40, 35]]]]], [], 0, null, ["loc", [null, [40, 10], [42, 19]]]]],
+          statements: [["block", "each", [["get", "structure.explore", ["loc", [null, [40, 18], [40, 35]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [40, 10], [42, 19]]]]],
           locals: [],
           templates: [child0]
         };
@@ -12335,8 +10050,7 @@ define("client/templates/write", ["exports"], function (exports) {
         var child0 = (function () {
           return {
             meta: {
-              "fragmentReason": false,
-              "revision": "Ember@2.4.6",
+              "revision": "Ember@2.9.0",
               "loc": {
                 "source": null,
                 "start": {
@@ -12371,15 +10085,14 @@ define("client/templates/write", ["exports"], function (exports) {
               morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
               return morphs;
             },
-            statements: [["content", "k", ["loc", [null, [49, 16], [49, 21]]]]],
+            statements: [["content", "k", ["loc", [null, [49, 16], [49, 21]]], 0, 0, 0, 0]],
             locals: ["k"],
             templates: []
           };
         })();
         return {
           meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.4.6",
+            "revision": "Ember@2.9.0",
             "loc": {
               "source": null,
               "start": {
@@ -12425,15 +10138,14 @@ define("client/templates/write", ["exports"], function (exports) {
             morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 3, 3);
             return morphs;
           },
-          statements: [["block", "each", [["get", "structure.knowledge", ["loc", [null, [48, 18], [48, 37]]]]], [], 0, null, ["loc", [null, [48, 10], [50, 19]]]]],
+          statements: [["block", "each", [["get", "structure.knowledge", ["loc", [null, [48, 18], [48, 37]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [48, 10], [50, 19]]]]],
           locals: [],
           templates: [child0]
         };
       })();
       return {
         meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.4.6",
+          "revision": "Ember@2.9.0",
           "loc": {
             "source": null,
             "start": {
@@ -12502,17 +10214,14 @@ define("client/templates/write", ["exports"], function (exports) {
           morphs[4] = dom.createMorphAt(element2, 2, 2);
           return morphs;
         },
-        statements: [["content", "structure.title", ["loc", [null, [24, 42], [24, 61]]]], ["block", "each", [["get", "structure.images", ["loc", [null, [27, 16], [27, 32]]]]], [], 0, null, ["loc", [null, [27, 8], [31, 17]]]], ["block", "if", [["get", "structure.images", ["loc", [null, [33, 12], [33, 28]]]]], [], 1, null, ["loc", [null, [33, 6], [35, 13]]]], ["block", "if", [["subexpr", "gt", [["get", "structure.explore.length", ["loc", [null, [37, 18], [37, 42]]]], 0], [], ["loc", [null, [37, 14], [37, 45]]]]], [], 2, null, ["loc", [null, [37, 8], [44, 15]]]], ["block", "if", [["subexpr", "gt", [["get", "structure.knowledge.length", ["loc", [null, [45, 18], [45, 44]]]], 0], [], ["loc", [null, [45, 14], [45, 47]]]]], [], 3, null, ["loc", [null, [45, 8], [52, 15]]]]],
+        statements: [["content", "structure.title", ["loc", [null, [24, 42], [24, 61]]], 0, 0, 0, 0], ["block", "each", [["get", "structure.images", ["loc", [null, [27, 16], [27, 32]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [27, 8], [31, 17]]]], ["block", "if", [["get", "structure.images", ["loc", [null, [33, 12], [33, 28]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [33, 6], [35, 13]]]], ["block", "if", [["subexpr", "gt", [["get", "structure.explore.length", ["loc", [null, [37, 18], [37, 42]]], 0, 0, 0, 0], 0], [], ["loc", [null, [37, 14], [37, 45]]], 0, 0]], [], 2, null, ["loc", [null, [37, 8], [44, 15]]]], ["block", "if", [["subexpr", "gt", [["get", "structure.knowledge.length", ["loc", [null, [45, 18], [45, 44]]], 0, 0, 0, 0], 0], [], ["loc", [null, [45, 14], [45, 47]]], 0, 0]], [], 3, null, ["loc", [null, [45, 8], [52, 15]]]]],
         locals: ["structure", "index"],
         templates: [child0, child1, child2, child3]
       };
     })();
     return {
       meta: {
-        "fragmentReason": {
-          "name": "triple-curlies"
-        },
-        "revision": "Ember@2.4.6",
+        "revision": "Ember@2.9.0",
         "loc": {
           "source": null,
           "start": {
@@ -12593,7 +10302,7 @@ define("client/templates/write", ["exports"], function (exports) {
         morphs[3] = dom.createMorphAt(dom.childAt(element5, [3]), 1, 1);
         return morphs;
       },
-      statements: [["block", "if", [["get", "mission.images", ["loc", [null, [3, 10], [3, 24]]]]], [], 0, null, ["loc", [null, [3, 4], [12, 11]]]], ["content", "mission.lastRapport.name", ["loc", [null, [13, 67], [13, 97]]]], ["block", "if", [["get", "mission.lastRapport.body", ["loc", [null, [15, 12], [15, 36]]]]], [], 1, 2, ["loc", [null, [15, 6], [19, 13]]]], ["block", "each", [["get", "data", ["loc", [null, [23, 12], [23, 16]]]]], [], 3, null, ["loc", [null, [23, 4], [54, 13]]]]],
+      statements: [["block", "if", [["get", "mission.images", ["loc", [null, [3, 10], [3, 24]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [3, 4], [12, 11]]]], ["content", "mission.lastRapport.name", ["loc", [null, [13, 67], [13, 97]]], 0, 0, 0, 0], ["block", "if", [["get", "mission.lastRapport.body", ["loc", [null, [15, 12], [15, 36]]], 0, 0, 0, 0]], [], 1, 2, ["loc", [null, [15, 6], [19, 13]]]], ["block", "each", [["get", "data", ["loc", [null, [23, 12], [23, 16]]], 0, 0, 0, 0]], [], 3, null, ["loc", [null, [23, 4], [54, 13]]]]],
       locals: [],
       templates: [child0, child1, child2, child3]
     };
@@ -12610,447 +10319,122 @@ define('client/transitions', ['exports'], function (exports) {
 
   ;
 });
-define("client/transitions/cross-fade", ["exports", "liquid-fire"], function (exports, _liquidFire) {
-  exports["default"] = crossFade;
-
-  function crossFade() {
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    (0, _liquidFire.stop)(this.oldElement);
-    return _liquidFire.Promise.all([(0, _liquidFire.animate)(this.oldElement, { opacity: 0 }, opts), (0, _liquidFire.animate)(this.newElement, { opacity: [opts.maxOpacity || 1, 0] }, opts)]);
-  }
-
-  // END-SNIPPET
+define('client/transitions/cross-fade', ['exports', 'liquid-fire/transitions/cross-fade'], function (exports, _liquidFireTransitionsCrossFade) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsCrossFade['default'];
+    }
+  });
 });
-// BEGIN-SNIPPET cross-fade-definition
-define("client/transitions/default", ["exports", "liquid-fire"], function (exports, _liquidFire) {
-  exports["default"] = defaultTransition;
-
-  // This is what we run when no animation is asked for. It just sets
-  // the newly-added element to visible (because we always start them
-  // out invisible so that transitions can control their initial
-  // appearance).
-
-  function defaultTransition() {
-    if (this.newElement) {
-      this.newElement.css({ visibility: '' });
+define('client/transitions/default', ['exports', 'liquid-fire/transitions/default'], function (exports, _liquidFireTransitionsDefault) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsDefault['default'];
     }
-    return _liquidFire.Promise.resolve();
-  }
+  });
 });
-define("client/transitions/explode", ["exports", "ember", "liquid-fire"], function (exports, _ember, _liquidFire) {
-  exports["default"] = explode;
-
-  // Explode is not, by itself, an animation. It exists to pull apart
-  // other elements so that each of the pieces can be targeted by
-  // animations.
-
-  function explode() {
-    var _this = this;
-
-    var seenElements = {};
-    var sawBackgroundPiece = false;
-
-    for (var _len = arguments.length, pieces = Array(_len), _key = 0; _key < _len; _key++) {
-      pieces[_key] = arguments[_key];
+define('client/transitions/explode', ['exports', 'liquid-fire/transitions/explode'], function (exports, _liquidFireTransitionsExplode) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsExplode['default'];
     }
-
-    var promises = pieces.map(function (piece) {
-      if (piece.matchBy) {
-        return matchAndExplode(_this, piece, seenElements);
-      } else if (piece.pick || piece.pickOld || piece.pickNew) {
-        return explodePiece(_this, piece, seenElements);
-      } else {
-        sawBackgroundPiece = true;
-        return runAnimation(_this, piece);
-      }
-    });
-    if (!sawBackgroundPiece) {
-      if (this.newElement) {
-        this.newElement.css({ visibility: '' });
-      }
-      if (this.oldElement) {
-        this.oldElement.css({ visibility: 'hidden' });
-      }
-    }
-    return _liquidFire.Promise.all(promises);
-  }
-
-  function explodePiece(context, piece, seen) {
-    var childContext = _ember["default"].copy(context);
-    var selectors = [piece.pickOld || piece.pick, piece.pickNew || piece.pick];
-    var cleanupOld, cleanupNew;
-
-    if (selectors[0] || selectors[1]) {
-      cleanupOld = _explodePart(context, 'oldElement', childContext, selectors[0], seen);
-      cleanupNew = _explodePart(context, 'newElement', childContext, selectors[1], seen);
-      if (!cleanupOld && !cleanupNew) {
-        return _liquidFire.Promise.resolve();
-      }
-    }
-
-    return runAnimation(childContext, piece)["finally"](function () {
-      if (cleanupOld) {
-        cleanupOld();
-      }
-      if (cleanupNew) {
-        cleanupNew();
-      }
-    });
-  }
-
-  function _explodePart(context, field, childContext, selector, seen) {
-    var child, childOffset, width, height, newChild;
-    var elt = context[field];
-
-    childContext[field] = null;
-    if (elt && selector) {
-      child = elt.find(selector).filter(function () {
-        var guid = _ember["default"].guidFor(this);
-        if (!seen[guid]) {
-          seen[guid] = true;
-          return true;
-        }
-      });
-      if (child.length > 0) {
-        childOffset = child.offset();
-        width = child.outerWidth();
-        height = child.outerHeight();
-        newChild = child.clone();
-
-        // Hide the original element
-        child.css({ visibility: 'hidden' });
-
-        // If the original element's parent was hidden, hide our clone
-        // too.
-        if (elt.css('visibility') === 'hidden') {
-          newChild.css({ visibility: 'hidden' });
-        }
-        newChild.appendTo(elt.parent());
-        newChild.outerWidth(width);
-        newChild.outerHeight(height);
-        var newParentOffset = newChild.offsetParent().offset();
-        newChild.css({
-          position: 'absolute',
-          top: childOffset.top - newParentOffset.top,
-          left: childOffset.left - newParentOffset.left,
-          margin: 0
-        });
-
-        // Pass the clone to the next animation
-        childContext[field] = newChild;
-        return function cleanup() {
-          newChild.remove();
-          child.css({ visibility: '' });
-        };
-      }
-    }
-  }
-
-  function animationFor(context, piece) {
-    var name, args, func;
-    if (!piece.use) {
-      throw new Error("every argument to the 'explode' animation must include a followup animation to 'use'");
-    }
-    if (_ember["default"].isArray(piece.use)) {
-      name = piece.use[0];
-      args = piece.use.slice(1);
-    } else {
-      name = piece.use;
-      args = [];
-    }
-    if (typeof name === 'function') {
-      func = name;
-    } else {
-      func = context.lookup(name);
-    }
-    return function () {
-      return _liquidFire.Promise.resolve(func.apply(this, args));
-    };
-  }
-
-  function runAnimation(context, piece) {
-    return new _liquidFire.Promise(function (resolve, reject) {
-      animationFor(context, piece).apply(context).then(resolve, reject);
-    });
-  }
-
-  function matchAndExplode(context, piece, seen) {
-    if (!context.oldElement || !context.newElement) {
-      return _liquidFire.Promise.resolve();
-    }
-
-    // reduce the matchBy scope
-    if (piece.pick) {
-      context.oldElement = context.oldElement.find(piece.pick);
-      context.newElement = context.newElement.find(piece.pick);
-    }
-
-    if (piece.pickOld) {
-      context.oldElement = context.oldElement.find(piece.pickOld);
-    }
-
-    if (piece.pickNew) {
-      context.newElement = context.newElement.find(piece.pickNew);
-    }
-
-    // use the fastest selector available
-    var selector;
-
-    if (piece.matchBy === 'id') {
-      selector = function (attrValue) {
-        return "#" + attrValue;
-      };
-    } else if (piece.matchBy === 'class') {
-      selector = function (attrValue) {
-        return "." + attrValue;
-      };
-    } else {
-      selector = function (attrValue) {
-        var escapedAttrValue = attrValue.replace(/'/g, "\\'");
-        return "[" + piece.matchBy + "='" + escapedAttrValue + "']";
-      };
-    }
-
-    var hits = _ember["default"].A(context.oldElement.find("[" + piece.matchBy + "]").toArray());
-    return _liquidFire.Promise.all(hits.map(function (elt) {
-      var attrValue = _ember["default"].$(elt).attr(piece.matchBy);
-
-      // if there is no match for a particular item just skip it
-      if (attrValue === "" || context.newElement.find(selector(attrValue)).length === 0) {
-        return _liquidFire.Promise.resolve();
-      }
-
-      return explodePiece(context, {
-        pick: selector(attrValue),
-        use: piece.use
-      }, seen);
-    }));
-  }
+  });
 });
-define('client/transitions/fade', ['exports', 'liquid-fire'], function (exports, _liquidFire) {
-  exports['default'] = fade;
-
-  function fade() {
-    var _this = this;
-
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    var firstStep;
-    var outOpts = opts;
-    var fadingElement = findFadingElement(this);
-
-    if (fadingElement) {
-      // We still have some older version that is in the process of
-      // fading out, so out first step is waiting for it to finish.
-      firstStep = (0, _liquidFire.finish)(fadingElement, 'fade-out');
-    } else {
-      if ((0, _liquidFire.isAnimating)(this.oldElement, 'fade-in')) {
-        // if the previous view is partially faded in, scale its
-        // fade-out duration appropriately.
-        outOpts = { duration: (0, _liquidFire.timeSpent)(this.oldElement, 'fade-in') };
-      }
-      (0, _liquidFire.stop)(this.oldElement);
-      firstStep = (0, _liquidFire.animate)(this.oldElement, { opacity: 0 }, outOpts, 'fade-out');
+define('client/transitions/fade', ['exports', 'liquid-fire/transitions/fade'], function (exports, _liquidFireTransitionsFade) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsFade['default'];
     }
-    return firstStep.then(function () {
-      return (0, _liquidFire.animate)(_this.newElement, { opacity: [opts.maxOpacity || 1, 0] }, opts, 'fade-in');
-    });
-  }
-
-  function findFadingElement(context) {
-    for (var i = 0; i < context.older.length; i++) {
-      var entry = context.older[i];
-      if ((0, _liquidFire.isAnimating)(entry.element, 'fade-out')) {
-        return entry.element;
-      }
+  });
+});
+define('client/transitions/flex-grow', ['exports', 'liquid-fire/transitions/flex-grow'], function (exports, _liquidFireTransitionsFlexGrow) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsFlexGrow['default'];
     }
-    if ((0, _liquidFire.isAnimating)(context.oldElement, 'fade-out')) {
-      return context.oldElement;
+  });
+});
+define('client/transitions/fly-to', ['exports', 'liquid-fire/transitions/fly-to'], function (exports, _liquidFireTransitionsFlyTo) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsFlyTo['default'];
     }
-  }
-  // END-SNIPPET
+  });
 });
-// BEGIN-SNIPPET fade-definition
-define('client/transitions/flex-grow', ['exports', 'liquid-fire'], function (exports, _liquidFire) {
-  exports['default'] = flexGrow;
-
-  function flexGrow(opts) {
-    (0, _liquidFire.stop)(this.oldElement);
-    return _liquidFire.Promise.all([(0, _liquidFire.animate)(this.oldElement, { 'flex-grow': 0 }, opts), (0, _liquidFire.animate)(this.newElement, { 'flex-grow': [1, 0] }, opts)]);
-  }
-});
-define('client/transitions/fly-to', ['exports', 'liquid-fire'], function (exports, _liquidFire) {
-  exports['default'] = flyTo;
-
-  function flyTo() {
-    var _this = this;
-
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    if (!this.newElement) {
-      return _liquidFire.Promise.resolve();
-    } else if (!this.oldElement) {
-      this.newElement.css({ visibility: '' });
-      return _liquidFire.Promise.resolve();
+define('client/transitions/move-over', ['exports', 'liquid-fire/transitions/move-over'], function (exports, _liquidFireTransitionsMoveOver) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsMoveOver['default'];
     }
-
-    var oldOffset = this.oldElement.offset();
-    var newOffset = this.newElement.offset();
-
-    if (opts.movingSide === 'new') {
-      var motion = {
-        translateX: [0, oldOffset.left - newOffset.left],
-        translateY: [0, oldOffset.top - newOffset.top],
-        outerWidth: [this.newElement.outerWidth(), this.oldElement.outerWidth()],
-        outerHeight: [this.newElement.outerHeight(), this.oldElement.outerHeight()]
-      };
-      this.oldElement.css({ visibility: 'hidden' });
-      return (0, _liquidFire.animate)(this.newElement, motion, opts);
-    } else {
-      var motion = {
-        translateX: newOffset.left - oldOffset.left,
-        translateY: newOffset.top - oldOffset.top,
-        outerWidth: this.newElement.outerWidth(),
-        outerHeight: this.newElement.outerHeight()
-      };
-      this.newElement.css({ visibility: 'hidden' });
-      return (0, _liquidFire.animate)(this.oldElement, motion, opts).then(function () {
-        _this.newElement.css({ visibility: '' });
-      });
+  });
+});
+define('client/transitions/scale', ['exports', 'liquid-fire/transitions/scale'], function (exports, _liquidFireTransitionsScale) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsScale['default'];
     }
-  }
+  });
 });
-define('client/transitions/move-over', ['exports', 'liquid-fire'], function (exports, _liquidFire) {
-  exports['default'] = moveOver;
-
-  function moveOver(dimension, direction, opts) {
-    var _this = this;
-
-    var oldParams = {},
-        newParams = {},
-        firstStep,
-        property,
-        measure;
-
-    if (dimension.toLowerCase() === 'x') {
-      property = 'translateX';
-      measure = 'width';
-    } else {
-      property = 'translateY';
-      measure = 'height';
+define('client/transitions/scroll-then', ['exports', 'liquid-fire/transitions/scroll-then'], function (exports, _liquidFireTransitionsScrollThen) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsScrollThen['default'];
     }
-
-    if ((0, _liquidFire.isAnimating)(this.oldElement, 'moving-in')) {
-      firstStep = (0, _liquidFire.finish)(this.oldElement, 'moving-in');
-    } else {
-      (0, _liquidFire.stop)(this.oldElement);
-      firstStep = _liquidFire.Promise.resolve();
+  });
+});
+define('client/transitions/to-down', ['exports', 'liquid-fire/transitions/to-down'], function (exports, _liquidFireTransitionsToDown) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsToDown['default'];
     }
-
-    return firstStep.then(function () {
-      var bigger = biggestSize(_this, measure);
-      oldParams[property] = bigger * direction + 'px';
-      newParams[property] = ["0px", -1 * bigger * direction + 'px'];
-
-      return _liquidFire.Promise.all([(0, _liquidFire.animate)(_this.oldElement, oldParams, opts), (0, _liquidFire.animate)(_this.newElement, newParams, opts, 'moving-in')]);
-    });
-  }
-
-  function biggestSize(context, dimension) {
-    var sizes = [];
-    if (context.newElement) {
-      sizes.push(parseInt(context.newElement.css(dimension), 10));
-      sizes.push(parseInt(context.newElement.parent().css(dimension), 10));
+  });
+});
+define('client/transitions/to-left', ['exports', 'liquid-fire/transitions/to-left'], function (exports, _liquidFireTransitionsToLeft) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsToLeft['default'];
     }
-    if (context.oldElement) {
-      sizes.push(parseInt(context.oldElement.css(dimension), 10));
-      sizes.push(parseInt(context.oldElement.parent().css(dimension), 10));
+  });
+});
+define('client/transitions/to-right', ['exports', 'liquid-fire/transitions/to-right'], function (exports, _liquidFireTransitionsToRight) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsToRight['default'];
     }
-    return Math.max.apply(null, sizes);
-  }
+  });
 });
-define("client/transitions/scale", ["exports", "liquid-fire"], function (exports, _liquidFire) {
-  exports["default"] = scale;
-
-  function scale() {
-    var _this = this;
-
-    var opts = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-    return (0, _liquidFire.animate)(this.oldElement, { scale: [0.2, 1] }, opts).then(function () {
-      return (0, _liquidFire.animate)(_this.newElement, { scale: [1, 0.2] }, opts);
-    });
-  }
-});
-define("client/transitions/scroll-then", ["exports", "ember", "liquid-fire/is-browser"], function (exports, _ember, _liquidFireIsBrowser) {
-  exports["default"] = function (nextTransitionName, options) {
-    for (var _len = arguments.length, rest = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-      rest[_key - 2] = arguments[_key];
+define('client/transitions/to-up', ['exports', 'liquid-fire/transitions/to-up'], function (exports, _liquidFireTransitionsToUp) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsToUp['default'];
     }
-
-    var _this = this;
-
-    if ((0, _liquidFireIsBrowser["default"])()) {
-      _ember["default"].assert("You must provide a transition name as the first argument to scrollThen. Example: this.use('scrollThen', 'toLeft')", 'string' === typeof nextTransitionName);
-
-      var el = document.getElementsByTagName('html');
-      var nextTransition = this.lookup(nextTransitionName);
-      if (!options) {
-        options = {};
-      }
-
-      _ember["default"].assert("The second argument to scrollThen is passed to Velocity's scroll function and must be an object", 'object' === typeof options);
-
-      // set scroll options via: this.use('scrollThen', 'ToLeft', {easing: 'spring'})
-      options = _ember["default"].merge({ duration: 500, offset: 0 }, options);
-
-      // additional args can be passed through after the scroll options object
-      // like so: this.use('scrollThen', 'moveOver', {duration: 100}, 'x', -1);
-
-      return window.$.Velocity(el, 'scroll', options).then(function () {
-        nextTransition.apply(_this, rest);
-      });
+  });
+});
+define('client/transitions/wait', ['exports', 'liquid-fire/transitions/wait'], function (exports, _liquidFireTransitionsWait) {
+  Object.defineProperty(exports, 'default', {
+    enumerable: true,
+    get: function get() {
+      return _liquidFireTransitionsWait['default'];
     }
-  };
+  });
 });
-define("client/transitions/to-down", ["exports", "client/transitions/move-over"], function (exports, _clientTransitionsMoveOver) {
-  exports["default"] = function (opts) {
-    return _clientTransitionsMoveOver["default"].call(this, 'y', 1, opts);
-  };
-});
-define("client/transitions/to-left", ["exports", "client/transitions/move-over"], function (exports, _clientTransitionsMoveOver) {
-  exports["default"] = function (opts) {
-    return _clientTransitionsMoveOver["default"].call(this, 'x', -1, opts);
-  };
-});
-define("client/transitions/to-right", ["exports", "client/transitions/move-over"], function (exports, _clientTransitionsMoveOver) {
-  exports["default"] = function (opts) {
-    return _clientTransitionsMoveOver["default"].call(this, 'x', 1, opts);
-  };
-});
-define("client/transitions/to-up", ["exports", "client/transitions/move-over"], function (exports, _clientTransitionsMoveOver) {
-  exports["default"] = function (opts) {
-    return _clientTransitionsMoveOver["default"].call(this, 'y', -1, opts);
-  };
-});
-define('client/transitions/wait', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = function (ms) {
-    var _this = this;
-
-    var opts = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-
-    return new _ember['default'].RSVP.Promise(function (resolve) {
-      setTimeout(function () {
-        resolve(_this.lookup(opts.then || 'default').call(_this));
-      }, ms);
-    });
-  };
-});
-define("client/utils/assets", ["exports"], function (exports) {
+define("client/utils/assets", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = {
     path: function path(type) {
-      return "assets/images/" + type + "/";
+      return "https://s3-eu-west-1.amazonaws.com/jutarum/images/" + type + "/";
     },
 
     ext: function ext() {
@@ -13128,10 +10512,14 @@ define('client/config/environment', ['ember'], function(Ember) {
 
 try {
   var metaName = prefix + '/config/environment';
-  var rawConfig = Ember['default'].$('meta[name="' + metaName + '"]').attr('content');
+  var rawConfig = document.querySelector('meta[name="' + metaName + '"]').getAttribute('content');
   var config = JSON.parse(unescape(rawConfig));
 
-  return { 'default': config };
+  var exports = { 'default': config };
+
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+  return exports;
 }
 catch(err) {
   throw new Error('Could not read config from meta tag with name "' + metaName + '".');
@@ -13146,7 +10534,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("client/app")["default"].create({"name":"client","version":"0.0.0+ef53b36b"});
+  require("client/app")["default"].create({"name":"Jutarum","version":"0.0.0+559fee6f"});
 }
 
 /* jshint ignore:end */

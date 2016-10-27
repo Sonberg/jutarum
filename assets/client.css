@@ -4530,10 +4530,15 @@ div {
   color: #66a268;
   font-family: 'Baloo Paaji', cursive; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   font-family: 'Baloo Paaji', cursive;
   font-size: 2.5vw;
   color: #a0a0a0; }
+
+h4 {
+  font-family: 'Baloo Paaji', cursive;
+  font-size: 2.5vw;
+  color: white; }
 
 .size--large {
   font-size: 2em;
@@ -4825,29 +4830,6 @@ Markup
 
 .ember-modal-overlay.translucent {
   background-color: rgba(216, 216, 216, 0.2) !important; }
-
-.ember-modal-overlay {
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 50; }
-
-.ember-modal-dialog {
-  z-index: 50;
-  position: fixed; }
-  .ember-modal-dialog.ember-modal-dialog-in-place {
-    position: relative; }
-
-.ember-modal-dialog {
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 0 10px #222;
-  padding: 10px; }
-
-.ember-modal-overlay.translucent {
-  background-color: rgba(128, 128, 128, 0.77); }
 
 .select2.select2-container {
   width: 100% !important; }

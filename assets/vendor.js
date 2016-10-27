@@ -69341,10 +69341,10 @@ return Tether;
 
 }));
 
-},{}],"/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-OJ8XgwPA.tmp/browserify_stubs.js":[function(require,module,exports){
+},{}],"/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-bZAGiASD.tmp/browserify_stubs.js":[function(require,module,exports){
 define('npm:pdfobject', function(){ return { 'default': require('pdfobject')};})
 define('npm:tether-drop', function(){ return { 'default': require('tether-drop')};})
-},{"pdfobject":"/Applications/MAMP/htdocs/jutarum/node_modules/pdfobject/pdfobject.js","tether-drop":"/Applications/MAMP/htdocs/jutarum/node_modules/tether-drop/dist/js/drop.js"}]},{},["/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-OJ8XgwPA.tmp/browserify_stubs.js"]);
+},{"pdfobject":"/Applications/MAMP/htdocs/jutarum/node_modules/pdfobject/pdfobject.js","tether-drop":"/Applications/MAMP/htdocs/jutarum/node_modules/tether-drop/dist/js/drop.js"}]},{},["/Applications/MAMP/htdocs/jutarum/tmp/core_object-input_staging-bZAGiASD.tmp/browserify_stubs.js"]);
 
 ;/*!
  * jQuery Cookie Plugin v1.4.1
@@ -74501,7 +74501,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
 
 (function(){if(jQuery&&jQuery.fn&&jQuery.fn.select2&&jQuery.fn.select2.amd)var e=jQuery.fn.select2.amd;return e.define("select2/i18n/sv",[],function(){return{errorLoading:function(){return"Resultat kunde inte laddas."},inputTooLong:function(e){var t=e.input.length-e.maximum,n="Vänligen sudda ut "+t+" tecken";return n},inputTooShort:function(e){var t=e.minimum-e.input.length,n="Vänligen skriv in "+t+" eller fler tecken";return n},loadingMore:function(){return"Laddar fler resultat…"},maximumSelected:function(e){var t="Du kan max välja "+e.maximum+" element";return t},noResults:function(){return"Inga träffar"},searching:function(){return"Söker…"}}}),{define:e.define,require:e.require}})();
 ;//! moment.js
-//! version : 2.15.1
+//! version : 2.15.2
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -75332,7 +75332,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
 
     // LOCALES
 
-    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/;
+    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
     var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
     function localeMonths (m, format) {
         if (!m) {
@@ -78697,7 +78697,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
     // Side effect imports
 
 
-    utils_hooks__hooks.version = '2.15.1';
+    utils_hooks__hooks.version = '2.15.2';
 
     setHookCallback(local__createLocal);
 
@@ -78804,7 +78804,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
 
 }));
 ;//! moment.js
-//! version : 2.15.1
+//! version : 2.15.2
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -79635,7 +79635,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
 
     // LOCALES
 
-    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?/;
+    var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
     var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
     function localeMonths (m, format) {
         if (!m) {
@@ -83002,7 +83002,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
     ;
 
 
-    utils_hooks__hooks.version = '2.15.1';
+    utils_hooks__hooks.version = '2.15.2';
 
     setHookCallback(local__createLocal);
 
@@ -87433,7 +87433,7 @@ if(this.$element.prop("multiple"))this.current(function(d){var e=[];a=[a],a.push
         months : {
             format: 'sausio_vasario_kovo_balandžio_gegužės_birželio_liepos_rugpjūčio_rugsėjo_spalio_lapkričio_gruodžio'.split('_'),
             standalone: 'sausis_vasaris_kovas_balandis_gegužė_birželis_liepa_rugpjūtis_rugsėjis_spalis_lapkritis_gruodis'.split('_'),
-            isFormat: /D[oD]?(\[[^\[\]]*\]|\s+)+MMMM?|MMMM?(\[[^\[\]]*\]|\s+)+D[oD]?/
+            isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/
         },
         monthsShort : 'sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd'.split('_'),
         weekdays : {
@@ -110266,6 +110266,7 @@ define('ember-load/components/ember-load-remover', ['exports', 'ember', 'ember-l
     didInsertElement: function didInsertElement() {
       this._super.apply(this, arguments);
       var loadingIndicatorClass = this.get('ember-load-config.loadingIndicatorClass') || 'ember-load-indicator';
+      _ember['default'].$('.' + loadingIndicatorClass).remove();
     }
   });
 });

@@ -6593,6 +6593,16 @@ define('client/controllers/index', ['exports', 'ember'], function (exports, _emb
     global: _ember['default'].inject.service()
   });
 });
+define('client/controllers/jutarum', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Controller.extend({
+    init: function init() {
+      this._super();
+      _ember['default'].run.schedule("afterRender", this, function () {
+        this.transitionToRoute('index');
+      });
+    }
+  });
+});
 define('client/controllers/knowledge', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Controller.extend({
     // Check if stuckture is choose
@@ -7591,6 +7601,7 @@ define('client/router', ['exports', 'ember', 'client/config/environment'], funct
     /* 404 - Page not found */
     this.route('not-found', { path: '/*path' });
     this.route('login');
+    this.route('jutarum');
   });
 
   exports['default'] = Router;
@@ -7682,7 +7693,6 @@ define("client/routes/index", ["exports", "ember"], function (exports, _ember) {
     global: _ember["default"].inject.service(),
     beforeModel: function beforeModel() {
       if (!this.get("global.school.id")) {
-        //this.transitionTo("login");
         return false;
       }
     },
@@ -7701,6 +7711,9 @@ define("client/routes/index", ["exports", "ember"], function (exports, _ember) {
       //this.set("global.mission", model);
     }
   });
+});
+define('client/routes/jutarum', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Route.extend({});
 });
 define("client/routes/knowledge", ["exports", "ember"], function (exports, _ember) {
   exports["default"] = _ember["default"].Route.extend({
@@ -10353,6 +10366,52 @@ define("client/templates/index", ["exports"], function (exports) {
         return morphs;
       },
       statements: [["content", "global.user.first-name", ["loc", [null, [3, 55], [3, 81]]]], ["inline", "user-missions", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [6, 22], [6, 27]]]]], [], []]], ["loc", [null, [6, 0], [6, 29]]]]],
+      locals: [],
+      templates: []
+    };
+  })());
+});
+define("client/templates/jutarum", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "fragmentReason": {
+          "name": "missing-wrapper",
+          "problems": ["wrong-type"]
+        },
+        "revision": "Ember@2.4.6",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "client/templates/jutarum.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+        dom.insertBoundary(fragment, 0);
+        return morphs;
+      },
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]]]],
       locals: [],
       templates: []
     };
@@ -13087,7 +13146,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("client/app")["default"].create({"name":"client","version":"0.0.0+370f9fe9"});
+  require("client/app")["default"].create({"name":"client","version":"0.0.0+54d74683"});
 }
 
 /* jshint ignore:end */

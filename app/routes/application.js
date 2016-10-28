@@ -12,9 +12,9 @@ export default Ember.Route.extend({
     
     if (self.cookie) {
       if (self.get("global.user") === null || self.get("global.school") === null) {
-        var school = self.cookie.getCookie('school');
-        var user = self.cookie.getCookie('user');
-        if (school && user) {
+        var school = parseInt(self.cookie.getCookie('school'));
+        var user = parseInt(self.cookie.getCookie('user'));
+        if (school !== null && user !== null) {
           self.set("global.school", self.get("store").find("school", school));
           self.set("global.user", self.get("store").find("user", user));
 

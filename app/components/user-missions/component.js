@@ -20,23 +20,21 @@ export default Ember.Component.extend({
     if (missions.length > 0 && rapports !== null) {
       self.set("new", Ember.A());
       self.set("old", Ember.A());
-      self.get("missions").every(function(mission) {
+      for (var i = 0; i < missions.length; i++) {
         console.log("miss");
-        if (self.get("new.length") + self.get("old.length") <= self.get("missions.length")) {
+        if (self.get("new.length") + self.get("old.length") <= missions.length) {
           if (rapports) {
             console.log("got rapport");
-            self.get("inRapport")(rapports, mission, self);
+            self.get("inRapport")(rapports, missions[i], self);
           } else {
-            self.get("new").pushObject(mission);
+            self.get("new").pushObject(missions[i]);
           }
           
           if (self.get("reloadBtn")) {
             self.get("reloadBtn").stop();
           }
         }
-        
-        return true;
-      });
+      }
     }
     
   }.observes("missions.[]").on("init"),
@@ -82,22 +80,16 @@ export default Ember.Component.extend({
         if (id === missionId) {
           var team = JSON.parse(rapport["team"]);
           if (Object.prototype.toString.call(team) === '[object Array]' ) {
-            for (var i = 0; i < team.length; i++) {
-              console.log("team");
-              var user = parseInt(team[i].id);
+            for (var t = 0; t < team.length; t++) {
+              var user = parseInt(team[t].id);
               var me = parseInt(self.cookie.getCookie('user'));
-              
               if (me === user) {
                 self.get("old").pushObject(mission);
                 return true;
               }
             }
-            self.get("new").pushObject(mission);
-            return true;
-            console.log("is array");
           }
         }
-        console.log("rapport");
       }
     }
     self.get("new").pushObject(mission);

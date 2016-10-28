@@ -16,6 +16,9 @@ export default Ember.Component.extend({
   
   actions: {
     logout: function() {
+      this.get("mission.resetService")(this.get("mission"));
+      this.cookie.setCookie('school', null, { expires: 7, path: '/' });
+      this.cookie.setCookie('user', null, { expires: 7, path: '/' });
       this.cookie.removeCookie('user');
       this.cookie.removeCookie('school');
       this.set("global.user", null);

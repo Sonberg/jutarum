@@ -15,7 +15,8 @@ export default Ember.Component.extend({
     }
     
     var missions = self.get("missions");
-    var rapports = this.get("rapports");
+    var rapports = self.get("rapports");
+
     if (missions.length > 0) {
       self.set("new", Ember.A());
       self.set("old", Ember.A());
@@ -32,7 +33,7 @@ export default Ember.Component.extend({
       });
     }
     
-  }.observes("model.missions.[]", "model.rapports.[]").on("init"),
+  }.observes("missions.[]", "rapports.[]").on("init"),
   
   _refresh: function() {
     this.get("setup")();
@@ -40,7 +41,6 @@ export default Ember.Component.extend({
 
   rapports: Ember.computed('model.rapports.@each', function() {
     var model = this.get('model.rapports');
-    if (model.length > 0) {
       var arr = model.filter(function(item, index, enumerable) {
         if (item.data["mission-id"] !== null) {
           return true;
@@ -52,8 +52,9 @@ export default Ember.Component.extend({
           "mission-id": rapport.get("mission-id")
         };
       });
-      return arr;
-    }
+      if (arr.length > 0) {
+        return arr;
+      }
   }),
   
   missions: Ember.computed('model.missions.@each', function() {

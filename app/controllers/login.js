@@ -22,7 +22,8 @@ export default Ember.Controller.extend({
     Ember.run.schedule("afterRender", this, function() {
       var school = parseInt(this.cookie.getCookie('school'));
       var user =  parseInt(this.cookie.getCookie('user'));
-      if (school !== null && user !== null) {
+
+      if (school && user) {
         this.set("global.school", this.get("store").find("school", school));
         this.set("global.user", this.get("store").find("user", user));
         this.transitionToRoute('index');

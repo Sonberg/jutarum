@@ -58,6 +58,8 @@ module.exports = function(defaults) {
   app.import("bower_components/ladda/dist/ladda.jquery.min.js");
   app.import("bower_components/ladda/dist/ladda.min.js");
   
+  app.import("bower_components/js-cookie/src/js.cookie.js");
+  
   
   return app.toTree();
 };

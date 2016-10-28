@@ -17,10 +17,20 @@ export default Ember.Component.extend({
   actions: {
     logout: function() {
       this.get("mission.resetService")(this.get("mission"));
+      
       this.cookie.setCookie('school', null, { expires: 7, path: '/' });
       this.cookie.setCookie('user', null, { expires: 7, path: '/' });
       this.cookie.removeCookie('user');
       this.cookie.removeCookie('school');
+      
+      Cookies.remove('user', { path: '' });
+      Cookies.remove('school', { path: '' });
+      Cookies.remove('user');
+      Cookies.remove('school');
+      Cookies.remove('user', { path: '/' });
+      Cookies.remove('school', { path: '/' });
+      Cookies.remove('user', { path: 'jutarum/' });
+      Cookies.remove('school', { path: 'jutarum/' });
       this.set("global.user", null);
       this.set("global.school", null);
       this.router.transitionTo('login');

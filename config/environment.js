@@ -48,7 +48,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootURL = '/';
+    ENV.rootURL = '/jutarum/dist/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -60,7 +60,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.locationType = 'hash';
-    ENV.rootURL = '/jutarum/dist/';
+    ENV.rootURL = '/jutarum/';
     minifyCSS: {
       enabled: false
     }

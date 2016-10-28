@@ -1,7 +1,7 @@
 @import './bower_components/foundation-sites/assets/foundation.scss';
 @import "mixins";
-/*@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
-@import 'https://fonts.googleapis.com/css?family=Raleway';*/
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 
 
 @import "palette";
@@ -23,9 +23,10 @@
 @import "components/ember-modal-dialog";
 @import "components/select2";
 @import "components/login";
-
+/*
 @include font-face(Raleway, fonts/Raleway);
 @include font-face(Raleway, fonts/Baloo_Paaji);
+*/
 
 body,
 html {

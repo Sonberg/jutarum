@@ -20,7 +20,7 @@ export default Ember.Component.extend({
       this.cookie.removeCookie('school');
       this.set("global.user", null);
       this.set("global.school", null);
-      window.location.reload(true);
+      this.router.transitionTo('login');
     }
   }
 

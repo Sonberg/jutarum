@@ -6,7 +6,9 @@ export default Ember.Controller.extend({
   init: function () {
     this._super();
     if(this.get("mission.structure.length") === 0) {
-        this.get('router').transitionTo('structure');
+      Ember.run.schedule("afterRender", this, function() {
+          this.transitionToRoute('structure');
+      });
     }
     
     Ember.run.schedule("afterRender", this, function() {

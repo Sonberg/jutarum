@@ -13,30 +13,47 @@ export default Ember.Component.extend({
     if (this) {
       var self = this;  
     }
-    console.log("setting up");
+    
     var missions = self.get("missions");
+    var rapports = this.get("rapports");
     if (missions.length > 0) {
       self.set("new", Ember.A());
       self.set("old", Ember.A());
       self.get("missions").forEach(function(mission) {
-        self.get("inRapport")(mission, self);
+        if (rapports) {
+          self.get("inRapport")(rapports, mission, self);
+        } else {
+          self.get("new").pushObject(mission);
+        }
+        
         if (self.get("reloadBtn")) {
           self.get("reloadBtn").stop();
         }
       });
     }
+    
   }.observes("model.missions.[]", "model.rapports.[]").on("init"),
+  
+  _refresh: function() {
+    this.get("setup")();
+  },
 
   rapports: Ember.computed('model.rapports.@each', function() {
     var model = this.get('model.rapports');
-    var arr = model.map(function(rapport, index, enumerable) {
-      return {
-        id: rapport.get("id"),
-        team: rapport.get("team"),
-        "mission-id": rapport.get("mission-id")
-      };
-    });
-    return arr;
+    if (model.length > 0) {
+      var arr = model.filter(function(item, index, enumerable) {
+        if (item.data["mission-id"] !== null) {
+          return true;
+        }
+      }).map(function(rapport, index, enumerable) {
+        return {
+          id: rapport.get("id"),
+          team: rapport.get("team"),
+          "mission-id": rapport.get("mission-id")
+        };
+      });
+      return arr;
+    }
   }),
   
   missions: Ember.computed('model.missions.@each', function() {
@@ -47,18 +64,25 @@ export default Ember.Component.extend({
     return arr;
   }),
 
-  inRapport: function(mission, self) {
+  inRapport: function(rapports, mission, self) {
     var id = parseInt(mission.get("id"));
-    var rapports = self.get("rapports");
     for (var i = 0; i < rapports.length; i++) {
       var rapport = rapports[i];
-      if (id === parseInt(rapport["mission-id"])) {
+      var missionId = parseInt(rapport["mission-id"]);
+      
+      if (id === missionId) {
         var team = JSON.parse(rapport["team"]);
-        for (var i = 0; i < team.length; i++) {
-          if (parseInt(team[i].id) === parseInt(self.cookie.getCookie('user'))) {
-            self.get("old").pushObject(mission);
-            return true;
+        if (team.length > 0) {
+          for (var i = 0; i < team.length; i++) {
+            var user = parseInt(team[i].id);
+            var me = parseInt(self.cookie.getCookie('user'));
+            
+            if (me === user) {
+              self.get("old").pushObject(mission);
+              return true;
+            }
           }
+          console.log("is array");
         }
       }
     }

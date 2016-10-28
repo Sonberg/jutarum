@@ -52,7 +52,6 @@ export default Ember.Route.extend({
 
       if (transition.targetName === "index") {
         this.set("mission.tab", "");
-        //  this.get("mission.createRecord")(this.get("mission"));
       }
     },
 
@@ -67,7 +66,6 @@ export default Ember.Route.extend({
           this.set("mission.nextParams.route", routes[index + 1]);
         }
         if (current !== "index") {
-
           this.set("mission.tab", "");
         }
         this.set("mission.lastRoute", current);

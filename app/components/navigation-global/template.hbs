@@ -17,7 +17,7 @@
       <h4>{{mission.tab}}</h4></li>
   </ul>
   <ul class="account menu float--right">
-    {{#if mission.lastRapport}}
+    {{#if (and mission.lastRapport mission.lastRoute)}}
       {{#if (missionVisible router.currentRouteName)}}
         <li class="pr2">
           {{#link-to mission.lastRoute global.mission.id classNames="last" }}Återgå till uppdraget{{/link-to}}

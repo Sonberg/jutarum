@@ -5,25 +5,19 @@ export default Ember.Route.extend({
           actions: {
             willTransition(transition) {
               var self = this;
-              var title = Ember.$("#parse--title").html().trim();
               var body = Ember.$("#parse--hook").html().trim();
-
+            
               this.set("nextText", "Nästa")
 
               if (transition.targetName === "index") {
                 /* Validate input */
-                if (title.length < 5) {
-                  transition.abort();
-                }
-
-
+              
                 if (body.length < 5) {
                   transition.abort();
                 }
                 
                 this.get("mission.updateRecord")(null, this.router.router.currentHandlerInfos[1].name, this.get("mission"), function(rapport) {
                   var structure = self.get("mission.removeImages")(self.get("mission"));
-                  rapport.set("name", title);
                   rapport.set("body", body);
                   rapport.set("structure", JSON.stringify(structure));
                   rapport.save().then(function(newRapport) {
@@ -49,7 +43,6 @@ export default Ember.Route.extend({
               } else {
                 var rapport = this.get("mission.lastRapport");
                 this.set("mission.nextText", "Nästa");
-                rapport.set("name", title);
                 rapport.set("body", body);
               }
             }

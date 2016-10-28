@@ -6,9 +6,13 @@
         <h1 class="jr--title ml1 mb0">Nya uppdrag</h1>
         {{#each new as | newMission |}}
           {{#if (eq newMission.id mission.lastRapport.mission-id)}}
-            {{mission-button model=newMission text="Återgå till uppdrag"}}
+            {{#link-to mission.lastRoute global.mission.id }}
+              {{mission-button model=newMission text="Återgå till uppdrag"}}
+            {{/link-to}}
           {{else}}
-            {{mission-button model=newMission text="Starta uppdrag"}}
+            {{#link-to "team" newMission.id }}
+              {{mission-button model=newMission text="Starta uppdrag"}}
+            {{/link-to}}
           {{/if}}
         {{/each}}
       </div>
@@ -20,7 +24,9 @@
       <div class="medium-12 large-12">
         <h1 class="jr--title pl1 mb0">Avslutade uppdrag</h1>
         {{#each old as | mission |}}
-          {{mission-button model=mission text="Utför uppdraget igen"}}
+          {{#link-to "team" mission.id }}
+            {{mission-button model=mission text="Utför uppdraget igen"}}
+          {{/link-to}}
         {{/each}}
       </div>
     </div>

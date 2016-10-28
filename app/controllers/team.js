@@ -14,27 +14,24 @@ export default Ember.Controller.extend({
 
     Ember.run.schedule("afterRender", this, function() {
       this.set("mission.tab", "Arbetsgrupp");
-      this.set("selected", this.get("mission.team"));
+      this.set("selected", this.get("mission.team").uniqBy('id'));
     });
   },
 
   group: Ember.computed('model.@each', function() {
-    var user = this.get("global.user");
     var model = this.get('model');
-    
-    var arr = model.filterBy('type', "student").filterBy('class-id', user.content.data["class-id"]).map(function(user, index, enumerable) {
+    var arr = model.filterBy('type', "student").filterBy('class-id', this.get("global.user.class-id")).map(function(user, index, enumerable) {
       return {
         id: user.get("id"),
         name: user.get("first-name") + " " + user.get("last-name")
       };
     });
-
-    return arr;
+    return arr.uniqBy('id');
   }),
 
   save: function(self) {
     console.log("save");
-    var selected = self.get("selected");
+    var selected = self.get("selected").uniqBy('id');
     self.set("mission.team", selected);
   },
   actions: {

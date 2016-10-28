@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import _ from 'underscore';
 
 export default Ember.Service.extend({
   global: Ember.inject.service(),
@@ -38,10 +39,12 @@ export default Ember.Service.extend({
   updateRecord: function(attr, route, self, callback) {
     // Transition inside mission
     if (route === "mission" && attr) {
-
+      console.log("route");
       // No rappoort created
-      if (!self.get("lastRapport")) {
+      if (self.get("lastRapport") === null) {
+        console.log("create");
         var rapport = self.get("store").createRecord("rapport", {
+          "name": self.get("global.mission.name"),
           "mission-id": self.get("global.mission.id"),
           "school-id": self.get("global.school.id")
         });
@@ -49,7 +52,9 @@ export default Ember.Service.extend({
       }
 
       var rapport = self.get("lastRapport");
-      rapport.set(attr, JSON.stringify(self.get(attr)));
+      var data = _.uniq(self.get(attr), function(p){ return p.id; });
+      console.log(data);
+      rapport.set(attr, JSON.stringify(data));
     }
 
     if (callback) {
@@ -57,65 +62,6 @@ export default Ember.Service.extend({
     }
   },
 
-/* Not using */
-  createRecord: function(self) {
-
-    /* Validate input */
-    if (title.length < 5) {
-      return false;
-    }
-
-
-    if (body.length < 5) {
-      return false;
-    }
-
-    if (self.get("lastRapport")) {
-      var rapport = self.get("store").peekRecord('rapport', self.get("lastRapport"));
-      rapport.set("name", self.get("global.mission.name"));
-      rapport.set("structure", JSON.stringify(self.get("removeImages")(self)));
-      rapport.set("body", body);
-      rapport.set("school-id", self.get("global.school.id"));
-      rapport.set("team", JSON.stringify);
-    } else {
-      if (body) {
-        var rapport = self.get("store").createRecord('rapport', {
-          "name": title,
-          "mission-id": self.get("model.id"),
-          "structure": JSON.stringify(self.get("removeImages")(self)),
-          "school-id": self.get("global.school.id"),
-          "body": body,
-          "team": JSON.stringify(team)
-        });
-      }
-    }
-    console.log(self.get("images"));
-    return rapport.save().then(function(newRapport) {
-      console.log("save");
-      if (newRapport.get("id")) {
-        console.log("got id");
-        console.log(self.get("images"));
-        for (var i = 0; i < self.get("images.length"); i++) {
-          console.log(self.get("images." + i + ".image.length"));
-          var pic = self.get("resize")(self.get("images." + i + ".image"));
-          console.log(pic.length);
-
-          /* Spara bilder */
-          var image = self.get("store").createRecord('image', {
-            name: self.get("images." + i + ".name"),
-            rapport_id: newRapport.get("id"),
-            image: pic
-          });
-          image.save();
-        }
-        self.get("resetService")(self);
-        return newRapport.get("id");
-      }
-      return false;
-    });
-
-  },
-  
   resize: function(image) {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -125,16 +71,16 @@ export default Ember.Service.extend({
     // limit the image to 150x100 maximum size
     var maxW = 500;
     var maxH = 500;
-    var iw=img.width;
-    var ih=img.height;
-    var scale=Math.min((maxW/iw),(maxH/ih));
-    var iwScaled=iw*scale;
-    var ihScaled=ih*scale;
-    canvas.width=iwScaled;
-    canvas.height=ihScaled;
-    ctx.drawImage(img,0,0,iwScaled,ihScaled);
+    var iw = img.width;
+    var ih = img.height;
+    var scale = Math.min((maxW / iw), (maxH / ih));
+    var iwScaled = iw * scale;
+    var ihScaled = ih * scale;
+    canvas.width = iwScaled;
+    canvas.height = ihScaled;
+    ctx.drawImage(img, 0, 0, iwScaled, ihScaled);
     return canvas.toDataURL();
-    
+
   },
 
   resetService(self) {

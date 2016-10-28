@@ -19,10 +19,6 @@ export default Ember.Controller.extend({
   }.on("init").property("data"),
 
   actions: {
-    save: function () {
-      this.get("mission.createRecord")(this.get("mission"));
-    },
-    
     add: function(index, title, img) {
       // Max 4 images
       if (this.get("mission.images.length") <= 4) {

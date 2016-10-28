@@ -29,11 +29,6 @@ export default Ember.Route.extend({
       }
 
       this.get("mission.updateRecord")("team", this.router.router.currentHandlerInfos[1].name, this.get("mission"));
-    },
-    didTransition: function(transition) {
-      if (this.get("mission.structure")) {
-        this.get("mission.resetService")(this.get("mission"));
-      }
     }
   }
 });

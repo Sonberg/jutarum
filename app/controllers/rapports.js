@@ -27,9 +27,10 @@ export default Ember.Controller.extend({
       if (parseInt(self.class) > 0) {
         model = model.filterBy("class-id", parseInt(self.class))
       }
-
+      
+      
       var arr = model.map(function(rapport, index, enumerable) {
-        return rapport;
+        return rapport
       });
     }
     this.set("rapports", arr);

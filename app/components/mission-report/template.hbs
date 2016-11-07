@@ -1,17 +1,12 @@
 {{#link-to "rapport" model.id class=buttonClass}}
-  <div class="row flex">
-    <div class="text">
-      <span class="m--title ml2">{{{model.name}}}</span>
-    </div>
-    <div class="columns text hide-for-small-only">
+  <div class="flex text">
+    <span class="m--title ml1 mr1 float-left">{{{model.name}}}</span>
+    <div class="hide-for-small-only float-left">
         <span class="m--under">{{team model.team}}</span>
-
     </div>
-    <div class="text columns text-right hide-for-small-only">
-    {{#each tags as |tag|}}
-    <span class="m--tag">{{tag}}</span>
-    {{/each}}
+    {{fa-icon "angle-right faa-horizontal m--icon mr2 ml1 float-right"}}
+    <div class="text-right hide-for-small-only flex-right float-right">
+    {{time-ago model=model}}
     </div>
-    {{fa-icon "angle-right faa-horizontal m--icon mr2" pull="right"}}
   </div>
   {{/link-to}}

@@ -38,10 +38,6 @@ export default Ember.Component.extend({
     }
     
   }.observes("missions.[]").on("init"),
-  
-  _refresh: function() {
-    this.get("setup")();
-  },
 
   rapports: Ember.computed('model.rapports.@each', function() {
 
@@ -64,6 +60,7 @@ export default Ember.Component.extend({
   
   missions: Ember.computed('model.missions.@each', function() {
     var model = this.get('model.missions');
+    model = this.get("store").peekAll("mission");
     var arr = model.map(function(mission, index, enumerable) {
       return mission;
     });
@@ -104,8 +101,15 @@ export default Ember.Component.extend({
   
   actions: {
     reload: function() {
-      this.get("reloadBtn").start();
+      if (this.get("reloadBtn")) {
+        this.get("reloadBtn").start();
+      }
       this.get("setup")(this);
+      
+      Ember.$(".btn-round").addClass("btn-spin");
+      setTimeout(function () {
+        Ember.$(".btn-round").removeClass("btn-spin");
+      }, 3000);
     }
   }
 });

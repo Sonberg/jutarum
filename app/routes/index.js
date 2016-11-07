@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     if (this.get("global.school.id")) {
       return this.get("store").query("mission", {
         "school-id": this.get("global.school.id")
-      })
+      }, { reload: true });
     }
   },
 

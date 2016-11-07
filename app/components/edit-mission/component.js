@@ -5,13 +5,9 @@ export default Ember.Component.extend({
   global: Ember.inject.service(),
   store: Ember.inject.service(),
 
-  structures: [
-    "Utseende",
-    "Fortplantning",
-    "Föda",
-    "Bostad",
-    "Fiender"
-  ],
+  structures: function() {
+    return this.get("store").findAll("structure");
+  }.property("structures"),
   selected: null,
   icons: [],
 
@@ -41,18 +37,24 @@ export default Ember.Component.extend({
     }
 
     /* Struktur */
-    Ember.$(".select-structure-multiple").select2({
-      minimumResultsForSearch: Infinity,
-      placeholder: "Välj tillgängliga stödstrukturer",
-      data: this.get("structures")
-    });
-    Ember.$(".select-structure-multiple").val([]).select2();
+    var structures = this.get("structures");
+    if (structures.content) {
+      Ember.$(".select-structure-multiple").select2({
+        minimumResultsForSearch: Infinity,
+        placeholder: "Välj tillgängliga stödstrukturer",
+        data: structures.content.content.map(function(structure, index, enumerable) {
+          console.log(structure["_data"].name);
+          return structure["_data"].name;
+        })
+      });
+      Ember.$(".select-structure-multiple").val([]).select2();
+    }
 
     if (this.get("selected.structures")) {
       var struc = JSON.parse(this.get("selected.structures"));
       Ember.$(".select-structure-multiple").val(struc).select2();
     }
-  }.on("didInsertElement").observes("selected"),
+  }.on("didInsertElement").observes("selected", "structures"),
 
   formatImage: function(state) {
     var path = assets.path("icons");

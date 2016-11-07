@@ -1,6 +1,8 @@
 {{#if (not-eq missions.length 0)}}
   {{#if new}}
     {{mission-alert model=new}}
+    <button type="button" {{action "reload" }} class="float-center btn-round">{{fa-icon "refresh"}}</button>
+    
     <div class="row fullwidth bb0 mr2 ml2 mt1">
       <div class="medium-12 large-12 float-right mr1">
         <h1 class="jr--title ml1 mb0">Nya uppdrag</h1>

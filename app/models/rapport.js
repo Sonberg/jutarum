@@ -9,5 +9,6 @@ export default Model.extend({
   "mission" : belongsTo('mission'),
   "mission-id" : attr('number'),
   "school-id" : attr('number'),
-  "team" : attr('string')
+  "team" : attr('string'),
+  "created" : attr('date')
 });

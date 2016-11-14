@@ -17,6 +17,19 @@ export default Ember.Controller.extend({
       this.set("selected", this.get("mission.team").uniqBy('id'));
     });
   },
+  
+  _watch: function() {
+    var model = this.get('model');
+    if (model) {
+      var arr = model.filterBy('type', "student").filterBy('class-id', this.get("global.user.class-id")).map(function(user, index, enumerable) {
+        return {
+          id: user.get("id"),
+          name: user.get("first-name") + " " + user.get("last-name")
+        };
+      });
+      this.set("group", arr.uniqBy('id'));
+    }
+  }.observes("model.@each").on("init"),
 
   group: Ember.computed('model.@each', function() {
     var model = this.get('model');
